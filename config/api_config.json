@@ -1,0 +1,27 @@
+{
+  "api_interfaces": [
+    {
+      "name": "1",
+      "api_base": "your_api_base",
+      "api_key": "the_api_key_for_judging",
+      "judge_models": [
+        "gpt-4o-mini",
+        "qwen3-32b-nothinking",
+        "gpt-5.2",
+        {"model": "qwen3-32b", "extra_body": {"enable_thinking": true}}
+      ]
+    },
+    {
+      "name": "2",
+      "api_base": "your_api_base",
+      "api_key": "the_api_key_for_judging",
+      "judge_models": [
+        "deepseek-v4-flash",
+        "glm-5.1",
+        "kimi-k2.6",
+        "qwen3-max"
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,86 @@
+# config/prompts/wp_bench/rubric/base.yaml
+# type: rubric (pairwise with genre-specific criteria)
+# matching 提示词合集md WP-Bench Rubric Prompt
+# task: 根据题材动态适配评分标准，两两比较选择更好回复
+
+task_description: |
+  You are a strict, meticulous, and objective creative writing evaluation expert.
+  You evaluate generated writing strictly according to the official WritingPreferenceBench rubric, which includes a 4‑point holistic scale, universal criteria applicable to all writing forms, and genre‑specific standards.
+
+user_prompt_format: |
+  Task Background
+  You will evaluate TWO anonymous creative writing responses for the same query.
+  Both responses have been pre‑filtered to be grammatically correct, factually accurate, and length‑matched.
+
+  Writing Prompt:
+  "{instruction}"
+
+  Response A:
+  <article_A>
+  "{response_0}"
+  </article_A>
+
+  Response B:
+  <article_B>
+  "{response_1}"
+  </article_B>
+
+  <Instruction>
+  Your Task
+  Please evaluate each response following the official WritingPreferenceBench rubric.
+
+  Step 1 – Holistic Quality Score (0–3)
+  Assign a holistic quality score using the 4‑point scale:
+  - Score 3 (Creative / Professional): The response is creative, stylistically fluent, and feels natural. It is a complete, well‑crafted piece on par with professionally published work. Original, engaging, often exceeds prompt expectations.
+  - Score 2 (Competent / Predictable): Good overall but lacks originality. Structure is sound and content addresses the prompt, but narrative or arguments are predictable. Comparable to a well‑written but standard university‑level essay.
+  - Score 1 (Formulaic / Flawed): Significant issues. May be written in a wrong language, follows a rigid, unnatural template, or has awkward/inappropriately technical word choice. Comparable to a middle‑school‑level essay.
+  - Score 0 (Incoherent / Irrelevant): Fundamentally unusable. Nonsensical, completely fails to address prompt's genre or topic, or mostly repeats the query. Comparable to elementary‑school or illiterate level.
+
+  Step 2 – Universal Evaluation Criteria (0–3 each)
+  For each response, score four universal dimensions:
+  - Prompt Adherence and Intent: Does the response satisfy all explicit constraints? Does it avoid vague grandiose statements? Is the reading experience fluent?
+  - Structure and Coherence: Is the overall structure complete? Are paragraphs divided logically? Is the line of reasoning clear? For narratives, is pacing effective (beginning, development, climax, conclusion)?
+  - Content and Substance: Is the content rich and specific, avoiding empty generic statements? Does the material effectively support the theme? Are descriptions vivid where applicable?
+  - Language and Expression: Is the language accurate, precise, and grammatically correct? Is expression clear and unambiguous? Does style match prompt, genre, and intended audience?
+
+  Step 3 – Genre‑Specific Evaluation
+  Based on the identified genre of the writing prompt, apply the following genre‑specific standards.
+
+  Genre categories and their specific criteria:
+
+  {genre_criteria}
+
+  For genres not explicitly listed above, use the universal criteria and provide a reasonable assessment based on the prompt's requirements.
+
+  Step 4 – Final Preference
+  Based on holistic scores and universal criteria, select your preferred response.
+
+  Output Format Requirements
+  Strictly follow the JSON output format below. Do not include any extra explanation, introduction, or irrelevant content. Do not mention any generator, model, or system origin.
+  </Instruction>
+
+  <output_format>
+  {output_format}
+  </output_format>
+
+  Now please evaluate the two responses and output only valid JSON.
+  Ensure your JSON is properly escaped and parsable.
+
+output_format: |
+  {
+    "response_A_holistic_score": 0-3,
+    "response_A_universal_scores": {
+      "prompt_adherence": 0-3,
+      "structure_coherence": 0-3,
+      "content_substance": 0-3,
+      "language_expression": 0-3
+    },
+    "response_B_holistic_score": 0-3,
+    "response_B_universal_scores": {
+      "prompt_adherence": 0-3,
+      "structure_coherence": 0-3,
+      "content_substance": 0-3,
+      "language_expression": 0-3
+    },
+    "preferred_response": "A or B"
+  }

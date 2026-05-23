@@ -1,0 +1,251 @@
+{
+  "paper_id": 305,
+  "model": "gpt-5",
+  "retrieval_mode": "dense_trained",
+  "success": true,
+  "error": null,
+  "timing": {
+    "total_seconds": 374.968939,
+    "start_time": "2026-04-14T11:39:33.664807",
+    "end_time": "2026-04-14T11:46:38.135577"
+  },
+  "retrieval": {
+    "queries_generated": 5,
+    "queries": [
+      "(\"Polycystic Ovary Syndrome\"[Mesh] OR \"polycystic ovary syndrome\"[tiab] OR PCOS[tiab] OR \"Stein-Leventhal\"[tiab]) AND (offspring[tiab] OR neonate[tiab] OR neonates[tiab] OR neonatal[tiab] OR newborn[tiab] OR newborns[tiab] OR infant[tiab] OR infants[tiab] OR child[tiab] OR children[tiab] OR \"live birth\"[tiab] OR \"live births\"[tiab] OR \"birth outcome\"[tiab] OR \"birth outcomes\"[tiab] OR perinatal[tiab]) AND (\"Pregnancy\"[Mesh] OR pregnancy[tiab] OR pregnant[tiab] OR maternal[tiab])",
+      "(\"Polycystic Ovary Syndrome\"[Mesh] OR \"polycystic ovary syndrome\"[tiab] OR PCOS[tiab]) AND (\"Premature Birth\"[Mesh] OR preterm[tiab] OR premature[tiab] OR \"Infant, Small for Gestational Age\"[Mesh] OR \"small for gestational age\"[tiab] OR SGA[tiab] OR \"Low Birth Weight\"[Mesh] OR \"Infant, Low Birth Weight\"[Mesh] OR \"low birth weight\"[tiab] OR LBW[tiab] OR \"Birth Weight\"[Mesh] OR \"birth weight\"[tiab] OR birthweight[tiab] OR \"mean birthweight\"[tiab] OR \"mean birth weight\"[tiab] OR \"Fetal Growth Retardation\"[Mesh] OR \"fetal growth restriction\"[tiab] OR \"intrauterine growth restriction\"[tiab] OR IUGR[tiab] OR FGR[tiab] OR \"Intensive Care Units, Neonatal\"[Mesh] OR \"neonatal intensive care\"[tiab] OR NICU[tiab] OR \"special care baby unit\"[tiab] OR SCBU[tiab] OR \"Perinatal Mortality\"[Mesh] OR \"perinatal death\"[tiab] OR \"perinatal deaths\"[tiab] OR \"neonatal mortality\"[tiab] OR \"Fetal Death\"[Mesh] OR stillbirth[tiab] OR stillbirths[tiab]) AND (offspring[tiab] OR neonate[tiab] OR neonates[tiab] OR neonatal[tiab] OR newborn[tiab] OR newborns[tiab] OR infant[tiab] OR infants[tiab])",
+      "(\"Polycystic Ovary Syndrome\"[Mesh] OR \"polycystic ovary syndrome\"[tiab] OR PCOS[tiab]) AND (offspring[tiab] OR neonate[tiab] OR neonates[tiab] OR neonatal[tiab] OR newborn[tiab] OR newborns[tiab] OR infant[tiab] OR infants[tiab]) AND (\"Birth Weight\"[Mesh] OR \"Premature Birth\"[Mesh] OR \"Perinatal Mortality\"[Mesh] OR \"Infant, Small for Gestational Age\"[Mesh] OR \"Intensive Care Units, Neonatal\"[Mesh] OR preterm[tiab] OR SGA[tiab] OR \"small for gestational age\"[tiab] OR LBW[tiab] OR \"low birth weight\"[tiab] OR \"neonatal intensive care\"[tiab] OR NICU[tiab] OR stillbirth[tiab] OR stillbirths[tiab] OR \"perinatal death\"[tiab] OR \"perinatal deaths\"[tiab]) AND (\"Cohort Studies\"[Mesh] OR \"Case-Control Studies\"[Mesh] OR \"Epidemiologic Studies\"[Mesh] OR longitudinal[tiab] OR prospective[tiab] OR retrospective[tiab] OR \"population-based\"[tiab] OR registry[tiab] OR matched[tiab] OR comparative[tiab] OR compare[tiab] OR compared[tiab] OR comparison[tiab] OR comparisons[tiab] OR control[tiab] OR controls[tiab] OR controlled[tiab] OR \"Randomized Controlled Trial\"[Publication Type] OR \"Controlled Clinical Trial\"[Publication Type]) AND Humans[Mesh]",
+      "((\"polycystic ovary syndrome\"[ti] OR PCOS[ti] OR \"maternal PCOS\"[tiab] OR \"maternal polycystic ovary syndrome\"[tiab] OR \"Polycystic Ovary Syndrome\"[Mesh]) AND (offspring[tiab] OR neonate[tiab] OR neonatal[tiab] OR newborn[tiab] OR infant[tiab]) AND (preterm[tiab] OR premature[tiab] OR \"small for gestational age\"[tiab] OR SGA[tiab] OR \"low birth weight\"[tiab] OR LBW[tiab] OR \"birth weight\"[tiab] OR birthweight[tiab] OR \"fetal growth restriction\"[tiab] OR IUGR[tiab] OR FGR[tiab] OR \"neonatal intensive care\"[tiab] OR NICU[tiab] OR \"perinatal mortality\"[tiab] OR \"perinatal death\"[tiab] OR stillbirth[tiab] OR \"neonatal mortality\"[tiab]))",
+      "(\"Polycystic Ovary Syndrome\"[Mesh]) AND (\"Infant, Newborn\"[Mesh] OR \"Infant, Premature\"[Mesh] OR \"Live Birth\"[Mesh]) AND (\"Premature Birth\"[Mesh] OR \"Birth Weight\"[Mesh] OR \"Infant, Low Birth Weight\"[Mesh] OR \"Infant, Small for Gestational Age\"[Mesh] OR \"Intensive Care Units, Neonatal\"[Mesh] OR \"Perinatal Mortality\"[Mesh] OR \"Fetal Growth Retardation\"[Mesh] OR \"Fetal Death\"[Mesh])"
+    ],
+    "retrieved_local": 85,
+    "retrieved_pubmed": 0,
+    "after_dedup": 85,
+    "retrieved_corpus_ids": [
+      7841,
+      21432,
+      46588,
+      46930,
+      46589,
+      7822,
+      46859,
+      46587,
+      7837,
+      46858,
+      7829,
+      69686,
+      8764,
+      7825,
+      46458,
+      46874,
+      7835,
+      46544,
+      46965,
+      7843,
+      47069,
+      46566,
+      7850,
+      46549,
+      46870,
+      47070,
+      24420,
+      46567,
+      46455,
+      46543,
+      7853,
+      7861,
+      46554,
+      46560,
+      48787,
+      46787,
+      18301,
+      46840,
+      46931,
+      7857,
+      7826,
+      46682,
+      7831,
+      46928,
+      46506,
+      46594,
+      42636,
+      46836,
+      48955,
+      33153,
+      46559,
+      7823,
+      46646,
+      46875,
+      76453,
+      33296,
+      7824,
+      7834,
+      63814,
+      46856,
+      48898,
+      48630,
+      46860,
+      7847,
+      46453,
+      33641,
+      47062,
+      48597,
+      46839,
+      7838,
+      89529,
+      48921,
+      7836,
+      46867,
+      21112,
+      33784,
+      46776,
+      46595,
+      33467,
+      46217,
+      33335,
+      123016,
+      45908,
+      46592,
+      89635
+    ]
+  },
+  "screening": {
+    "screened_count": 85,
+    "excluded_count": 76,
+    "full_text_assessed": 9,
+    "included_count": 9,
+    "screening_criteria": [
+      {
+        "layer_name": "Layer 1",
+        "layer_order": 1,
+        "inclusion_criteria": [
+          "Observational human studies (cohort, case-control, cross-sectional) directly comparing offspring of women with PCOS to offspring of women without PCOS.",
+          "Population limited to singleton pregnancies/newborns, or studies that report singleton outcomes separately; offspring outcomes assessed at birth or in the perinatal period.",
+          "Maternal PCOS exposure defined by accepted clinical diagnostic criteria (e.g., Rotterdam, NIH, AE-PCOS) or clinician-documented diagnosis in medical records; includes a clearly defined non-PCOS comparator group.",
+          "Reports at least one birth outcome of interest: preterm birth, fetal growth restriction, low birth weight, mean birthweight, small for gestational age, neonatal intensive care unit admission, or perinatal mortality (stillbirth/neonatal death), with outcome definitions as per primary studies."
+        ],
+        "exclusion_criteria": [
+          "No appropriate comparison group (e.g., studies without a non-PCOS control group or no direct comparison of offspring outcomes by maternal PCOS status).",
+          "PCOS defined only by self-report or by unspecified/unclear criteria without clinical confirmation; studies unable to distinguish PCOS from other hyperandrogenic disorders.",
+          "Do not report the specified offspring birth outcomes (e.g., report only maternal outcomes or mechanistic/biomarker data without clinical birth outcomes).",
+          "Non-original or non-human research (animal studies, case reports/series, conference abstracts, editorials, reviews); studies limited to multiple gestations without separate singleton data."
+        ],
+        "description": "Screening criteria to include human observational studies comparing offspring birth outcomes between women with clinically diagnosed PCOS and women without PCOS, requiring at least one specified birth outcome and appropriate comparator; excludes studies without relevant outcomes, without valid PCOS definition, without non-PCOS controls, or non-original/non-human evidence."
+      }
+    ]
+  },
+  "inclusion": {
+    "included_count": 9,
+    "included_corpus_ids": [
+      46589,
+      46587,
+      46858,
+      7825,
+      47069,
+      46567,
+      46560,
+      7824,
+      7847
+    ],
+    "included_articles": [
+      {
+        "corpus_id": 46589,
+        "title": "Anthropometric Measurements in Newborns: A Comparative Study of Infants Born to Mothers With and Without Polycystic Ovary Syndrome.",
+        "authors": [],
+        "year": "2023"
+      },
+      {
+        "corpus_id": 46587,
+        "title": "The impact of pre-pregnancy overweight/obesity on the birth weight of offspring born from women with polycystic ovarian syndrome.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 46858,
+        "title": "Growth Restriction in the Offspring of Mothers With Polycystic Ovary Syndrome.",
+        "authors": [],
+        "year": "2024"
+      },
+      {
+        "corpus_id": 7825,
+        "title": "Birth weight in offspring of mothers with polycystic ovarian syndrome.",
+        "authors": [
+          "Teresa Sir-Petermann",
+          "Catalina Hitchsfeld",
+          "Manuel Maliqueo",
+          "Ethel Codner",
+          "Bárbara Echiburú",
+          "Raimundo Gazitúa",
+          "Sergio Recabarren",
+          "Fernando Cassorla"
+        ],
+        "year": "2005"
+      },
+      {
+        "corpus_id": 47069,
+        "title": "The impact of obesity surgery on newborn anthropometrics in women with and without polycystic ovary syndrome.",
+        "authors": [],
+        "year": "2024"
+      },
+      {
+        "corpus_id": 46567,
+        "title": "Pregnancy complications and birth outcomes in women with polycystic ovary syndrome undergoing frozen embryo transfer.",
+        "authors": [],
+        "year": "2024"
+      },
+      {
+        "corpus_id": 46560,
+        "title": "The impact of androgens on pregnancy and fetal outcomes in patients with polycystic ovary syndrome.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 7824,
+        "title": "Assessment of glucose tolerance and pregnancy outcome of polycystic ovary patients.",
+        "authors": [
+          "N O Turhan",
+          "N C Seçkin",
+          "F Aybar",
+          "I Inegöl"
+        ],
+        "year": "2003"
+      },
+      {
+        "corpus_id": 7847,
+        "title": "Gestational Weight Gain in Women With Polycystic Ovary Syndrome: A Controlled Study.",
+        "authors": [
+          "James Kent",
+          "William C Dodson",
+          "Allen Kunselman",
+          "Jaimey Pauli",
+          "Alicia Stone",
+          "Michael P Diamond",
+          "Christos Coutifaris",
+          "William D Schlaff",
+          "Ruben Alvero",
+          "Peter Casson",
+          "Gregory M Christman",
+          "R Mitchell Rosen",
+          "Karl R Hansen",
+          "Randall D Robinson",
+          "Valerie Baker",
+          "Rebecca Usadi",
+          "Nanette Santoro",
+          "Heping Zhang",
+          "Esther Eisenberg",
+          "Richard S Legro"
+        ],
+        "year": "2018"
+      }
+    ],
+    "gt_matched_count": 45,
+    "gt_study_count": 18.0,
+    "matched_with_gt": 3,
+    "retrieval_recall": 0.06666666666666667,
+    "inclusion_recall": 0.16666666666666666
+  },
+  "files": {
+    "excel": "autometa_batch_results/gpt-5/dense_trained/paper_305/data_extraction.xlsx",
+    "markdown": "autometa_batch_results/gpt-5/dense_trained/paper_305/report.md"
+  }
+}

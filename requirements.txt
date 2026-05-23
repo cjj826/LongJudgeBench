@@ -1,0 +1,17 @@
+# Core
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.2
+pyyaml>=6.0
+
+# LLM API
+openai>=1.0
+
+# Token counting
+tiktoken>=0.5
+
+# xlsx export
+openpyxl>=3.0
+
+# Data preprocessing (Standardized_function)
+python-docx>=0.8

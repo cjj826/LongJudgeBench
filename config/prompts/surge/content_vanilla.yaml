@@ -1,0 +1,28 @@
+# surge content_vanilla.yaml
+# type: vanilla (listwise, content quality scoring, no rubric, no reference)
+
+task_description: |
+  You are an AI evaluator. Your task is to score four model outputs on Content Quality (text coherence, clarity, fluency, logical consistency). Assign a content quality score (0-5) to each model. Higher scores mean better content quality.
+
+user_prompt_format: |
+  Input
+
+  **Model A**
+  {response_0}
+
+  **Model B**
+  {response_1}
+
+  **Model C**
+  {response_2}
+
+  **Model D**
+  {response_3}
+
+  Output Format:
+  Output only a valid JSON object with the following structure. Do not add any extra text.
+
+  {output_format}
+
+output_format: |
+  {"A": {"content_score": 0-5}, "B": {"content_score": 0-5}, "C": {"content_score": 0-5}, "D": {"content_score": 0-5}}

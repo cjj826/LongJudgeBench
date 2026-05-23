@@ -1,0 +1,27 @@
+# realdr vanilla_reference.yaml
+# type: vanilla + reference (pointwise, no rubric, has reference)
+
+task_description: |
+  You are an objective long-report evaluation expert.
+
+user_prompt_format: |
+  Task Background
+  There is a long research report to evaluate. You have a reference article for calibration context.
+
+  Reference Article:
+  "{reference}"
+
+  Article to Evaluate:
+  "{response_0}"
+
+  Your Task:
+  Assign an overall quality score from 0 to 10, where 10 is the best possible quality.
+  Use the reference article as a calibration benchmark — it is a real example, not a perfect score.
+
+  Output Format:
+  {output_format
+
+  Do not include any extra text. Output only valid JSON.
+
+output_format: |
+  {"overall_score": 0-10}

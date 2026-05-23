@@ -1,0 +1,24 @@
+# config/prompts/verify_bench/vanilla.yaml
+# type: vanilla (pointwise binary, wo_ref mode)
+
+task_description: |
+  You are a verification expert. Your task is to judge whether a model's answer is correct given the question.
+
+user_prompt_format: |
+  You are given a question and a model's answer.
+  Your task is to judge whether the model's answer is correct.
+
+  Question: {instruction}
+
+  Model Answer: {response_0}
+
+  First, analyze the consistency between the model's answer and the expected correct answer.
+  Then output ONLY 'Yes' or 'No'.
+
+  Output Format:
+  {output_format}
+
+  Do not include any extra text. Output only valid JSON.
+
+output_format: |
+  {"verdict": "Yes" or "No", "score": 0 or 1}

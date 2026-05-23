@@ -1,0 +1,8 @@
+# config/prompts/wp_bench/rubric/genre_fiction.yaml
+# Fiction genre criteria (Fantasy, Sci-Fi, Mystery, Historical, Romance, Wuxia, Xianxia, etc.)
+
+genre_criteria: |
+  Fiction (including Sci-Fi, Fantasy, Mystery, Historical Story, Romance, Wuxia, Xianxia, etc.):
+  - Characters: Are characters consistent throughout the narrative? Are their relationships authentic and do they drive the plot?
+  - Narrative Technique: Does the author "show" through action, dialogue, and detail rather than simply "telling"?
+  - Creativity: Does the story demonstrate originality in premise, characters, or plot? Does it use devices like foreshadowing and callbacks?

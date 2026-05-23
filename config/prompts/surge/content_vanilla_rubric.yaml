@@ -1,0 +1,48 @@
+# surge content_vanilla_rubric.yaml
+# type: rubric (listwise, content quality scoring, has rubric, no reference)
+
+task_description: |
+  You are an AI evaluator. Your task is to score four model outputs on Content Quality (text coherence, clarity, fluency, logical consistency). Use the official rubric below to assess each model's text quality. Assign a content quality score (0-5) to each model.
+
+user_prompt_format: |
+  **Rubric for Content Quality (Logical Coherence & Clarity)**
+
+  - **5 - Excellent**
+    Highly fluent, smooth transitions, natural flow. Logical progression clear and well-structured. No redundancy. Precise descriptions. No errors.
+
+  - **4 - Good**
+    Mostly fluent, minor awkward transitions. Clear logic but slight inconsistencies. Minor redundancy. Mostly clear descriptions. Very few errors.
+
+  - **3 - Average**
+    Understandable but noticeable awkward phrasing. Inconsistent logical flow. Some redundancy affecting readability. Vague descriptions. Some errors but still readable.
+
+  - **2 - Poor**
+    Difficult to read. Logical inconsistencies. Repetitive phrases. Vague descriptions. Multiple errors.
+
+  - **1 - Very Poor**
+    Highly disjointed. Almost no logical flow. Redundant sentences. Confusing descriptions. Frequent errors.
+
+  - **0 - Incoherent**
+    Nonsensical or unreadable. No logical progression. Extreme redundancy or word salad. Severe errors.
+
+  Input:
+
+  **Model A**
+  {response_0}
+
+  **Model B**
+  {response_1}
+
+  **Model C**
+  {response_2}
+
+  **Model D**
+  {response_3}
+
+  Output Format:
+  Output only a valid JSON object with the following structure. Do not add any extra text.
+
+  {output_format}
+
+output_format: |
+  {"A": {"content_score": 0-5}, "B": {"content_score": 0-5}, "C": {"content_score": 0-5}, "D": {"content_score": 0-5}}

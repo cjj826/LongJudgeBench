@@ -1,0 +1,28 @@
+# surge structure_vanilla.yaml
+# type: vanilla (listwise, structural quality scoring, no rubric, no reference)
+
+task_description: |
+  You are an AI evaluator. Your task is to score four model outputs on Structural Quality. Evaluate each output's structure, chapter division, title-content matching, and reasoning coherence. Assign a structural quality score (0-5) to each model. Higher scores mean better structural quality.
+
+user_prompt_format: |
+  Input
+
+  **Model A**
+  {response_0}
+
+  **Model B**
+  {response_1}
+
+  **Model C**
+  {response_2}
+
+  **Model D**
+  {response_3}
+
+  Output Format:
+  Output only a valid JSON object with the following structure. Do not add any extra text.
+
+  {output_format}
+
+output_format: |
+  {"A": {"structural_score": 0-5}, "B": {"structural_score": 0-5}, "C": {"structural_score": 0-5}, "D": {"structural_score": 0-5}}

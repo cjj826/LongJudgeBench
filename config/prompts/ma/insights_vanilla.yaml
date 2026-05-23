@@ -1,0 +1,24 @@
+# map insights_vanilla.yaml
+# type: vanilla (pairwise, insights dimension, no rubric, no reference)
+
+task_description: |
+  You are an expert evaluator of systematic reviews and meta-analyses.
+
+user_prompt_format: |
+  You will compare two full reports (A and B) on a single dimension: **Insights Consistency** – how well the key insights extracted from the report match the ground truth (semantic coverage).
+
+  For each report, consider the entire text. Then decide which report has better insights consistency. Output only JSON.
+
+  **Report A (full text):**
+  {response_0}
+
+  **Report B (full text):**
+  {response_1}
+
+  Output format:
+  {output_format}
+
+  Do not include any extra text. Output only valid JSON.
+
+output_format: |
+  {"preferred_insights_consistency": "A" or "B" or "tie"}

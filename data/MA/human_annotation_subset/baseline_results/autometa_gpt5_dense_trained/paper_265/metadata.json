@@ -1,0 +1,281 @@
+{
+  "paper_id": 265,
+  "model": "gpt-5",
+  "retrieval_mode": "dense_trained",
+  "success": true,
+  "error": null,
+  "timing": {
+    "total_seconds": 217.165118,
+    "start_time": "2026-04-14T10:32:17.942403",
+    "end_time": "2026-04-14T10:36:32.248321"
+  },
+  "retrieval": {
+    "queries_generated": 5,
+    "queries": [
+      "(\"Brain-Derived Neurotrophic Factor\"[Mesh] OR BDNF[tiab] OR \"brain-derived neurotrophic factor\"[tiab] OR \"brain derived neurotrophic factor\"[tiab]) AND (\"Blood\"[Mesh] OR \"Serum\"[Mesh] OR \"Plasma\"[Mesh] OR blood[tiab] OR serum[tiab] OR plasma[tiab]) AND (Ketamine[Mesh] OR ketamine[tiab] OR \"S-ketamine\"[tiab] OR esketamine[tiab] OR \"Esketamine Hydrochloride\"[Supplementary Concept] OR \"R-ketamine\"[tiab] OR arketamine[tiab] OR \"Lysergic Acid Diethylamide\"[Mesh] OR LSD[tiab] OR \"lysergic acid diethylamide\"[tiab] OR Psilocybin[Mesh] OR psilocybin[tiab] OR psilocin[tiab] OR \"Ayahuasca\"[Supplementary Concept] OR ayahuasca[tiab] OR hoasca[tiab] OR yage[tiab] OR \"Dimethyltryptamine\"[Mesh] OR DMT[tiab] OR \"N,N-dimethyltryptamine\"[tiab] OR \"Methylenedioxymethamphetamine\"[Mesh] OR MDMA[tiab] OR \"3,4-methylenedioxymethamphetamine\"[tiab] OR Scopolamine[Mesh] OR scopolamine[tiab] OR hyoscine[tiab] OR Rapastinel[Supplementary Concept] OR rapastinel[tiab] OR GLYX-13[tiab] OR glyx13[tiab] OR \"psychoplastogen*\"[tiab] OR Spravato[tiab]) AND Humans[Mesh]",
+      "(Humans[Mesh] AND (healthy[tiab] OR \"healthy volunteer*\"[tiab] OR \"healthy subject*\"[tiab] OR \"Mental Disorders\"[Mesh] OR psychiatric[tiab] OR depression[tiab] OR depressive[tiab] OR anxiety[tiab] OR \"Anxiety Disorders\"[Mesh] OR \"Post-Traumatic Stress Disorders\"[Mesh] OR PTSD[tiab] OR \"Substance-Related Disorders\"[Mesh]) AND (Ketamine[Mesh] OR ketamine[tiab] OR esketamine[tiab] OR \"Esketamine Hydrochloride\"[Supplementary Concept] OR \"Lysergic Acid Diethylamide\"[Mesh] OR LSD[tiab] OR Psilocybin[Mesh] OR psilocybin[tiab] OR \"Dimethyltryptamine\"[Mesh] OR DMT[tiab] OR MDMA[tiab] OR \"Methylenedioxymethamphetamine\"[Mesh] OR Scopolamine[Mesh] OR scopolamine[tiab] OR Rapastinel[Supplementary Concept] OR rapastinel[tiab] OR \"Ayahuasca\"[Supplementary Concept] OR ayahuasca[tiab] OR hoasca[tiab] OR yage[tiab] OR \"psychoplastogen*\"[tiab]))",
+      "((\"Brain-Derived Neurotrophic Factor\"[Mesh] OR BDNF[tiab] OR \"brain-derived neurotrophic factor\"[tiab]) AND (blood[tiab] OR serum[tiab] OR plasma[tiab] OR \"Blood\"[Mesh] OR \"Serum\"[Mesh] OR \"Plasma\"[Mesh]) AND (ketamine[tiab] OR Ketamine[Mesh] OR esketamine[tiab] OR \"Esketamine Hydrochloride\"[Supplementary Concept] OR LSD[tiab] OR \"Lysergic Acid Diethylamide\"[Mesh] OR psilocybin[tiab] OR Psilocybin[Mesh] OR psilocin[tiab] OR ayahuasca[tiab] OR \"Ayahuasca\"[Supplementary Concept] OR DMT[tiab] OR \"Dimethyltryptamine\"[Mesh] OR MDMA[tiab] OR \"Methylenedioxymethamphetamine\"[Mesh] OR scopolamine[tiab] OR Scopolamine[Mesh] OR rapastinel[tiab] OR Rapastinel[Supplementary Concept] OR GLYX-13[tiab])) AND (placebo[tiab] OR \"Placebos\"[Mesh] OR control*[tiab] OR baseline[tiab] OR \"pre-treatment\"[tiab] OR pretreatment[tiab] OR \"pre dose\"[tiab] OR preinfusion[tiab]) AND (randomized controlled trial[pt] OR \"Controlled Clinical Trial\"[Publication Type] OR randomized[tiab] OR randomised[tiab] OR placebo[tiab] OR crossover[tiab] OR \"Cross-Over Studies\"[Mesh] OR trial[tiab] OR \"Cohort Studies\"[Mesh] OR cohort[tiab] OR longitudinal[tiab])",
+      "(\"Brain-Derived Neurotrophic Factor\"[Mesh]) AND (\"Blood\"[Mesh] OR \"Serum\"[Mesh] OR \"Plasma\"[Mesh]) AND (Ketamine[Mesh] OR \"Esketamine Hydrochloride\"[Supplementary Concept] OR \"Lysergic Acid Diethylamide\"[Mesh] OR Psilocybin[Mesh] OR \"Dimethyltryptamine\"[Mesh] OR \"Methylenedioxymethamphetamine\"[Mesh] OR Scopolamine[Mesh] OR Rapastinel[Supplementary Concept] OR Hallucinogens[Mesh]) AND Humans[Mesh]",
+      "((\"BDNF\"[tiab] OR \"brain-derived neurotrophic factor\"[tiab]) AND (serum[tiab] OR plasma[tiab] OR blood[tiab] OR peripheral[tiab] OR circulating[tiab]) AND (ketamine[tiab] OR esketamine[tiab] OR \"s-ketamine\"[tiab] OR \"r-ketamine\"[tiab] OR lsd[tiab] OR \"lysergic acid diethylamide\"[tiab] OR psilocybin[tiab] OR psilocin[tiab] OR ayahuasca[tiab] OR hoasca[tiab] OR yage[tiab] OR dmt[tiab] OR \"n,n-dimethyltryptamine\"[tiab] OR mdma[tiab] OR \"3,4-methylenedioxymethamphetamine\"[tiab] OR scopolamine[tiab] OR hyoscine[tiab] OR rapastinel[tiab] OR glyx-13[tiab] OR glyx13[tiab] OR psychedelic*[tiab] OR entheogen*[tiab] OR psychoplastogen*[tiab]) AND (placebo[tiab] OR control*[tiab] OR baseline[tiab] OR \"pre treatment\"[tiab] OR pretreatment[tiab] OR \"pre-dose\"[tiab] OR \"pre dose\"[tiab] OR preinfusion[tiab] OR before[tiab]))"
+    ],
+    "retrieved_local": 93,
+    "retrieved_pubmed": 0,
+    "after_dedup": 93,
+    "retrieved_corpus_ids": [
+      7310,
+      95222,
+      54249,
+      27764,
+      12108,
+      7320,
+      46333,
+      7817,
+      52600,
+      44321,
+      7312,
+      95419,
+      46325,
+      40794,
+      55929,
+      11343,
+      55923,
+      46332,
+      55917,
+      40776,
+      40792,
+      46321,
+      46310,
+      27766,
+      55914,
+      39317,
+      34823,
+      40824,
+      56021,
+      7324,
+      40507,
+      46324,
+      46293,
+      95215,
+      7327,
+      44318,
+      7311,
+      40772,
+      40827,
+      55924,
+      55921,
+      95345,
+      55913,
+      24666,
+      55912,
+      46313,
+      46311,
+      40709,
+      40826,
+      7308,
+      139294,
+      55919,
+      40727,
+      76846,
+      46316,
+      40044,
+      7322,
+      7326,
+      55916,
+      40779,
+      54085,
+      40770,
+      40721,
+      7323,
+      94731,
+      46319,
+      40769,
+      7321,
+      40773,
+      7307,
+      95218,
+      95360,
+      46315,
+      39549,
+      7325,
+      46322,
+      94613,
+      40845,
+      39474,
+      41091,
+      40825,
+      40707,
+      40777,
+      40791,
+      27755,
+      7309,
+      94727,
+      39268,
+      40708,
+      7313,
+      43260,
+      95324,
+      46312
+    ]
+  },
+  "screening": {
+    "screened_count": 93,
+    "excluded_count": 86,
+    "full_text_assessed": 7,
+    "included_count": 7,
+    "screening_criteria": [
+      {
+        "layer_name": "Layer 1",
+        "layer_order": 1,
+        "inclusion_criteria": [
+          "Original human studies (RCTs, crossover, before–after, cohort) in healthy individuals or patients with psychiatric diagnoses",
+          "Intervention includes administration of a psychoplastogen: ketamine, esketamine, LSD, psilocybin, ayahuasca, DMT, MDMA, scopolamine, or rapastinel (any route/dose)",
+          "Comparator includes either within-subject baseline (pre-treatment) or a placebo/control condition",
+          "Reports peripheral blood BDNF concentrations measured in serum or plasma at baseline and at least one post-intervention time point or as between-group differences vs control"
+        ],
+        "exclusion_criteria": [
+          "Nonhuman or in vitro studies; reviews, editorials, case reports, or nonoriginal data",
+          "Interventions that do not include the specified psychoplastogens or combine them with other active agents without a separable effect on BDNF",
+          "Outcomes not measuring BDNF in serum or plasma (e.g., CSF, brain tissue, saliva, whole blood cellular fractions, PBMCs/platelets) or studies reporting only genetic/epigenetic proxies or ex vivo–stimulated BDNF",
+          "No baseline or control comparator, or insufficient data to extract BDNF levels/change related to the psychoplastogen"
+        ],
+        "description": "Screen for original human studies administering specified psychoplastogens that report peripheral serum/plasma BDNF with a baseline or placebo/control comparator."
+      }
+    ]
+  },
+  "inclusion": {
+    "included_count": 7,
+    "included_corpus_ids": [
+      7310,
+      7312,
+      40794,
+      7324,
+      7327,
+      7326,
+      7313
+    ],
+    "included_articles": [
+      {
+        "corpus_id": 7310,
+        "title": "Low Doses of LSD Acutely Increase BDNF Blood Plasma Levels in Healthy Volunteers.",
+        "authors": [
+          "Nadia R P W Hutten",
+          "Natasha L Mason",
+          "Patrick C Dolder",
+          "Eef L Theunissen",
+          "Friederike Holze",
+          "Matthias E Liechti",
+          "Nimmy Varghese",
+          "Anne Eckert",
+          "Amanda Feilding",
+          "Johannes G Ramaekers",
+          "Kim P C Kuypers"
+        ],
+        "year": "2021"
+      },
+      {
+        "corpus_id": 7312,
+        "title": "Brain-derived neurotrophic factor serum levels following ketamine and esketamine intervention for treatment-resistant depression: secondary analysis from a randomized trial.",
+        "authors": [
+          "Ana Teresa Caliman-Fontes",
+          "Gustavo C Leal",
+          "Fernanda S Correia-Melo",
+          "Camilla S Paixão",
+          "Michelle S Carvalho",
+          "Ana Paula Jesus-Nunes",
+          "Flavia Vieira",
+          "Guilherme Magnavita",
+          "Igor D Bandeira",
+          "Rodrigo P Mello",
+          "Graziele Beanes",
+          "Samantha S Silva",
+          "Mariana Echegaray",
+          "Lucas P Carvalho",
+          "Paulo Machado",
+          "Aline S Sampaio",
+          "Taiane de A Cardoso",
+          "Flávio Kapczinski",
+          "Acioly L T Lacerda",
+          "Lucas C Quarantini"
+        ],
+        "year": "2023"
+      },
+      {
+        "corpus_id": 40794,
+        "title": "Association between S-ketamine induced changes in glutamate levels in the pregenual anterior cingulate cortex and plasma brain-derived neurotrophic factor in healthy subjects.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 7324,
+        "title": "Single ketamine infusion in bipolar depression resistant to antidepressants: are neurotrophins involved?",
+        "authors": [
+          "Janusz K Rybakowski",
+          "Agnieszka Permoda-Osip",
+          "Maria Skibinska",
+          "Rafal Adamski",
+          "Alicja Bartkowska-Sniatkowska"
+        ],
+        "year": "2013"
+      },
+      {
+        "corpus_id": 7327,
+        "title": "Plasma BDNF concentrations and the antidepressant effects of six ketamine infusions in unipolar and bipolar depression.",
+        "authors": [
+          "Wei Zheng",
+          "Yan-Ling Zhou",
+          "Cheng-Yu Wang",
+          "Xiao-Feng Lan",
+          "Bin Zhang",
+          "Su-Miao Zhou",
+          "Su Yan",
+          "Yu-Ping Ning"
+        ],
+        "year": "2021"
+      },
+      {
+        "corpus_id": 7326,
+        "title": "Ketamine-induced changes in plasma brain-derived neurotrophic factor (BDNF) levels are associated with the resting-state functional connectivity of the prefrontal cortex.",
+        "authors": [
+          "Marie Woelfer",
+          "Meng Li",
+          "Lejla Colic",
+          "Thomas Liebe",
+          "Xin Di",
+          "Bharat Biswal",
+          "James Murrough",
+          "Volkmar Lessmann",
+          "Tanja Brigadski",
+          "Martin Walter"
+        ],
+        "year": "2020"
+      },
+      {
+        "corpus_id": 7313,
+        "title": "Concomitant BDNF and sleep slow wave changes indicate ketamine-induced plasticity in major depressive disorder.",
+        "authors": [
+          "Wallace C Duncan",
+          "Simone Sarasso",
+          "Fabio Ferrarelli",
+          "Jessica Selter",
+          "Brady A Riedner",
+          "Nadia S Hejazi",
+          "Peixiong Yuan",
+          "Nancy Brutsche",
+          "Husseini K Manji",
+          "Giulio Tononi",
+          "Carlos A Zarate"
+        ],
+        "year": "2013"
+      }
+    ],
+    "gt_matched_count": 21,
+    "gt_study_count": 18.0,
+    "matched_with_gt": 6,
+    "retrieval_recall": 0.2857142857142857,
+    "inclusion_recall": 0.3333333333333333
+  },
+  "files": {
+    "excel": "autometa_batch_results/gpt-5/dense_trained/paper_265/data_extraction.xlsx",
+    "markdown": "autometa_batch_results/gpt-5/dense_trained/paper_265/report.md"
+  }
+}

@@ -1,0 +1,8 @@
+# config/prompts/wp_bench/rubric/genre_poetry.yaml
+# Poetry genre criteria
+
+genre_criteria: |
+  Poetry:
+  - Rhythm & Meter: Is there intentional control of rhythm, meter, or free verse effectiveness?
+  - Imagery & Figurative Language: Are metaphors, similes, and other figures used effectively?
+  - Emotional Resonance: Does the poem evoke a genuine emotional or aesthetic response?

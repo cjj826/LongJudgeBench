@@ -1,0 +1,298 @@
+{
+  "paper_id": 23,
+  "model": "gpt-5",
+  "retrieval_mode": "dense_trained",
+  "success": true,
+  "error": null,
+  "timing": {
+    "total_seconds": 360.780884,
+    "start_time": "2026-04-14T06:26:57.424550",
+    "end_time": "2026-04-14T06:34:27.457869"
+  },
+  "retrieval": {
+    "queries_generated": 5,
+    "queries": [
+      "((\"time-restricted eating\"[tiab] OR \"time restricted eating\"[tiab] OR \"time-restricted feeding\"[tiab] OR \"time restricted feeding\"[tiab] OR \"time-limited eating\"[tiab] OR \"time limited eating\"[tiab] OR \"time-limited feeding\"[tiab] OR \"time limited feeding\"[tiab] OR TRE[tiab] OR TRF[tiab] OR \"eating window\"[tiab] OR \"feeding window\"[tiab] OR \"meal timing\"[tiab] OR chrononutrition[tiab] OR \"chrono-nutrition\"[tiab] OR \"intermittent fasting\"[tiab] OR \"Intermittent Fasting\"[Mesh] OR \"restricted feeding\"[tiab]) AND (Exercise[Mesh] OR Exercise Therapy[Mesh] OR Resistance Training[Mesh] OR Physical Exertion[Mesh] OR exercise[tiab] OR \"exercise training\"[tiab] OR aerobic[tiab] OR endurance[tiab] OR \"resistance exercise\"[tiab] OR \"strength training\"[tiab] OR \"concurrent training\"[tiab] OR HIIT[tiab] OR \"high-intensity interval\"[tiab])) AND (Adult[Mesh] OR adults[tiab] OR men[tiab] OR women[tiab])",
+      "((\"time-restricted eating\"[tiab] OR \"time restricted eating\"[tiab] OR \"time-restricted feeding\"[tiab] OR \"time restricted feeding\"[tiab] OR TRE[tiab] OR TRF[tiab] OR \"intermittent fasting\"[tiab] OR \"Intermittent Fasting\"[Mesh]) AND (Exercise[Mesh] OR exercise[tiab] OR \"resistance exercise\"[tiab] OR \"Resistance Training\"[Mesh] OR \"aerobic\"[tiab] OR \"endurance\"[tiab] OR \"concurrent training\"[tiab] OR \"strength training\"[tiab]) AND (\"Body Composition\"[Mesh] OR \"Adiposity\"[Mesh] OR \"Body Fat Distribution\"[Mesh] OR \"body composition\"[tiab] OR \"fat mass\"[tiab] OR \"body fat\"[tiab] OR \"body fat percentage\"[tiab] OR \"percent body fat\"[tiab] OR BF%[tiab] OR \"fat-free mass\"[tiab] OR FFM[tiab] OR \"lean mass\"[tiab] OR LBM[tiab] OR DXA[tiab] OR DEXA[tiab] OR \"dual-energy x-ray absorptiometry\"[tiab] OR \"bioelectrical impedance\"[tiab] OR \"skinfold\"[tiab] OR \"air displacement plethysmography\"[tiab] OR \"hydrodensitometry\"[tiab])) AND (Adult[Mesh] OR adults[tiab])",
+      "((\"time-restricted eating\"[tiab] OR \"time-restricted feeding\"[tiab] OR TRE[tiab] OR TRF[tiab] OR \"intermittent fasting\"[tiab] OR \"Intermittent Fasting\"[Mesh]) AND (Exercise[Mesh] OR exercise[tiab] OR \"exercise training\"[tiab] OR \"resistance exercise\"[tiab] OR \"aerobic\"[tiab] OR \"endurance\"[tiab] OR \"strength training\"[tiab] OR \"concurrent training\"[tiab])) AND (randomized controlled trial[pt] OR controlled clinical trial[pt] OR randomized[tiab] OR randomised[tiab] OR randomly[tiab] OR trial[tiab] OR placebo[tiab] OR crossover[tiab] OR \"cross-over\"[tiab] OR \"clinical trial\"[pt])",
+      "((\"time-restricted\"[tiab] OR \"time restricted\"[tiab] OR \"eating window\"[tiab] OR \"feeding window\"[tiab] OR \"early time-restricted\"[tiab] OR \"late time-restricted\"[tiab]) AND (exercise[tiab] OR \"exercise training\"[tiab] OR \"resistance exercise\"[tiab] OR \"strength training\"[tiab] OR aerobic[tiab] OR endurance[tiab] OR \"high-intensity interval\"[tiab] OR HIIT[tiab]) AND (\"fat mass\"[tiab] OR \"fat-free mass\"[tiab] OR \"lean mass\"[tiab] OR \"body fat percentage\"[tiab] OR BF%[tiab] OR \"body composition\"[tiab])) AND (\"ad libitum\"[tiab] OR unrestricted[tiab] OR \"usual diet\"[tiab] OR \"habitual diet\"[tiab] OR control[tiab])",
+      "(Intermittent Fasting[Mesh] OR Fasting[Mesh] OR Feeding Behavior[Mesh]) AND (Exercise[Mesh] OR Exercise Therapy[Mesh] OR Resistance Training[Mesh] OR Physical Fitness[Mesh]) AND (Body Composition[Mesh] OR Adiposity[Mesh] OR Adipose Tissue[Mesh] OR Body Fat Distribution[Mesh] OR Muscle, Skeletal[Mesh]) AND Adult[Mesh]"
+    ],
+    "retrieved_local": 93,
+    "retrieved_pubmed": 0,
+    "after_dedup": 93,
+    "retrieved_corpus_ids": [
+      4563,
+      69752,
+      4559,
+      8395,
+      4556,
+      69788,
+      4561,
+      4557,
+      91155,
+      8397,
+      4562,
+      69782,
+      107101,
+      4564,
+      8396,
+      4560,
+      18166,
+      69793,
+      108297,
+      108916,
+      108307,
+      19342,
+      91149,
+      19693,
+      91147,
+      109244,
+      108487,
+      69789,
+      70375,
+      69795,
+      69728,
+      69753,
+      115776,
+      69743,
+      18865,
+      17824,
+      69797,
+      27117,
+      70374,
+      69796,
+      69794,
+      109231,
+      69790,
+      69736,
+      109264,
+      108660,
+      91138,
+      18274,
+      19710,
+      108597,
+      4558,
+      18008,
+      70372,
+      70672,
+      10331,
+      109052,
+      16344,
+      69737,
+      18095,
+      69730,
+      69786,
+      7002,
+      17814,
+      69740,
+      70670,
+      69781,
+      21754,
+      10334,
+      6989,
+      107466,
+      69798,
+      86377,
+      109227,
+      18885,
+      107501,
+      109210,
+      69780,
+      111998,
+      91572,
+      107679,
+      108598,
+      70388,
+      18218,
+      108616,
+      109243,
+      91151,
+      108521,
+      17297,
+      18220,
+      107751,
+      108765,
+      19617,
+      18168
+    ]
+  },
+  "screening": {
+    "screened_count": 93,
+    "excluded_count": 81,
+    "full_text_assessed": 12,
+    "included_count": 12,
+    "screening_criteria": [
+      {
+        "layer_name": "Layer 1",
+        "layer_order": 1,
+        "inclusion_criteria": [
+          "Randomized controlled trials (parallel or randomized crossover) with an exercise-matched comparator following an unrestricted eating window; pre- and post-intervention data available",
+          "Adults (≥18 years), generally healthy (may include overweight/obesity), undertaking structured aerobic, resistance, or concurrent training during the intervention",
+          "Intervention: time-restricted eating with a daily feeding window of 4–12 hours combined with exercise; intervention duration ≥4 weeks",
+          "Reports body composition outcomes: fat mass (kg) and/or body fat percentage and/or fat-free mass (kg), measured with validated methods"
+        ],
+        "exclusion_criteria": [
+          "Non-randomized, uncontrolled, observational, or acute studies; intervention duration <4 weeks; no pre–post outcome data",
+          "Ineligible population: <18 years, pregnant/lactating, or clinical populations with chronic diseases/medications likely to affect metabolism/body composition (beyond overweight/obesity)",
+          "Ineligible intervention/control: no exercise component in one or both groups, not exercise-matched, control uses a restricted eating window, or groups differ in prescribed energy/macronutrient intake beyond eating-window timing",
+          "Does not report at least one target body composition outcome (FM kg, BF%, or FFM kg)"
+        ],
+        "description": "Screen studies evaluating time-restricted eating (4–12 h feeding window) combined with exercise versus an exercise-matched, unrestricted eating window control in adults, with body composition outcomes."
+      }
+    ]
+  },
+  "inclusion": {
+    "included_count": 12,
+    "included_corpus_ids": [
+      4563,
+      4556,
+      69788,
+      4557,
+      69782,
+      4564,
+      8396,
+      4560,
+      69793,
+      17824,
+      91138,
+      17814
+    ],
+    "included_articles": [
+      {
+        "corpus_id": 4563,
+        "title": "Time-restricted feeding plus resistance training in active females: a randomized trial.",
+        "authors": [
+          "Grant M Tinsley",
+          "M Lane Moore",
+          "Austin J Graybeal",
+          "Antonio Paoli",
+          "Youngdeok Kim",
+          "Joaquin U Gonzales",
+          "John R Harry",
+          "Trisha A VanDusseldorp",
+          "Devin N Kennedy",
+          "Megan R Cruz"
+        ],
+        "year": "2019"
+      },
+      {
+        "corpus_id": 4556,
+        "title": "Effect of Time-Restricted Eating and Resistance Training on High-Speed Strength and Body Composition.",
+        "authors": [
+          "Joana M Correia",
+          "Paulo D G Santos",
+          "Pedro Pezarat-Correia",
+          "Cláudia S Minderico",
+          "Jorge Infante",
+          "Goncalo V Mendonca"
+        ],
+        "year": "2023"
+      },
+      {
+        "corpus_id": 69788,
+        "title": "Hypercaloric 16:8 time-restricted eating during 8 weeks of resistance exercise in well-trained men and women.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 4557,
+        "title": "Effects of eight weeks of time-restricted feeding (16/8) on basal metabolism, maximal strength, body composition, inflammation, and cardiovascular risk factors in resistance-trained males.",
+        "authors": [
+          "Tatiana Moro",
+          "Grant Tinsley",
+          "Antonino Bianco",
+          "Giuseppe Marcolin",
+          "Quirico Francesco Pacelli",
+          "Giuseppe Battaglia",
+          "Antonio Palma",
+          "Paulo Gentil",
+          "Marco Neri",
+          "Antonio Paoli"
+        ],
+        "year": "2016"
+      },
+      {
+        "corpus_id": 69782,
+        "title": "Effects of Time-Restricted Eating on Aerobic Capacity, Body Composition, and Markers of Metabolic Health in Healthy Male Recreational Runners: A Randomized Crossover Trial.",
+        "authors": [],
+        "year": "2024"
+      },
+      {
+        "corpus_id": 4564,
+        "title": "Four Weeks of 16/8 Time Restrictive Feeding in Endurance Trained Male Runners Decreases Fat Mass, without Affecting Exercise Performance.",
+        "authors": [
+          "Ashley P Tovar",
+          "Christine E Richardson",
+          "Nancy L Keim",
+          "Marta D Van Loan",
+          "Brian A Davis",
+          "Gretchen A Casazza"
+        ],
+        "year": "2021"
+      },
+      {
+        "corpus_id": 8396,
+        "title": "Effects of 8 wk of 16:8 Time-restricted Eating in Male Middle- and Long-Distance Runners.",
+        "authors": [
+          "Aidan J Brady",
+          "Henry M Langton",
+          "Mollie Mulligan",
+          "Brendan Egan"
+        ],
+        "year": "2021"
+      },
+      {
+        "corpus_id": 4560,
+        "title": "Time-restricted eating effects on performance, immune function, and body composition in elite cyclists: a randomized controlled trial.",
+        "authors": [
+          "Tatiana Moro",
+          "Grant Tinsley",
+          "Giovanni Longo",
+          "Davide Grigoletto",
+          "Antonino Bianco",
+          "Cinzia Ferraris",
+          "Monica Guglielmetti",
+          "Alessandro Veneto",
+          "Anna Tagliabue",
+          "Giuseppe Marcolin",
+          "Antonio Paoli"
+        ],
+        "year": "2020"
+      },
+      {
+        "corpus_id": 69793,
+        "title": "Efficacy of time restricted eating and resistance training on body composition and mood profiles among young adults with overweight/obesity: a randomized controlled trial.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 17824,
+        "title": "High-Protein Time-Restricted Eating Alongside Resistance Training Reduces Adipose Tissue While Preserving Fat-Free Mass in Women With Overweight: A Randomized Controlled Trial.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 91138,
+        "title": "Flexible time-restricted eating combined with exercise in a free-living setting for middle-aged women with overweight/obesity: a randomized controlled trial.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 17814,
+        "title": "Impact of 16/8 time-restricted eating on body composition and lipolytic hormone regulation in female DanceSport dancers.",
+        "authors": [],
+        "year": "2025"
+      }
+    ],
+    "gt_matched_count": 9,
+    "gt_study_count": 15,
+    "matched_with_gt": 5,
+    "retrieval_recall": 0.5555555555555556,
+    "inclusion_recall": 0.3333333333333333
+  },
+  "files": {
+    "excel": "autometa_batch_results/gpt-5/dense_trained/paper_23/data_extraction.xlsx",
+    "markdown": "autometa_batch_results/gpt-5/dense_trained/paper_23/report.md"
+  }
+}

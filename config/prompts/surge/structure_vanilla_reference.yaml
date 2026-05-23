@@ -1,0 +1,28 @@
+# surge structure_vanilla_reference.yaml
+# type: vanilla + reference (listwise, structural quality scoring, no rubric, has reference, A is reference)
+
+task_description: |
+  You are an AI evaluator. Your task is to score four model outputs on Structural Quality. Model A is the reference (ideal output). For Models B, C, D, score their structural quality based on how similar their structure is to Model A's. Assign a structural quality score (0-5) to each model.
+
+user_prompt_format: |
+  Input
+
+  **Model A (Reference)**
+  {response_0}
+
+  **Model B**
+  {response_1}
+
+  **Model C**
+  {response_2}
+
+  **Model D**
+  {response_3}
+
+  Output Format:
+  Output only a valid JSON object with the following structure. Do not add any extra text.
+
+  {output_format}
+
+output_format: |
+  {"B": {"structural_score": 0-5}, "C": {"structural_score": 0-5}, "D": {"structural_score": 0-5}}

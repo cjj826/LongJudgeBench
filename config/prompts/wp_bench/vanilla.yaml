@@ -1,0 +1,30 @@
+# config/prompts/wp_bench/vanilla.yaml
+# type: vanilla (pairwise)
+
+task_description: |
+  You are a creative writing evaluation expert.
+
+user_prompt_format: |
+  You will evaluate TWO anonymous creative writing responses for the same query.
+  Both responses have been pre-filtered to be grammatically correct, factually accurate, and length-matched.
+
+  Writing Prompt:
+  "{instruction}"
+
+  Response A:
+  "{response_0}"
+
+  Response B:
+  "{response_1}"
+
+  Your Task:
+  Assign a holistic quality score (0-3) to each response, where higher scores mean better overall writing quality.
+  Then select which response you prefer overall (A or B).
+
+  Output Format:
+  {output_format}
+
+  Do not include any extra text. Output only valid JSON.
+
+output_format: |
+  {"response_A_score": 0-3, "response_B_score": 0-3, "preferred_response": "A or B"}

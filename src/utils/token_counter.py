@@ -1,0 +1,10 @@
+"""Token counting utility. Uses tiktoken; no fallback to avoid silent errors."""
+import tiktoken
+
+ENCODER = tiktoken.get_encoding("cl100k_base")
+
+
+def count_tokens(text: str) -> int:
+    if not text:
+        return 0
+    return len(ENCODER.encode(text))

@@ -1,0 +1,60 @@
+# surge structure_vanilla_rubric.yaml
+# type: rubric (listwise, structural quality scoring, has rubric, no reference)
+
+task_description: |
+  You are an AI evaluator. Your task is to score four model outputs on Structural Quality. Use the official rubric below to assess each model's structural quality (title similarity, chapter organization, coherence). Assign a structural quality score (0-5) to each model.
+
+user_prompt_format: |
+  **Rubric for Structural Quality (Title Similarity & Organization)**
+
+  - **0 - Completely Different:**
+    - Nearly no words in common.
+    - Completely different meanings.
+    - No similarity in structure or phrasing.
+
+  - **1 - Somewhat Different:**
+    - Few words overlap, but they are not key terms.
+    - The meaning is somewhat related but mostly different.
+    - The sentence structures are significantly different.
+
+  - **2 - Somewhat Similar:**
+    - Some key words are shared, but others are different.
+    - The general topic is the same, but the emphasis may differ.
+    - The sentence structures are different but not entirely unrelated.
+
+  - **3 - Similar:**
+    - Several key words are shared.
+    - The meaning is largely the same with slight variations.
+    - The structure is somewhat similar, but there may be word substitutions.
+
+  - **4 - Very Similar:**
+    - Most key words match.
+    - The meaning is nearly identical.
+    - The phrasing and structure are very close, with minor rewording.
+
+  - **5 - Almost Identical:**
+    - Nearly all key words match exactly.
+    - The meaning is fully preserved.
+    - The phrasing and structure are identical or differ only in trivial ways.
+
+  Input:
+
+  **Model A**
+  {response_0}
+
+  **Model B**
+  {response_1}
+
+  **Model C**
+  {response_2}
+
+  **Model D**
+  {response_3}
+
+  Output Format:
+  Output only a valid JSON object with the following structure. Do not add any extra text.
+
+  {output_format}
+
+output_format: |
+  {"A": {"structural_score": 0-5}, "B": {"structural_score": 0-5}, "C": {"structural_score": 0-5}, "D": {"structural_score": 0-5}}

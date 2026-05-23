@@ -1,0 +1,185 @@
+{
+  "paper_id": 182,
+  "model": "gpt-5",
+  "retrieval_mode": "dense_trained",
+  "success": true,
+  "error": null,
+  "timing": {
+    "total_seconds": 198.160337,
+    "start_time": "2026-04-14T08:45:20.444611",
+    "end_time": "2026-04-14T08:49:08.117630"
+  },
+  "retrieval": {
+    "queries_generated": 5,
+    "queries": [
+      "((\"Cuspid\"[Mesh] OR canine*[tiab]) AND (maxilla*[tiab] OR \"Maxilla\"[Mesh]) AND (\"Tooth, Impacted\"[Mesh] OR impact*[tiab] OR unerupt*[tiab] OR ectopic*[tiab] OR \"palatally displaced\"[tiab] OR palatal*[tiab] OR \"maxillary canine impaction\"[tiab] OR PDC[tiab] OR MCI[tiab])) AND (((\"Tooth Extraction\"[Mesh] AND \"Tooth, Deciduous\"[Mesh]) OR ((extract*[tiab] OR removal[tiab]) AND (deciduous[tiab] OR primary[tiab]) AND (canine*[tiab] OR cuspid*[tiab]))) OR (\"Orthodontics, Interceptive\"[Mesh] AND (extract*[tiab] OR \"selective extraction\"[tiab] OR \"guidance of eruption\"[tiab])))",
+      "((\"Child\"[Mesh] OR child*[tiab] OR \"Adolescent\"[Mesh] OR adolescent*[tiab] OR \"Dentition, Mixed\"[Mesh] OR \"mixed dentition\"[tiab])) AND ((palatal*[tiab] AND displac*[tiab] AND canine*[tiab]) OR \"palatally displaced canine*\"[tiab] OR \"maxillary canine impaction\"[tiab] OR ((maxillar*[tiab] OR upper[tiab]) AND (canine*[tiab] OR cuspid*[tiab]) AND (impact*[tiab] OR ectopic[tiab] OR unerupt*[tiab]))) AND (((extract*[tiab] OR removal[tiab]) AND (primary[tiab] OR deciduous[tiab]) AND (canine*[tiab] OR cuspid*[tiab])) OR (\"Tooth Extraction\"[Mesh] AND \"Tooth, Deciduous\"[Mesh]) OR (\"interceptive orthodont*\"[tiab] OR \"Orthodontics, Interceptive\"[Mesh] OR \"guidance of eruption\"[tiab] OR \"selective extraction\"[tiab])) AND ((erupt*[tiab] OR \"Tooth Eruption\"[Mesh]) AND (success*[tiab] OR normaliz*[tiab] OR spontaneous*[tiab] OR favorab*[tiab] OR align*[tiab] OR self-correct*[tiab]))",
+      "(((maxillar*[tiab] OR upper[tiab]) AND (canine*[tiab] OR cuspid*[tiab]) AND (impact*[tiab] OR ectopic[tiab] OR unerupt*[tiab])) OR \"palatally displaced canine\"[tiab] OR \"maxillary canine impaction\"[tiab] OR (\"Tooth, Impacted\"[Mesh] AND \"Cuspid\"[Mesh] AND \"Maxilla\"[Mesh])) AND (((extract*[tiab] OR removal[tiab]) AND (primary[tiab] OR deciduous[tiab]) AND (canine*[tiab] OR cuspid*[tiab])) OR (\"Tooth Extraction\"[Mesh] AND \"Tooth, Deciduous\"[Mesh]) OR \"guidance of eruption\"[tiab] OR \"Orthodontics, Interceptive\"[Mesh]) AND (random*[tiab] OR randomized controlled trial[pt] OR controlled clinical trial[pt] OR trial[tiab] OR cohort[tiab] OR prospective[tiab] OR retrospective[tiab] OR \"Comparative Study\"[Publication Type] OR case-control[tiab])",
+      "(\"Cuspid\"[Mesh] AND \"Maxilla\"[Mesh]) AND (\"Tooth, Impacted\"[Mesh] OR \"Tooth Eruption\"[Mesh]) AND (\"Tooth, Deciduous\"[Mesh] AND \"Tooth Extraction\"[Mesh]) AND (\"Orthodontics, Interceptive\"[Mesh] OR \"Dentition, Mixed\"[Mesh]) AND (\"Child\"[Mesh] OR \"Adolescent\"[Mesh])",
+      "((PDC[tiab] OR \"palatally displaced canine*\"[tiab] OR (maxillar*[tiab] AND canine*[tiab] AND (impact*[tiab] OR ectopic[tiab] OR unerupt*[tiab])) OR \"maxillary canine impaction\"[tiab])) AND ((extract*[tiab] OR removal[tiab]) AND (primary[tiab] OR deciduous[tiab]) AND canine*[tiab] AND (intercept*[tiab] OR \"guidance of eruption\"[tiab] OR \"selective extraction\"[tiab])) AND (\"mixed dentition\"[tiab] OR child*[tiab] OR preadolescen*[tiab]) AND (spontaneous erupt*[tiab] OR successful erupt*[tiab] OR normaliz*[tiab] OR eruptive position[tiab] OR alignment[tiab]) AND (observation[tiab] OR observe*[tiab] OR \"watchful waiting\"[tiab] OR \"no treatment\"[tiab] OR untreated[tiab] OR delayed[tiab] OR control*[tiab])"
+    ],
+    "retrieved_local": 70,
+    "retrieved_pubmed": 0,
+    "after_dedup": 70,
+    "retrieved_corpus_ids": [
+      103456,
+      103465,
+      103468,
+      6328,
+      6330,
+      6344,
+      6327,
+      6335,
+      6331,
+      6342,
+      103463,
+      103462,
+      103469,
+      103492,
+      6343,
+      6329,
+      6332,
+      103461,
+      6333,
+      103467,
+      6336,
+      6334,
+      103450,
+      103557,
+      103460,
+      6345,
+      103562,
+      103476,
+      103491,
+      140443,
+      6338,
+      6326,
+      6341,
+      103561,
+      103493,
+      103555,
+      6337,
+      103556,
+      103477,
+      103559,
+      139661,
+      103478,
+      6340,
+      103554,
+      103494,
+      103480,
+      72326,
+      103451,
+      6339,
+      103558,
+      103528,
+      104312,
+      103523,
+      103525,
+      103464,
+      116207,
+      103522,
+      21824,
+      96556,
+      6347,
+      103470,
+      103527,
+      103474,
+      139012,
+      103475,
+      101643,
+      13347,
+      139890,
+      135020,
+      82306
+    ]
+  },
+  "screening": {
+    "screened_count": 70,
+    "excluded_count": 65,
+    "full_text_assessed": 5,
+    "included_count": 5,
+    "screening_criteria": [
+      {
+        "layer_name": "Layer 1",
+        "layer_order": 1,
+        "inclusion_criteria": [
+          "Comparative clinical studies (randomized controlled trials, controlled clinical trials, or prospective/retrospective cohort studies) that include a no-interceptive or delayed-treatment control group.",
+          "Participants are children aged 10–13 years in the mixed dentition with clinically and/or radiographically diagnosed palatally displaced maxillary permanent canines.",
+          "Intervention is extraction of the primary maxillary canine as the sole interceptive procedure (passive space maintenance allowed).",
+          "Report outcomes on normalization of eruptive position and/or successful spontaneous eruption of the palatally displaced maxillary canine, assessed clinically or radiographically, with follow-up sufficient to observe eruption."
+        ],
+        "exclusion_criteria": [
+          "Non-comparative designs (case reports/series), reviews, editorials, conference abstracts, or non-human studies.",
+          "Populations with craniofacial anomalies/syndromes, cleft lip/palate, relevant systemic conditions, prior comprehensive orthodontic treatment affecting canine eruption, or cases with buccally displaced (non-palatal) canines; outside 10–13 years or not in mixed dentition.",
+          "Interventions combining primary canine extraction with additional active orthodontic or surgical procedures during the interceptive phase (e.g., rapid maxillary expansion, distalization, surgical exposure with orthodontic traction).",
+          "Studies that do not report eruption-related outcomes (normalization/successful eruption) or do not provide separate data for palatally displaced canines and/or the target age group."
+        ],
+        "description": "Screening criteria to identify comparative clinical studies in 10–13-year-old mixed-dentition children with palatally displaced maxillary canines evaluating interceptive extraction of the primary canine versus no or delayed treatment, with outcomes on eruption normalization/success."
+      }
+    ]
+  },
+  "inclusion": {
+    "included_count": 5,
+    "included_corpus_ids": [
+      103456,
+      6330,
+      6327,
+      103462,
+      6329
+    ],
+    "included_articles": [
+      {
+        "corpus_id": 103456,
+        "title": "Two interceptive approaches to palatally displaced canines: a prospective longitudinal study.",
+        "authors": [],
+        "year": "2004"
+      },
+      {
+        "corpus_id": 6330,
+        "title": "Extraction of the deciduous canine as an interceptive treatment in children with palatal displaced canines - part I: shall we extract the deciduous canine or not?",
+        "authors": [
+          "Julia Naoumova",
+          "Jüri Kurol",
+          "Heidrun Kjellberg"
+        ],
+        "year": "2015"
+      },
+      {
+        "corpus_id": 6327,
+        "title": "A randomized clinical study of two interceptive approaches to palatally displaced canines.",
+        "authors": [
+          "Tiziano Baccetti",
+          "Maria Leonardi",
+          "Pamela Armi"
+        ],
+        "year": "2008"
+      },
+      {
+        "corpus_id": 103462,
+        "title": "The use of panoramic radiographs to decide when interceptive extraction is beneficial in children with palatally displaced canines based on a randomized clinical trial.",
+        "authors": [],
+        "year": "2018"
+      },
+      {
+        "corpus_id": 6329,
+        "title": "Effect of interceptive extraction of deciduous canine on palatally displaced maxillary canine: a prospective randomized controlled study.",
+        "authors": [
+          "Farhan Bazargani",
+          "Anders Magnuson",
+          "Bertil Lennartsson"
+        ],
+        "year": "2014"
+      }
+    ],
+    "gt_matched_count": 20,
+    "gt_study_count": 34,
+    "matched_with_gt": 3,
+    "retrieval_recall": 0.15,
+    "inclusion_recall": 0.08823529411764706
+  },
+  "files": {
+    "excel": "autometa_batch_results/gpt-5/dense_trained/paper_182/data_extraction.xlsx",
+    "markdown": "autometa_batch_results/gpt-5/dense_trained/paper_182/report.md"
+  }
+}

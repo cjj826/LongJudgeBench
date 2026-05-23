@@ -1,0 +1,512 @@
+{
+  "paper_id": 215,
+  "model": "gpt-5",
+  "retrieval_mode": "bm25",
+  "success": true,
+  "error": null,
+  "timing": {
+    "total_seconds": 421.705355,
+    "start_time": "2026-04-14T08:51:30.066605",
+    "end_time": "2026-04-14T08:59:09.091574"
+  },
+  "retrieval": {
+    "queries_generated": 5,
+    "queries": [
+      "((\"Perfluorooctanesulfonic Acids\"[Mesh] OR \"Perfluorinated Compounds\"[Mesh] OR \"Fluorocarbons\"[Mesh] OR PFOS[tiab] OR \"perfluorooctane sulfonate\"[tiab] OR \"perfluorooctanesulfonate\"[tiab] OR \"perfluorooctanesulfonic acid\"[tiab] OR \"perfluorooctane sulfonic acid\"[tiab] OR \"perfluorooctyl sulfonate\"[tiab] OR \"perfluorinated compound*\"[tiab] OR \"perfluoroalkyl substance*\"[tiab] OR PFAS[tiab]) AND (\"Pregnancy\"[Mesh] OR \"Infant, Newborn\"[Mesh] OR pregnan*[tiab] OR pregnancy[tiab] OR gestation*[tiab] OR prenatal[tiab] OR antenatal[tiab] OR maternal[tiab] OR newborn*[tiab] OR neonat*[tiab] OR infant*[tiab]))",
+      "((\"Perfluorooctanesulfonic Acids\"[Mesh] OR PFOS[tiab] OR \"perfluorooctane sulfonate\"[tiab] OR \"perfluorooctanesulfonate\"[tiab] OR \"perfluorooctanesulfonic acid\"[tiab] OR \"perfluorooctane sulfonic acid\"[tiab] OR \"perfluorooctyl sulfonate\"[tiab]) AND (\"Birth Weight\"[Mesh] OR \"Infant, Low Birth Weight\"[Mesh] OR \"birth weight\"[tiab] OR birthweight[tiab] OR \"low birth weight\"[tiab] OR LBW[tiab] OR \"neonatal weight\"[tiab] OR \"infant weight\"[tiab] OR \"fetal weight\"[tiab]) AND (\"Pregnancy\"[Mesh] OR \"Infant, Newborn\"[Mesh] OR pregnan*[tiab] OR maternal[tiab] OR neonat*[tiab] OR newborn*[tiab] OR infant*[tiab])) NOT (animals[Mesh] NOT humans[Mesh])",
+      "(((\"Perfluorooctanesulfonic Acids\"[Mesh] OR PFOS[tiab] OR \"perfluorooctane sulfonate\"[tiab] OR \"perfluorooctanesulfonic acid\"[tiab]) AND (\"Birth Weight\"[Mesh] OR \"birth weight\"[tiab] OR birthweight[tiab] OR \"low birth weight\"[tiab]) AND (\"Pregnancy\"[Mesh] OR pregnan*[tiab] OR maternal[tiab])) AND (\"Cohort Studies\"[Mesh] OR \"Prospective Studies\"[Mesh] OR \"Longitudinal Studies\"[Mesh] OR \"Case-Control Studies\"[Mesh] OR \"Cross-Sectional Studies\"[Mesh] OR cohort[tiab] OR prospective[tiab] OR longitudinal[tiab] OR \"case control\"[tiab] OR \"cross-sectional\"[tiab] OR \"cross sectional\"[tiab])) NOT (animals[Mesh] NOT humans[Mesh])",
+      "((\"Perfluorooctanesulfonic Acids\"[Mesh] OR PFOS[tiab] OR \"perfluorooctane sulfonate\"[tiab] OR \"perfluorooctanesulfonate\"[tiab] OR \"perfluorooctanesulfonic acid\"[tiab]) AND (\"Maternal Exposure\"[Mesh] OR \"Prenatal Exposure Delayed Effects\"[Mesh] OR \"Environmental Exposure\"[Mesh] OR ((maternal[tiab] OR prenatal[tiab] OR antenatal[tiab]) AND (serum[tiab] OR plasma[tiab] OR blood[tiab] OR \"cord blood\"[tiab] OR placenta*[tiab] OR \"amniotic fluid\"[tiab] OR milk[tiab]))) AND (\"Birth Weight\"[Mesh] OR \"birth weight\"[tiab] OR birthweight[tiab] OR \"low birth weight\"[tiab])) NOT (animals[Mesh] NOT humans[Mesh])",
+      "((\"Perfluorinated Compounds\"[Mesh] OR \"Organofluorine Compounds\"[Mesh] OR PFAS[tiab] OR \"perfluoroalkyl substance*\"[tiab] OR \"perfluoroalkyl acid*\"[tiab] OR PFAA*[tiab] OR \"perfluorinated compound*\"[tiab] OR \"perfluorosulfonate*\"[tiab] OR \"perfluorinated sulfonate*\"[tiab] OR \"polyfluoroalkyl\"[tiab] OR \"per- and polyfluoroalkyl\"[tiab]) AND (\"Birth Weight\"[Mesh] OR \"Infant, Low Birth Weight\"[Mesh] OR \"birth weight\"[tiab] OR birthweight[tiab] OR \"low birth weight\"[tiab] OR LBW[tiab]) AND (\"Pregnancy\"[Mesh] OR \"Infant, Newborn\"[Mesh] OR pregnan*[tiab] OR neonat*[tiab] OR infant*[tiab] OR newborn*[tiab])) NOT (animals[Mesh] NOT humans[Mesh])"
+    ],
+    "retrieved_local": 158,
+    "retrieved_pubmed": 0,
+    "after_dedup": 158,
+    "retrieved_corpus_ids": [
+      86706,
+      111400,
+      75123,
+      102467,
+      3838,
+      75462,
+      85076,
+      64277,
+      99333,
+      107289,
+      89006,
+      133739,
+      83498,
+      45788,
+      6064,
+      3397,
+      69633,
+      88178,
+      3401,
+      21101,
+      56965,
+      138572,
+      111394,
+      69580,
+      3778,
+      136345,
+      72362,
+      112114,
+      79369,
+      88897,
+      88449,
+      32787,
+      88064,
+      124126,
+      3393,
+      48461,
+      89646,
+      81352,
+      111065,
+      56587,
+      3400,
+      98165,
+      130054,
+      48911,
+      65551,
+      86865,
+      49023,
+      3388,
+      3411,
+      101013,
+      18983,
+      8855,
+      70033,
+      3380,
+      120020,
+      125762,
+      33289,
+      70019,
+      3404,
+      46858,
+      32809,
+      69997,
+      27140,
+      11303,
+      86861,
+      86774,
+      33605,
+      34596,
+      68778,
+      134109,
+      21640,
+      68412,
+      90426,
+      126467,
+      89769,
+      53370,
+      66860,
+      134406,
+      123174,
+      69546,
+      81481,
+      3779,
+      135603,
+      48076,
+      71063,
+      88597,
+      37219,
+      133525,
+      70015,
+      70030,
+      73285,
+      86870,
+      3390,
+      58721,
+      86793,
+      70013,
+      4588,
+      86728,
+      86688,
+      88687,
+      90084,
+      89761,
+      88584,
+      86868,
+      3631,
+      88586,
+      3385,
+      3412,
+      86819,
+      90470,
+      87980,
+      69995,
+      86684,
+      69999,
+      3777,
+      70035,
+      90049,
+      3409,
+      90059,
+      86775,
+      86754,
+      69991,
+      86735,
+      70028,
+      3641,
+      90097,
+      3386,
+      70016,
+      3391,
+      86748,
+      88977,
+      3407,
+      90101,
+      3402,
+      88813,
+      88256,
+      86746,
+      53715,
+      86712,
+      3410,
+      88262,
+      88117,
+      90099,
+      88974,
+      88175,
+      86857,
+      90100,
+      86794,
+      86756,
+      3645,
+      3639,
+      86788,
+      3688,
+      46621,
+      4589,
+      69998,
+      88138,
+      86901
+    ]
+  },
+  "screening": {
+    "screened_count": 158,
+    "excluded_count": 135,
+    "full_text_assessed": 23,
+    "included_count": 23,
+    "screening_criteria": [
+      {
+        "layer_name": "Layer 1",
+        "layer_order": 1,
+        "inclusion_criteria": [
+          "Observational human studies (prospective/retrospective cohort, case–control, or cross-sectional) with an analytic comparison of PFOS exposure levels",
+          "Pregnant women and their newborns (mother–infant pairs)",
+          "Prenatal PFOS (perfluorooctanesulfonic acid) exposure quantified in biospecimens (e.g., maternal serum/plasma during pregnancy or cord blood), with comparisons across exposure levels (e.g., higher vs lower or per-unit increase)",
+          "Birth weight at delivery reported in grams or sufficient data to derive an effect estimate for birth weight (e.g., mean/SD, regression coefficients)"
+        ],
+        "exclusion_criteria": [
+          "Non-human studies or studies not involving pregnant women and their newborns",
+          "Exposure not specific to PFOS, not quantitatively measured, or only PFAS mixture results without PFOS-specific estimates",
+          "No outcome data on birth weight in grams or only categorical outcomes (e.g., low birth weight yes/no) without continuous birth weight",
+          "Non-original research (systematic reviews, narrative reviews, editorials, commentaries) or designs without a comparator/association estimate"
+        ],
+        "description": "Screening to include human observational studies assessing the association between quantified prenatal PFOS exposure and birth weight (in grams), comparing higher versus lower exposure levels in pregnant women and their newborns."
+      }
+    ]
+  },
+  "inclusion": {
+    "included_count": 23,
+    "included_corpus_ids": [
+      3397,
+      88178,
+      3401,
+      3778,
+      88064,
+      3393,
+      3400,
+      86865,
+      3411,
+      70033,
+      3380,
+      70019,
+      86728,
+      88584,
+      86684,
+      3777,
+      3409,
+      86735,
+      3386,
+      70016,
+      3391,
+      3407,
+      3410
+    ],
+    "included_articles": [
+      {
+        "corpus_id": 3397,
+        "title": "PFOS, PFOA, estrogen homeostasis, and birth size in Chinese infants.",
+        "authors": [
+          "Hexing Wang",
+          "Hongyi Du",
+          "Jiaqi Yang",
+          "Hong Jiang",
+          "Karmin O",
+          "Linji Xu",
+          "Shuping Liu",
+          "Jianping Yi",
+          "Xu Qian",
+          "Yue Chen",
+          "Qingwu Jiang",
+          "Gengsheng He"
+        ],
+        "year": "2019"
+      },
+      {
+        "corpus_id": 88178,
+        "title": "Prenatal Exposure to Perfluoroalkyl Substances and Birth Outcomes; An Updated Analysis from the Danish National Birth Cohort.",
+        "authors": [],
+        "year": "2018"
+      },
+      {
+        "corpus_id": 3401,
+        "title": "Perfluoroalkyl Acids in Maternal Serum and Indices of Fetal Growth: The Aarhus Birth Cohort.",
+        "authors": [
+          "Cathrine Carlsen Bach",
+          "Bodil Hammer Bech",
+          "Ellen Aagaard Nohr",
+          "Jørn Olsen",
+          "Niels Bjerregård Matthiesen",
+          "Eva Cecilie Bonefeld-Jørgensen",
+          "Rossana Bossi",
+          "Tine Brink Henriksen"
+        ],
+        "year": "2016"
+      },
+      {
+        "corpus_id": 3778,
+        "title": "Correlations between prenatal exposure to perfluorinated chemicals and reduced fetal growth.",
+        "authors": [
+          "Noriaki Washino",
+          "Yasuaki Saijo",
+          "Seiko Sasaki",
+          "Shizue Kato",
+          "Susumu Ban",
+          "Kanae Konishi",
+          "Rie Ito",
+          "Ayako Nakata",
+          "Yusuke Iwasaki",
+          "Koichi Saito",
+          "Hiroyuki Nakazawa",
+          "Reiko Kishi"
+        ],
+        "year": "2009"
+      },
+      {
+        "corpus_id": 88064,
+        "title": "Prenatal exposure to legacy and emerging PFAS and sex-specific associations with fetal growth: Evidence from a Chinese birth cohort.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 3393,
+        "title": "Maternal concentrations of polyfluoroalkyl compounds during pregnancy and fetal and postnatal growth in British girls.",
+        "authors": [
+          "Mildred Maisonet",
+          "Metrecia L Terrell",
+          "Michael A McGeehin",
+          "Krista Yorita Christensen",
+          "Adrianne Holmes",
+          "Antonia M Calafat",
+          "Michele Marcus"
+        ],
+        "year": "2012"
+      },
+      {
+        "corpus_id": 3400,
+        "title": "Maternal Concentrations of Perfluoroalkyl Substances and Fetal Markers of Metabolic Function and Birth Weight.",
+        "authors": [
+          "Jillian Ashley-Martin",
+          "Linda Dodds",
+          "Tye E Arbuckle",
+          "Maryse F Bouchard",
+          "Mandy Fisher",
+          "Anne-Sophie Morriset",
+          "Patricia Monnier",
+          "Gabriel D Shapiro",
+          "Adrienne S Ettinger",
+          "Renee Dallaire",
+          "Shayne Taback",
+          "William Fraser",
+          "Robert W Platt"
+        ],
+        "year": "2017"
+      },
+      {
+        "corpus_id": 86865,
+        "title": "Association of Early Pregnancy Perfluoroalkyl and Polyfluoroalkyl Substance Exposure With Birth Outcomes.",
+        "authors": [],
+        "year": "2023"
+      },
+      {
+        "corpus_id": 3411,
+        "title": "Associations of Exposure to Perfluoroalkyl Substances With Thyroid Hormone Concentrations and Birth Size.",
+        "authors": [
+          "Christina Xiao",
+          "Philippe Grandjean",
+          "Damaskini Valvi",
+          "Flemming Nielsen",
+          "Tina Kold Jensen",
+          "Pal Weihe",
+          "Youssef Oulhote"
+        ],
+        "year": "2020"
+      },
+      {
+        "corpus_id": 70033,
+        "title": "Associations between gestational exposure to perfluoroalkyl substances, fetal growth, and the mediation effect of thyroid hormones.",
+        "authors": [],
+        "year": "2024"
+      },
+      {
+        "corpus_id": 3380,
+        "title": "Maternal exposure to perfluoroalkyl acids measured in whole blood and birth outcomes in offspring.",
+        "authors": [
+          "A C Callan",
+          "A Rotander",
+          "K Thompson",
+          "J Heyworth",
+          "J F Mueller",
+          "J Ø Odland",
+          "A L Hinwood"
+        ],
+        "year": "2016"
+      },
+      {
+        "corpus_id": 70019,
+        "title": "Fetal growth indicators and perfluorinated chemicals: a study in the Danish National Birth Cohort.",
+        "authors": [],
+        "year": "2008"
+      },
+      {
+        "corpus_id": 86728,
+        "title": "Associations of Prenatal Exposure to Per- and Polyfluoroalkyl Substances with the Neonatal Birth Size and Hormones in the Growth Hormone/Insulin-Like Growth Factor Axis.",
+        "authors": [],
+        "year": "2021"
+      },
+      {
+        "corpus_id": 88584,
+        "title": "Prenatal exposure to perfluoroalkyl and polyfluoroalkyl substances and birth outcomes: A longitudinal cohort with repeated measurements.",
+        "authors": [],
+        "year": "2021"
+      },
+      {
+        "corpus_id": 86684,
+        "title": "Serum Concentrations of Selected Poly- and Perfluoroalkyl Substances (PFASs) in Pregnant Women and Associations with Birth Outcomes. A Cross-Sectional Study from Southern Malawi.",
+        "authors": [],
+        "year": "2023"
+      },
+      {
+        "corpus_id": 3777,
+        "title": "Perfluorinated chemicals and fetal growth: a study within the Danish National Birth Cohort.",
+        "authors": [
+          "Chunyuan Fei",
+          "Joseph K McLaughlin",
+          "Robert E Tarone",
+          "Jørn Olsen"
+        ],
+        "year": "2007"
+      },
+      {
+        "corpus_id": 3409,
+        "title": "Perfluorinated compounds in relation to birth weight in the Norwegian Mother and Child Cohort Study.",
+        "authors": [
+          "Kristina W Whitworth",
+          "Line S Haug",
+          "Donna D Baird",
+          "Georg Becher",
+          "Jane A Hoppin",
+          "Rolv Skjaerven",
+          "Cathrine Thomsen",
+          "Merete Eggesbo",
+          "Gregory Travlos",
+          "Ralph Wilson",
+          "Lea A Cupul-Uicab",
+          "Anne Lise Brantsaeter",
+          "Matthew P Longnecker"
+        ],
+        "year": "2012"
+      },
+      {
+        "corpus_id": 86735,
+        "title": "Association between perfluorinated compound concentrations in cord serum and birth weight using multiple regression models.",
+        "authors": [],
+        "year": "2016"
+      },
+      {
+        "corpus_id": 3386,
+        "title": "Perfluorinated compounds in umbilical cord blood and adverse birth outcomes.",
+        "authors": [
+          "Mei-Huei Chen",
+          "Eun-Hee Ha",
+          "Ting-Wen Wen",
+          "Yi-Ning Su",
+          "Guang-Wen Lien",
+          "Chia-Yang Chen",
+          "Pau-Chung Chen",
+          "Wu-Shiun Hsieh"
+        ],
+        "year": "2012"
+      },
+      {
+        "corpus_id": 70016,
+        "title": "The Association of Prenatal Exposure to Perfluorinated Chemicals with Maternal Essential and Long-Chain Polyunsaturated Fatty Acids during Pregnancy and the Birth Weight of Their Offspring: The Hokkaido Study.",
+        "authors": [],
+        "year": "2015"
+      },
+      {
+        "corpus_id": 3391,
+        "title": "Prenatal Exposure to Perfluorinated Compounds Affects Birth Weight Through GSTM1 Polymorphism.",
+        "authors": [
+          "Eun Jin Kwon",
+          "Joon Soo Shin",
+          "Byung Mi Kim",
+          "Surabhi Shah-Kulkarni",
+          "Hyesook Park",
+          "Young Lim Kho",
+          "Eun Ae Park",
+          "Young Ju Kim",
+          "Eun Hee Ha"
+        ],
+        "year": "2016"
+      },
+      {
+        "corpus_id": 3407,
+        "title": "Perfluoroalkyl Substances during Pregnancy and Offspring Weight and Adiposity at Birth: Examining Mediation by Maternal Fasting Glucose in the Healthy Start Study.",
+        "authors": [
+          "Anne P Starling",
+          "John L Adgate",
+          "Richard F Hamman",
+          "Katerina Kechris",
+          "Antonia M Calafat",
+          "Xiaoyun Ye",
+          "Dana Dabelea"
+        ],
+        "year": "2017"
+      },
+      {
+        "corpus_id": 3410,
+        "title": "Maternal serum levels of perfluoroalkyl substances in early pregnancy and offspring birth weight.",
+        "authors": [
+          "Sverre Wikström",
+          "Ping-I Lin",
+          "Christian H Lindh",
+          "Huan Shu",
+          "Carl-Gustaf Bornehag"
+        ],
+        "year": "2020"
+      }
+    ],
+    "gt_matched_count": 33,
+    "gt_study_count": 15,
+    "matched_with_gt": 11,
+    "retrieval_recall": 0.3333333333333333,
+    "inclusion_recall": 0.7333333333333333
+  },
+  "files": {
+    "excel": "autometa_batch_results/gpt-5/bm25/paper_215/data_extraction.xlsx",
+    "markdown": "autometa_batch_results/gpt-5/bm25/paper_215/report.md"
+  }
+}

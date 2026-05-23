@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Judge outputs (generated during evaluation)
+outputs/
+
+# API keys / environment
+.env
+*.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+*~
+
+# Jupyter checkpoints
+.ipynb_checkpoints/

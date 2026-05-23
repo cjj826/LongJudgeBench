@@ -1,0 +1,8 @@
+# config/prompts/wp_bench/rubric/genre_roleplay.yaml
+# Role-Playing genre criteria
+
+genre_criteria: |
+  Role-Playing:
+  - Character Consistency: Does the response maintain consistent persona, voice, and perspective?
+  - Immersion: Does it convincingly adopt the role's assumed knowledge, attitude, and speech patterns?
+  - Responsiveness: Does it appropriately react to the context and implied interaction?

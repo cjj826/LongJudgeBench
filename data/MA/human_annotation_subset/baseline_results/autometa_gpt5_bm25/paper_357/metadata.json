@@ -1,0 +1,416 @@
+{
+  "paper_id": 357,
+  "model": "gpt-5",
+  "retrieval_mode": "bm25",
+  "success": true,
+  "error": null,
+  "timing": {
+    "total_seconds": 366.762112,
+    "start_time": "2026-04-14T12:46:06.795385",
+    "end_time": "2026-04-14T12:53:00.111413"
+  },
+  "retrieval": {
+    "queries_generated": 5,
+    "queries": [
+      "(Schizophrenia[Mesh] OR schizophren*[tiab]) AND (Autopsy[Mesh] OR postmortem[tiab] OR post-mortem[tiab] OR \"postmortem brain\"[tiab] OR \"post-mortem brain\"[tiab] OR \"brain bank\"[tiab] OR \"brain tissue\"[tiab]) AND (Neuroinflammation[tiab] OR inflammation[tiab] OR inflammatory[tiab] OR Cytokines[Mesh] OR cytokine*[tiab] OR Microglia[Mesh] OR microglia*[tiab] OR Astrocytes[Mesh] OR astrocyt*[tiab] OR Gliosis[Mesh] OR gliosis[tiab] OR \"Glial Fibrillary Acidic Protein\"[Mesh] OR GFAP[tiab]) NOT (animals[mh] NOT humans[mh])",
+      "(Schizophrenia[Mesh] OR schizophren*[tiab]) AND (Autopsy[Mesh] OR Postmortem Changes[Mesh] OR autopsy[tiab] OR postmortem[tiab] OR post-mortem[tiab] OR \"postmortem brain\"[tiab] OR \"brain bank\"[tiab]) AND (Microglia[Mesh] OR microglia*[tiab] OR IBA1[tiab] OR AIF1[tiab] OR GFAP[tiab] OR \"Glial Fibrillary Acidic Protein\"[Mesh] OR astrocyt*[tiab] OR glial*[tiab] OR gliosis[Mesh] OR gliosis[tiab] OR Cytokines[Mesh] OR cytokine*[tiab] OR interleukin*[tiab] OR IL-1[tiab] OR IL1B[tiab] OR IL-6[tiab] OR TNF[tiab] OR \"tumor necrosis factor\"[tiab] OR \"Arachidonic Acid\"[Mesh] OR arachidon*[tiab] OR eicosanoid*[tiab] OR \"Cyclooxygenase 2\"[Mesh] OR COX-2[tiab] OR PTGS2[tiab] OR \"Phospholipases A2\"[Mesh] OR \"phospholipase A2\"[tiab] OR PLA2[tiab] OR prostaglandin*[tiab] OR leukotrien*[tiab] OR \"Substance P\"[Mesh] OR \"substance P\"[tiab] OR SERPINA3[tiab] OR \"alpha-1-antichymotrypsin\"[tiab] OR \"alpha 1 antichymotrypsin\"[tiab] OR antichymotrypsin[tiab] OR IFITM[tiab] OR IFITM1[tiab] OR IFITM2[tiab] OR IFITM3[tiab] OR \"interferon-induced transmembrane\"[tiab]) AND (Case-Control Studies[Mesh] OR case-control[tiab] OR Cohort Studies[Mesh] OR cohort[tiab] OR Cross-Sectional Studies[Mesh] OR cross-sectional[tiab] OR \"comparative study\"[Publication Type] OR control*[tiab] OR healthy[tiab]) NOT (animals[mh] NOT humans[mh])",
+      "(\"Schizophrenia\"[Mesh]) AND (\"Brain\"[Mesh] OR \"Cerebral Cortex\"[Mesh] OR \"Hippocampus\"[Mesh]) AND (\"Autopsy\"[Mesh] OR \"Postmortem Changes\"[Mesh]) AND (\"Inflammation\"[Mesh] OR \"Cytokines\"[Mesh] OR \"Microglia\"[Mesh] OR \"Astrocytes\"[Mesh] OR \"Glial Fibrillary Acidic Protein\"[Mesh] OR \"Gliosis\"[Mesh] OR \"Arachidonic Acid\"[Mesh] OR \"Eicosanoids\"[Mesh] OR \"Prostaglandins\"[Mesh] OR \"Leukotrienes\"[Mesh] OR \"Cyclooxygenase 2\"[Mesh] OR \"Phospholipases A2\"[Mesh] OR \"Substance P\"[Mesh]) NOT (animals[mh] NOT humans[mh])",
+      "(schizophren*[tiab] OR Schizophrenia[Mesh]) AND (postmortem[tiab] OR post-mortem[tiab] OR autopsy[tiab] OR Autopsy[Mesh] OR \"postmortem brain\"[tiab] OR \"brain bank\"[tiab]) AND ((microglia*[tiab] OR Microglia[Mesh] OR IBA1[tiab] OR AIF1[tiab] OR TMEM119[tiab]) OR (astrocyt*[tiab] OR Astrocytes[Mesh] OR GFAP[tiab] OR \"Glial Fibrillary Acidic Protein\"[Mesh]) OR (\"glial density\"[tiab] OR \"glial cell\"[tiab] OR \"glial cells\"[tiab] OR glial*[tiab] OR gliosis[tiab])) AND (immunohistochem*[tiab] OR \"western blot\"[tiab] OR ELISA[tiab] OR qPCR[tiab] OR mRNA[tiab] OR transcript*[tiab] OR protein[tiab] OR expression[tiab]) NOT (animals[mh] NOT humans[mh])",
+      "((schizophren*[tiab] OR Schizophrenia[Mesh]) AND (postmortem[tiab] OR post-mortem[tiab] OR autopsy[tiab] OR Autopsy[Mesh] OR \"postmortem brain\"[tiab] OR \"brain tissue\"[tiab])) AND (cytokine*[tiab] OR interleukin*[tiab] OR IL-1[tiab] OR IL1B[tiab] OR IL-6[tiab] OR TNF[tiab] OR \"tumor necrosis factor\"[tiab] OR interferon[tiab] OR IFN[tiab] OR SERPINA3[tiab] OR \"alpha-1-antichymotrypsin\"[tiab] OR \"alpha 1 antichymotrypsin\"[tiab] OR antichymotrypsin[tiab] OR IFITM[tiab] OR IFITM1[tiab] OR IFITM2[tiab] OR IFITM3[tiab] OR \"interferon-induced transmembrane\"[tiab] OR \"substance P\"[tiab] OR \"Substance P\"[Mesh] OR arachidon*[tiab] OR eicosanoid*[tiab] OR prostaglandin*[tiab] OR leukotrien*[tiab] OR COX-2[tiab] OR PTGS2[tiab] OR PLA2[tiab]) AND (control*[tiab] OR healthy[tiab] OR \"non-psychiatric\"[tiab] OR nonpsychiatric[tiab] OR \"non-schizophren*\"[tiab]) NOT (animals[mh] NOT humans[mh])"
+    ],
+    "retrieved_local": 158,
+    "retrieved_pubmed": 0,
+    "after_dedup": 158,
+    "retrieved_corpus_ids": [
+      114310,
+      37219,
+      140557,
+      134109,
+      69546,
+      135603,
+      66860,
+      98165,
+      65551,
+      53370,
+      34596,
+      126467,
+      81481,
+      134406,
+      133525,
+      62807,
+      138228,
+      73285,
+      123174,
+      48076,
+      48105,
+      120020,
+      83923,
+      80280,
+      1780,
+      25178,
+      1526,
+      27329,
+      1776,
+      1769,
+      27313,
+      25112,
+      27332,
+      38918,
+      27432,
+      1770,
+      39197,
+      27364,
+      25164,
+      25169,
+      27320,
+      94147,
+      1774,
+      25480,
+      111400,
+      27337,
+      27324,
+      102467,
+      24988,
+      45788,
+      62992,
+      27389,
+      27395,
+      25103,
+      99311,
+      25489,
+      25269,
+      1511,
+      85076,
+      27414,
+      20017,
+      1779,
+      1545,
+      24997,
+      6064,
+      107289,
+      83498,
+      27424,
+      27374,
+      75462,
+      111394,
+      75123,
+      27298,
+      68778,
+      64277,
+      1795,
+      39290,
+      1543,
+      24998,
+      136345,
+      72362,
+      133739,
+      56965,
+      128063,
+      7452,
+      111065,
+      112114,
+      101013,
+      1761,
+      138572,
+      99983,
+      27412,
+      69633,
+      56587,
+      26911,
+      27499,
+      99333,
+      130054,
+      79369,
+      92592,
+      1777,
+      81352,
+      126087,
+      125762,
+      42083,
+      1531,
+      1792,
+      124126,
+      1763,
+      27386,
+      27448,
+      27397,
+      42191,
+      23286,
+      27725,
+      131011,
+      1014,
+      23287,
+      41894,
+      66774,
+      25698,
+      39314,
+      25806,
+      24859,
+      127102,
+      19924,
+      25566,
+      23726,
+      41812,
+      25610,
+      98218,
+      1834,
+      25461,
+      52370,
+      1848,
+      127469,
+      42261,
+      42309,
+      62430,
+      7140,
+      25571,
+      25727,
+      127233,
+      42475,
+      127987,
+      27450,
+      86587,
+      26696,
+      87298,
+      25289,
+      26903,
+      63099,
+      20012,
+      41893,
+      23282,
+      64690,
+      62289,
+      95575
+    ]
+  },
+  "screening": {
+    "screened_count": 158,
+    "excluded_count": 143,
+    "full_text_assessed": 15,
+    "included_count": 15,
+    "screening_criteria": [
+      {
+        "layer_name": "Layer 1",
+        "layer_order": 1,
+        "inclusion_criteria": [
+          "Human postmortem brain studies including individuals with schizophrenia diagnosed by DSM/ICD or documented clinical assessment",
+          "Include a healthy, non‑schizophrenic postmortem control group",
+          "Report quantitative group-level data for at least one neuroinflammatory outcome: microglial markers (e.g., Iba1, CD68, HLA‑DR), GFAP expression, glial cell densities, cytokines, arachidonic cascade markers (e.g., COX‑2, cPLA2), substance P, SERPINA3, or IFITM",
+          "Original, peer‑reviewed research with sufficient information to extract or compute group comparisons"
+        ],
+        "exclusion_criteria": [
+          "Non-human studies or non-postmortem brain studies (e.g., animal/cell models, peripheral tissue, CSF/serum only, in vivo neuroimaging)",
+          "No healthy control group, schizophrenia not primary diagnosis/unclear diagnostic criteria, or cohorts with major neurodegenerative/inflammatory CNS comorbidities that confound neuroinflammation",
+          "Do not measure any listed neuroinflammatory markers or lack extractable group-level data for cases and controls",
+          "Non-original publications (reviews, editorials, meta-analyses) or duplicate reporting of the same postmortem cases"
+        ],
+        "description": "Screen original human postmortem brain studies comparing schizophrenia cases to healthy controls that report quantitative neuroinflammatory markers (microglia-related markers, GFAP, glial densities, cytokines, arachidonic cascade markers, substance P, SERPINA3, IFITM)."
+      }
+    ]
+  },
+  "inclusion": {
+    "included_count": 15,
+    "included_corpus_ids": [
+      1780,
+      1776,
+      1769,
+      1770,
+      1774,
+      1779,
+      1545,
+      1795,
+      1543,
+      1761,
+      1777,
+      1531,
+      1792,
+      27725,
+      1834
+    ],
+    "included_articles": [
+      {
+        "corpus_id": 1780,
+        "title": "Glial fibrillary acidic protein mRNA levels in the cingulate cortex of individuals with depression, bipolar disorder and schizophrenia.",
+        "authors": [
+          "M J Webster",
+          "J O'Grady",
+          "J E Kleinman",
+          "C S Weickert"
+        ],
+        "year": "2005"
+      },
+      {
+        "corpus_id": 1776,
+        "title": "Layer-specific reductions in GFAP-reactive astroglia in the dorsolateral prefrontal cortex in schizophrenia.",
+        "authors": [
+          "Grazyna Rajkowska",
+          "Jose Javier Miguel-Hidalgo",
+          "Zoltan Makkos",
+          "Herbert Meltzer",
+          "James Overholser",
+          "Craig Stockmeier"
+        ],
+        "year": "2002"
+      },
+      {
+        "corpus_id": 1769,
+        "title": "Increase in HLA-DR immunoreactive microglia in frontal and temporal cortex of chronic schizophrenics.",
+        "authors": [
+          "K Radewicz",
+          "L J Garey",
+          "S M Gentleman",
+          "R Reynolds"
+        ],
+        "year": "2000"
+      },
+      {
+        "corpus_id": 1770,
+        "title": "Immunohistochemical localization of phosphorylated glial fibrillary acidic protein in the prefrontal cortex and hippocampus from patients with schizophrenia, bipolar disorder, and depression.",
+        "authors": [
+          "M J Webster",
+          "M B Knable",
+          "N Johnston-Wilson",
+          "K Nagata",
+          "M Inagaki",
+          "R H Yolken"
+        ],
+        "year": "2001"
+      },
+      {
+        "corpus_id": 1774,
+        "title": "Regionally specific changes in levels of cortical S100beta in bipolar 1 disorder but not schizophrenia.",
+        "authors": [
+          "Brian Dean",
+          "Laura Gray",
+          "Elizabeth Scarr"
+        ],
+        "year": "2006"
+      },
+      {
+        "corpus_id": 1779,
+        "title": "Increased expression of astrocyte markers in schizophrenia: Association with neuroinflammation.",
+        "authors": [
+          "Vibeke Sørensen Catts",
+          "Jenny Wong",
+          "Stu Gregory Fillman",
+          "Samantha Jane Fung",
+          "Cynthia Shannon Weickert"
+        ],
+        "year": "2014"
+      },
+      {
+        "corpus_id": 1545,
+        "title": "Fibrillary astrocytes are decreased in the subgenual cingulate in schizophrenia.",
+        "authors": [
+          "Matthew Williams",
+          "Ronald K B Pearce",
+          "Steven R Hirsch",
+          "Olaf Ansorge",
+          "Maria Thom",
+          "Michael Maier"
+        ],
+        "year": "2014"
+      },
+      {
+        "corpus_id": 1795,
+        "title": "Inflammation-related genes up-regulated in schizophrenia brains.",
+        "authors": [
+          "Peter Saetre",
+          "Lina Emilsson",
+          "Elin Axelsson",
+          "Johan Kreuger",
+          "Eva Lindholm",
+          "Elena Jazin"
+        ],
+        "year": "2007"
+      },
+      {
+        "corpus_id": 1543,
+        "title": "Evidence for morphological alterations in prefrontal white matter glia in schizophrenia and bipolar disorder.",
+        "authors": [
+          "Christa Hercher",
+          "Vikramjit Chopra",
+          "Clare L Beasley"
+        ],
+        "year": "2014"
+      },
+      {
+        "corpus_id": 1761,
+        "title": "Gliosis in schizophrenia: a survey.",
+        "authors": [
+          "G W Roberts",
+          "N Colter",
+          "R Lofthouse",
+          "B Bogerts",
+          "M Zech",
+          "T J Crow"
+        ],
+        "year": "1986"
+      },
+      {
+        "corpus_id": 1777,
+        "title": "3-D Golgi and image analysis of the olfactory tubercle in schizophrenia.",
+        "authors": [
+          "E Markova",
+          "I Markov",
+          "A Revishchin",
+          "V Okhotin",
+          "G Sulimov"
+        ],
+        "year": "2000"
+      },
+      {
+        "corpus_id": 1531,
+        "title": "Extracellular matrix-glial abnormalities in the amygdala and entorhinal cortex of subjects diagnosed with schizophrenia.",
+        "authors": [
+          "Harry Pantazopoulos",
+          "Tsung-Ung W Woo",
+          "Maribel P Lim",
+          "Nicholas Lange",
+          "Sabina Berretta"
+        ],
+        "year": "2010"
+      },
+      {
+        "corpus_id": 1792,
+        "title": "Calprotectin in microglia from frontal cortex is up-regulated in schizophrenia: evidence for an inflammatory process?",
+        "authors": [
+          "Russell Foster",
+          "Apsara Kandanearatchi",
+          "Claire Beasley",
+          "Brenda Williams",
+          "Nadeem Khan",
+          "Magne K Fagerhol",
+          "Ian P Everall"
+        ],
+        "year": "2006"
+      },
+      {
+        "corpus_id": 27725,
+        "title": "Molecular mechanisms and timing of cortical immune activation in schizophrenia.",
+        "authors": [],
+        "year": "2015"
+      },
+      {
+        "corpus_id": 1834,
+        "title": "Elevated viral restriction factor levels in cortical blood vessels in schizophrenia.",
+        "authors": [
+          "Benjamin I Siegel",
+          "Elizabeth J Sengupta",
+          "Jessica R Edelson",
+          "David A Lewis",
+          "David W Volk"
+        ],
+        "year": "2014"
+      }
+    ],
+    "gt_matched_count": 89,
+    "gt_study_count": 35,
+    "matched_with_gt": 14,
+    "retrieval_recall": 0.15730337078651685,
+    "inclusion_recall": 0.4
+  },
+  "files": {
+    "excel": "autometa_batch_results/gpt-5/bm25/paper_357/data_extraction.xlsx",
+    "markdown": "autometa_batch_results/gpt-5/bm25/paper_357/report.md"
+  }
+}

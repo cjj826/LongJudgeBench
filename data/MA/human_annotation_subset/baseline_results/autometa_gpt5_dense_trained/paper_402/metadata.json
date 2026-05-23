@@ -1,0 +1,231 @@
+{
+  "paper_id": 402,
+  "model": "gpt-5",
+  "retrieval_mode": "dense_trained",
+  "success": true,
+  "error": null,
+  "timing": {
+    "total_seconds": 342.725034,
+    "start_time": "2026-04-14T13:34:15.166867",
+    "end_time": "2026-04-14T13:40:43.141007"
+  },
+  "retrieval": {
+    "queries_generated": 5,
+    "queries": [
+      "((\"Child, Preschool\"[Mesh] OR \"Infant\"[Mesh] OR child*[tiab] OR infant*[tiab] OR toddler*[tiab] OR \"under five\"[tiab] OR \"under-five\"[tiab] OR \"under 5\"[tiab] OR \"0-59 months\"[tiab] OR \"0 to 59 months\"[tiab]) AND (\"Developing Countries\"[Mesh] OR LMIC*[tiab] OR \"low- and middle-income countr*\"[tiab] OR \"low and middle income countr*\"[tiab] OR \"developing countr*\"[tiab] OR \"resource-limited\"[tiab] OR \"resource poor\"[tiab] OR \"sub-Saharan Africa\"[tiab] OR \"South Asia\"[tiab] OR \"Southeast Asia\"[tiab] OR \"Latin America\"[tiab] OR \"Caribbean\"[tiab]) AND (stunt*[tiab] OR \"height-for-age\"[tiab] OR \"length-for-age\"[tiab] OR HAZ[tiab] OR LAZ[tiab] OR \"linear growth\"[tiab] OR \"growth faltering\"[tiab] OR \"linear growth retard*\"[tiab] OR \"chronic malnutrition\"[tiab] OR \"chronic undernutrition\"[tiab]))",
+      "((\"Nutritional Status\"[Mesh] OR \"Body Height\"[Mesh] OR \"Anthropometry\"[Mesh] OR \"Growth Disorders\"[Mesh]) AND (\"Child, Preschool\"[Mesh] OR \"Infant\"[Mesh]) AND (\"Developing Countries\"[Mesh]) AND (stunt*[tiab] OR \"height-for-age\"[tiab] OR \"length-for-age\"[tiab] OR HAZ[tiab] OR LAZ[tiab]) AND (\"z score\"[tiab] OR \"z-score\"[tiab] OR zscore*[tiab] OR \"Z-scor*\"[tiab] OR \"standard deviation*\"[tiab] OR \"-2 SD\"[tiab] OR \"< -2\"[tiab] OR \"<-2\"[tiab] OR \"two standard deviation*\"[tiab]) AND (\"WHO\"[tiab] OR \"World Health Organization\"[tiab] OR \"WHO child growth standard*\"[tiab] OR \"WHO growth standard*\"[tiab] OR \"WHO growth reference\"[tiab]))",
+      "((\"Child, Preschool\"[Mesh] OR \"Infant\"[Mesh] OR child*[tiab] OR infant*[tiab] OR toddler*[tiab] OR \"under five\"[tiab] OR \"under 5\"[tiab]) AND (\"Developing Countries\"[Mesh] OR LMIC*[tiab] OR \"low- and middle-income countr*\"[tiab] OR \"developing countr*\"[tiab]) AND (stunt*[tiab] OR \"height-for-age\"[tiab] OR HAZ[tiab] OR LAZ[tiab] OR \"linear growth\"[tiab])) AND (\"Cohort Studies\"[Mesh] OR \"Case-Control Studies\"[Mesh] OR \"Cross-Sectional Studies\"[Mesh] OR \"Longitudinal Studies\"[Mesh] OR \"Randomized Controlled Trial\"[Publication Type] OR cohort[tiab] OR \"case control\"[tiab] OR \"cross sectional\"[tiab] OR \"cross-sectional\"[tiab] OR longitudinal[tiab] OR prospective[tiab] OR retrospective[tiab] OR randomized[tiab] OR randomised[tiab] OR trial[tiab])",
+      "((\"Child, Preschool\"[Mesh] OR \"Infant\"[Mesh] OR \"under-five\"[tiab] OR \"0-59 months\"[tiab]) AND (\"Developing Countries\"[Mesh] OR \"developing countr*\"[tiab] OR LMIC*[tiab] OR \"low- and middle-income\"[tiab]) AND (stunt*[tiab] OR \"height-for-age\"[tiab] OR \"length-for-age\"[tiab] OR HAZ[tiab] OR LAZ[tiab])) AND (\"Demographic and Health Surveys\"[Mesh] OR \"Demographic and Health Survey\"[tiab] OR \"Demographic and Health Surveys\"[tiab] OR DHS[tiab] OR \"Multiple Indicator Cluster Surveys\"[tiab] OR MICS[tiab] OR \"national survey\"[tiab] OR \"population-based survey\"[tiab] OR \"household survey\"[tiab])",
+      "((\"Child, Preschool\"[Mesh] OR \"Infant\"[Mesh]) AND (\"Developing Countries\"[Mesh] OR LMIC*[tiab] OR \"developing countr*\"[tiab])) AND ((\"stunted\"[tiab] OR \"stunting\"[tiab]) AND (\"non-stunted\"[tiab] OR \"not stunted\"[tiab] OR \"normal height-for-age\"[tiab] OR \"height-for-age within normal\"[tiab] OR \"HAZ >= -2\"[tiab] OR \"HAZ > -2\"[tiab] OR \"LAZ >= -2\"[tiab]))"
+    ],
+    "retrieved_local": 107,
+    "retrieved_pubmed": 0,
+    "after_dedup": 107,
+    "retrieved_corpus_ids": [
+      31081,
+      89022,
+      30948,
+      89386,
+      16218,
+      89650,
+      19179,
+      30949,
+      89824,
+      123748,
+      105136,
+      17135,
+      116833,
+      31378,
+      63399,
+      108758,
+      18611,
+      109144,
+      109146,
+      17736,
+      137300,
+      71074,
+      17634,
+      6966,
+      85894,
+      18466,
+      106676,
+      89258,
+      65999,
+      115563,
+      10491,
+      17635,
+      18738,
+      18472,
+      31212,
+      86285,
+      137234,
+      54627,
+      33883,
+      18729,
+      83180,
+      46063,
+      122338,
+      89638,
+      48593,
+      71308,
+      111846,
+      50908,
+      53696,
+      138237,
+      21237,
+      22619,
+      121780,
+      135873,
+      18491,
+      103406,
+      53094,
+      31384,
+      22505,
+      109059,
+      83171,
+      90321,
+      2117,
+      22486,
+      31749,
+      108255,
+      21128,
+      19180,
+      70464,
+      109192,
+      31131,
+      106688,
+      70173,
+      21374,
+      30063,
+      104274,
+      125254,
+      55000,
+      137246,
+      21137,
+      68379,
+      46265,
+      89716,
+      48718,
+      19414,
+      48784,
+      73080,
+      14117,
+      33963,
+      84075,
+      52559,
+      89540,
+      31349,
+      119381,
+      2087,
+      109175,
+      31153,
+      70131,
+      21112,
+      46287,
+      55045,
+      8854,
+      50954,
+      46043,
+      140009,
+      8739,
+      119175
+    ]
+  },
+  "screening": {
+    "screened_count": 107,
+    "excluded_count": 99,
+    "full_text_assessed": 8,
+    "included_count": 8,
+    "screening_criteria": [
+      {
+        "layer_name": "Layer 1",
+        "layer_order": 1,
+        "inclusion_criteria": [
+          "Study design: Primary research using experimental, quasi-experimental, cohort, case-control, or cross-sectional designs.",
+          "Population: Human children aged 0–59 months residing in low- and middle-income countries (per World Bank classification at time of study).",
+          "Comparator: Includes a comparison group of non-stunted children (height-for-age z-score ≥ −2).",
+          "Outcomes: Reports stunting status defined by WHO Child Growth Standards (height-for-age z-score < −2), as prevalence, incidence, or risk estimates."
+        ],
+        "exclusion_criteria": [
+          "Not in LMIC settings or does not provide separate data for children under 5 years.",
+          "Does not report stunting using WHO height-for-age z-score criteria or lacks a non-stunted comparator group.",
+          "Non-primary study designs (systematic reviews, meta-analyses, editorials, commentaries, letters, protocols), qualitative-only studies, case reports, or ecological studies without individual-level data.",
+          "Non-human studies or studies using only non-WHO growth references without WHO-defined stunting outcomes."
+        ],
+        "description": "Screening criteria to identify primary studies on children under 5 in LMICs that report WHO-defined stunting (HAZ < −2) with a non-stunted comparator, across experimental and observational designs."
+      }
+    ]
+  },
+  "inclusion": {
+    "included_count": 8,
+    "included_corpus_ids": [
+      89650,
+      19179,
+      105136,
+      31378,
+      109144,
+      109146,
+      53094,
+      31153
+    ],
+    "included_articles": [
+      {
+        "corpus_id": 89650,
+        "title": "Predictors of Stunting and Pathway Analysis for Linear Growth among Children Aged Two to Three Years after a Trial of Small-Quantity Lipid-Based Nutrient Supplements and Home-Installed Growth Charts in Three Districts in Zambia.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 19179,
+        "title": "A multilevel analysis of factors associated with stunting among children under five years in Lesotho: a study of the lesotho multiple cluster indicator survey 2018.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 105136,
+        "title": "Is Infant and Young Child-feeding (IYCF) a potential double-duty strategy to prevent the double burden of malnutrition among children at the critical age? Evidence of association from urban slums in Pune, Maharashtra, India.",
+        "authors": [],
+        "year": "2022"
+      },
+      {
+        "corpus_id": 31378,
+        "title": "To work or not to work? Child stunting and maternal labour force participation in South Africa.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 109144,
+        "title": "Exploring the determinants of undernutrition among children aged 6-59 months old in Malawi: Insights on religious affiliation, ethnicity, and nutritional status using the 2015-2016 Malawi demographic and health survey.",
+        "authors": [],
+        "year": "2026"
+      },
+      {
+        "corpus_id": 109146,
+        "title": "Coexisting predictors for undernutrition indices among under-five children in West Africa: application of a multilevel multivariate ordinal logistic regression model.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 53094,
+        "title": "Analyzing childhood (0-59 months) malnutrition determinants in five West African countries of Gabon, Gambia, Liberia, Mauritania, and Nigeria using a generalized additive mixed model from DHS data.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 31153,
+        "title": "Child undernutrition and its association with household environmental conditions in Bangladesh.",
+        "authors": [],
+        "year": "2024"
+      }
+    ],
+    "gt_matched_count": 8,
+    "gt_study_count": 38.0,
+    "matched_with_gt": 0,
+    "retrieval_recall": 0.0,
+    "inclusion_recall": 0.0
+  },
+  "files": {
+    "excel": "autometa_batch_results/gpt-5/dense_trained/paper_402/data_extraction.xlsx",
+    "markdown": "autometa_batch_results/gpt-5/dense_trained/paper_402/report.md"
+  }
+}

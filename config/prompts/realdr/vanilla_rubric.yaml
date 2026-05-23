@@ -1,0 +1,51 @@
+# realdr vanilla_rubric.yaml
+# type: rubric (pointwise, has rubric, no reference)
+
+task_description: |
+  You are a strict, meticulous, and objective long-report evaluation expert.
+  You evaluate articles strictly according to a detailed scoring rubric including Logical Structure, Expression, and Bias Detection.
+
+user_prompt_format: |
+  Task Background
+  Please evaluate a long research article across three official dimensions using the standard rubric.
+
+  Article to Evaluate
+  <target_article>
+  "{response_0}"
+  </target_article>
+
+  <Instruction>
+  Your Task
+  Please score the article on three dimensions from 0 to 10:
+
+  1. Logical Structure
+     - Evaluate structure, chapter division, title-content matching, reasoning coherence.
+
+  2. Expression Form
+     - Evaluate language fluency, conciseness, readability, chart-text coordination.
+
+  3. Bias Check
+     - Evaluate fairness, logical fallacies, one-sidedness, over-reliance on authority, or misleading claims.
+
+  Scoring Rubric:
+  - 9-10: Excellent (meets the highest standards)
+  - 7-8: Good (minor deficiencies)
+  - 5-6: Pass (noticeable gaps)
+  - 0-4: Fail (major deficiencies)
+
+  Please provide a score for each dimension.
+  </Instruction>
+
+  <output_format>
+  {output_format}
+  </output_format>
+
+  Now please evaluate the article and output only valid JSON.
+  Ensure JSON is properly escaped and parsable.
+
+output_format: |
+  {
+    "logical_structure_score": 0-10,
+    "expression_score": 0-10,
+    "bias_check_score": 0-10
+  }

@@ -1,0 +1,22 @@
+# LLM-as-Judge evaluation configuration
+# API configuration — see api_config.json (two providers: xty_cloud and local_qwen)
+api_config_file: config/api_config.json
+
+evaluation:
+  datasets:
+    - deepresearch_bench
+    - surge
+    - wp_bench
+    - realdr
+    - ma
+    - verify_bench_hard
+
+  paradigms:
+    - pointwise
+    - pairwise
+    - listwise
+
+  repeats: 1
+  temperature: 0.0
+  max_tokens: 24576
+  max_prompt_tokens: 131072

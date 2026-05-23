@@ -1,0 +1,258 @@
+{
+  "paper_id": 207,
+  "model": "gpt-5",
+  "retrieval_mode": "dense_trained",
+  "success": true,
+  "error": null,
+  "timing": {
+    "total_seconds": 265.312703,
+    "start_time": "2026-04-14T09:08:21.698309",
+    "end_time": "2026-04-14T09:13:16.056099"
+  },
+  "retrieval": {
+    "queries_generated": 5,
+    "queries": [
+      "(\"Female\"[MeSH] OR female[tiab] OR women[tiab] OR woman[tiab]) AND ((\"Menstrual Cycle\"[MeSH] OR \"Luteal Phase\"[MeSH] OR \"Follicular Phase\"[MeSH] OR menstrual phase*[tiab] OR \"menstrual cycle\"[tiab] OR \"luteal phase\"[tiab] OR \"follicular phase\"[tiab] OR \"ovulatory phase\"[tiab] OR ovulation[tiab]) OR (\"Menopause\"[MeSH] OR \"Postmenopause\"[MeSH] OR \"Premenopause\"[MeSH] OR menopaus*[tiab] OR postmenopaus*[tiab] OR premenopaus*[tiab] OR perimenopaus*[tiab] OR climacteric[tiab])) NOT (\"Pregnancy\"[MeSH] OR pregnan*[tiab])",
+      "(\"Female\"[MeSH] OR women[tiab] OR female[tiab]) AND (\"Menstrual Cycle\"[MeSH] OR \"Luteal Phase\"[MeSH] OR \"Follicular Phase\"[MeSH] OR menstrual phase*[tiab] OR luteal[tiab] OR follicular[tiab] OR \"Menopause\"[MeSH] OR \"Postmenopause\"[MeSH] OR \"Premenopause\"[MeSH] OR menopaus*[tiab] OR postmenopaus*[tiab] OR premenopaus*[tiab] OR perimenopaus*[tiab]) AND ((\"Macula Lutea\"[MeSH] OR \"Fovea Centralis\"[MeSH] OR macula*[tiab] OR fovea*[tiab] OR \"posterior pole\"[tiab] OR \"central macular thickness\"[tiab] OR CMT[tiab] OR \"macular volume\"[tiab] OR \"retinal thickness\"[tiab]) OR (\"Choroid\"[MeSH] OR choroid*[tiab] OR \"choroidal thickness\"[tiab] OR \"subfoveal choroidal thickness\"[tiab] OR SFCT[tiab]) OR (\"Optic Disk\"[MeSH] OR optic disc[tiab] OR optic disk[tiab] OR \"optic nerve head\"[tiab] OR ONH[tiab] OR \"retinal nerve fiber layer\"[tiab] OR RNFL[tiab] OR peripapillary[tiab] OR \"ganglion cell layer\"[tiab] OR GCL[tiab] OR \"ganglion cell complex\"[tiab] OR GCC[tiab] OR GCIPL[tiab] OR \"inner plexiform layer\"[tiab])) AND (\"Tomography, Optical Coherence\"[MeSH] OR OCT[tiab] OR \"optical coherence tomography\"[tiab] OR \"swept-source\"[tiab] OR SS-OCT[tiab] OR EDI-OCT[tiab]) NOT (\"Pregnancy\"[MeSH] OR pregnan*[tiab])",
+      "((\"Female\"[MeSH] OR women[tiab]) AND (\"Menstrual Cycle\"[MeSH] OR \"Luteal Phase\"[MeSH] OR \"Follicular Phase\"[MeSH] OR luteal[tiab] OR follicular[tiab] OR menopaus*[tiab] OR premenopaus*[tiab] OR postmenopaus*[tiab] OR perimenopaus*[tiab]) AND (\"Choroid\"[MeSH] OR choroid*[tiab]) AND (\"choroidal thickness\"[tiab] OR \"subfoveal choroidal thickness\"[tiab] OR SFCT[tiab]) AND (\"Tomography, Optical Coherence\"[MeSH] OR OCT[tiab] OR \"optical coherence tomography\"[tiab] OR EDI-OCT[tiab] OR \"swept-source\"[tiab] OR SS-OCT[tiab])) NOT (\"Pregnancy\"[MeSH] OR pregnan*[tiab])",
+      "((\"Female\"[MeSH] OR women[tiab] OR female[tiab]) AND (\"Menstrual Cycle\"[MeSH] OR luteal[tiab] OR follicular[tiab] OR menopaus*[tiab] OR premenopaus*[tiab] OR postmenopaus*[tiab] OR perimenopaus*[tiab]) AND (\"Optic Disk\"[MeSH] OR optic disc[tiab] OR optic disk[tiab] OR \"optic nerve head\"[tiab] OR ONH[tiab] OR \"retinal nerve fiber layer\"[tiab] OR RNFL[tiab] OR \"ganglion cell complex\"[tiab] OR GCC[tiab] OR \"cup-to-disc\"[tiab] OR \"neuroretinal rim\"[tiab] OR \"Bruch's membrane opening\"[tiab] OR peripapillary[tiab]) AND (\"Tomography, Optical Coherence\"[MeSH] OR OCT[tiab] OR \"optical coherence tomography\"[tiab])) NOT (\"Pregnancy\"[MeSH] OR pregnan*[tiab])",
+      "((\"Female\"[MeSH] OR women[tiab]) AND (\"Menstrual Cycle\"[MeSH] OR \"Luteal Phase\"[MeSH] OR \"Follicular Phase\"[MeSH] OR menopaus*[tiab] OR postmenopaus*[tiab] OR premenopaus*[tiab]) AND (macula*[tiab] OR choroid*[tiab] OR \"posterior pole\"[tiab] OR \"optic disc\"[tiab] OR \"optic disk\"[tiab] OR \"optic nerve head\"[tiab] OR RNFL[tiab] OR \"retinal thickness\"[tiab] OR \"choroidal thickness\"[tiab])) AND (cohort[tiab] OR \"cross-sectional\"[tiab] OR \"case-control\"[tiab] OR longitudinal[tiab] OR prospective[tiab] OR retrospective[tiab] OR randomized[tiab] OR randomised[tiab] OR trial[tiab] OR observational[tiab] OR normative[tiab]) NOT (case reports[Publication Type] OR \"Case Reports\"[tiab] OR editorial[Publication Type] OR comment[Publication Type]) NOT (\"Pregnancy\"[MeSH] OR pregnan*[tiab])"
+    ],
+    "retrieved_local": 123,
+    "retrieved_pubmed": 0,
+    "after_dedup": 123,
+    "retrieved_corpus_ids": [
+      85474,
+      3200,
+      85479,
+      85499,
+      3201,
+      3203,
+      85477,
+      85485,
+      3202,
+      3204,
+      85517,
+      85480,
+      85481,
+      3206,
+      85516,
+      85483,
+      85536,
+      84987,
+      85519,
+      85496,
+      85500,
+      85510,
+      84775,
+      85476,
+      85907,
+      84825,
+      85498,
+      18285,
+      35413,
+      85531,
+      85707,
+      137614,
+      84963,
+      15754,
+      21776,
+      84969,
+      114245,
+      113617,
+      85455,
+      85518,
+      84683,
+      85503,
+      63362,
+      89951,
+      85535,
+      86873,
+      24993,
+      15996,
+      85096,
+      85482,
+      102739,
+      85514,
+      84702,
+      85541,
+      84970,
+      60916,
+      85357,
+      85527,
+      84745,
+      53845,
+      85507,
+      113391,
+      9846,
+      74179,
+      59691,
+      3143,
+      79776,
+      62849,
+      62910,
+      139565,
+      111710,
+      78520,
+      120935,
+      21711,
+      79192,
+      42636,
+      5489,
+      77981,
+      85494,
+      77978,
+      10335,
+      8756,
+      120973,
+      49441,
+      5476,
+      115824,
+      79712,
+      19988,
+      83497,
+      85478,
+      106892,
+      68455,
+      41291,
+      3205,
+      75362,
+      78289,
+      51883,
+      140522,
+      109921,
+      79298,
+      70017,
+      61045,
+      121075,
+      138761,
+      85488,
+      85475,
+      46517,
+      131167,
+      14473,
+      85489,
+      68418,
+      55098,
+      113836,
+      121655,
+      14424,
+      76470,
+      99371,
+      55096,
+      68458,
+      6656,
+      3199,
+      24508,
+      46642
+    ]
+  },
+  "screening": {
+    "screened_count": 123,
+    "excluded_count": 117,
+    "full_text_assessed": 6,
+    "included_count": 6,
+    "screening_criteria": [
+      {
+        "layer_name": "Layer 1",
+        "layer_order": 1,
+        "inclusion_criteria": [
+          "Human observational studies (e.g., cross-sectional, cohort, case-control, or repeated-measures) that compare groups by menstrual cycle phase (follicular vs luteal) and/or menopausal status (pre- vs post-menopause).",
+          "Population: healthy adult, non-pregnant women from menarche through post-menopause without ocular or systemic disease affecting the posterior pole.",
+          "Reports quantitative posterior pole structural outcomes (e.g., macular morphology, subfoveal/segmental choroidal thickness, optic disc/retinal nerve head characteristics) measured by ocular imaging (e.g., OCT/EDI-OCT/swept-source OCT).",
+          "Includes explicit stratification or within-subject comparison by menstrual phase and/or menopausal status."
+        ],
+        "exclusion_criteria": [
+          "Studies including males, pregnant or lactating women, pre-menarche participants, or participants with ocular/systemic pathology affecting the posterior pole (e.g., glaucoma, AMD, diabetes, high myopia, uncontrolled hypertension) unless healthy subgroups are analyzed separately.",
+          "Interventional studies manipulating hormones or ocular structure (e.g., initiation of hormonal contraception/HRT, ocular surgery, pharmacologic agents) without separate baseline phase/status comparisons.",
+          "No relevant outcomes (does not report quantitative posterior pole structural parameters) or no comparison by menstrual phase or menopausal status.",
+          "Non-original research (reviews, editorials), case reports/series without comparator, animal/in vitro studies, or conference abstracts without full data."
+        ],
+        "description": "Screen for human observational studies of healthy, non-pregnant adult women that compare posterior pole structural parameters across menstrual phases and/or menopausal status using ocular imaging."
+      }
+    ]
+  },
+  "inclusion": {
+    "included_count": 6,
+    "included_corpus_ids": [
+      3200,
+      85499,
+      3202,
+      3204,
+      3205,
+      3199
+    ],
+    "included_articles": [
+      {
+        "corpus_id": 3200,
+        "title": "Assessment of choroidal vascularity index during the menstrual cycle.",
+        "authors": [
+          "Nazife Aşikgarip",
+          "Emine Temel",
+          "Kemal Örnek"
+        ],
+        "year": "2022"
+      },
+      {
+        "corpus_id": 85499,
+        "title": "Evaluation of the macula, retinal nerve fiber layer and choroid thickness in postmenopausal women and reproductive-age women using spectral-domain optical coherence tomography.",
+        "authors": [],
+        "year": "2014"
+      },
+      {
+        "corpus_id": 3202,
+        "title": "Effects of menopause on the retinal nerve fiber layer and ganglion cell complex and on intraocular pressure.",
+        "authors": [
+          "Oksan Alpogan",
+          "Hatice Tekcan"
+        ],
+        "year": "2022"
+      },
+      {
+        "corpus_id": 3204,
+        "title": "The effect of postmenopausal hormonal drop on optic nerve head and peripapillary perfusion using optical coherence tomography angiography (OCTA).",
+        "authors": [
+          "Mahmoud Fathy",
+          "Alia Noureldine",
+          "Hala M Elmofty",
+          "Doaa Ahmad Tolba"
+        ],
+        "year": "2022"
+      },
+      {
+        "corpus_id": 3205,
+        "title": "Choroidal Morphology and Systemic Circulation Changes During the Menstrual Cycle in Healthy Japanese Women.",
+        "authors": [
+          "Kana Kurahashi",
+          "Yuki Hashimoto",
+          "Kanon Shiraishi",
+          "Nonoka Kubota",
+          "Takeshi Yoshitomi"
+        ],
+        "year": "2023"
+      },
+      {
+        "corpus_id": 3199,
+        "title": "Choroidal thickness changes during the menstrual cycle.",
+        "authors": [
+          "Fatih Ulaş",
+          "Umit Doğan",
+          "Bülent Duran",
+          "Asena Keleş",
+          "Sümeyra Ağca",
+          "Serdal Celebi"
+        ],
+        "year": "2013"
+      }
+    ],
+    "gt_matched_count": 8,
+    "gt_study_count": 13,
+    "matched_with_gt": 5,
+    "retrieval_recall": 0.625,
+    "inclusion_recall": 0.38461538461538464
+  },
+  "files": {
+    "excel": "autometa_batch_results/gpt-5/dense_trained/paper_207/data_extraction.xlsx",
+    "markdown": "autometa_batch_results/gpt-5/dense_trained/paper_207/report.md"
+  }
+}

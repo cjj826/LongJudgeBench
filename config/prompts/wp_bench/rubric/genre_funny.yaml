@@ -1,0 +1,8 @@
+# config/prompts/wp_bench/rubric/genre_funny.yaml
+# Funny genre criteria (Internet memes, subculture humor, role-playing humor)
+
+genre_criteria: |
+  Funny (Internet memes, copypasta, subculture humor, role-playing humor):
+  - Form: Does the response deliberately break conventional logic for humorous or absurd effect?
+  - Technique: Does it correctly use subculture-specific techniques such as puns, homophones, context-dependent slang, or "serious nonsense"?
+  - Tone: Does it successfully capture a specific ironic or satirical tone, potentially with multiple layers of meaning?

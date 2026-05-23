@@ -1,0 +1,8 @@
+# config/prompts/wp_bench/rubric/genre_functional.yaml
+# Functional Documents genre criteria (Resume, Proposal, Memo, Manual, Letter, Report, Minutes)
+
+genre_criteria: |
+  Functional Documents (Resume, Proposal, Memo, Manual, Letter, Report, Minutes):
+  - Purpose: Is the core purpose of the document (to inform, persuade, request) immediately clear?
+  - Completeness: Does the document include all information necessary to achieve its goal?
+  - Format & Logic: Does it follow the conventional format for its type? Are arguments clear, well-supported, and logical?

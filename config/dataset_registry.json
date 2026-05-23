@@ -1,0 +1,160 @@
+{
+  "datasets": {
+    "deepresearch_bench": {
+      "data_file": "data_standardized/deepresearch_bench.jsonl",
+      "gt_file": "ground_truth/deepresearch_bench_gt.jsonl",
+      "task_type": "pointwise",
+      "language": "zh",
+      "description": "DeepResearch report evaluation — pointwise multi-dim scoring, 50 topics, 4 models",
+      "statistics": {
+        "doc_count": 200,
+        "avg_instruction_tokens": 116.1,
+        "avg_content_tokens": 18012.9,
+        "median_content_tokens": 9604.5,
+        "max_content_tokens": 158158,
+        "min_content_tokens": 2282,
+        "pct_above_1000": 100.0
+      }
+    },
+    "realdr": {
+      "data_file": "data_standardized/realdr.jsonl",
+      "gt_file": "ground_truth/realdr_gt.jsonl",
+      "task_type": "pointwise",
+      "language": "zh",
+      "description": "RealDR document evaluation — pointwise multi-dim weighted scoring",
+      "statistics": {
+        "doc_count": 640,
+        "avg_instruction_tokens": 0.0,
+        "avg_content_tokens": 10131.4,
+        "median_content_tokens": 9610.0,
+        "max_content_tokens": 35891,
+        "min_content_tokens": 829,
+        "pct_above_1000": 99.5
+      }
+    },
+    "surge": {
+      "data_file": "data_standardized/surge.jsonl",
+      "gt_file": "ground_truth/surge_gt.jsonl",
+      "task_type": "listwise",
+      "language": "en",
+      "description": "Survey Generation — listwise ranking of 4 models on structure & content",
+      "statistics": {
+        "doc_count": 41,
+        "avg_instruction_tokens": 10.0,
+        "avg_content_tokens": 28758.0,
+        "median_content_tokens": 35948.5,
+        "max_content_tokens": 74595,
+        "min_content_tokens": 1456,
+        "pct_above_1000": 100.0
+      },
+      "per_model": {
+        "Autosurvey": {
+          "doc_count": 41,
+          "avg_content_tokens": 47027.6,
+          "median_content_tokens": 46895.0,
+          "max_content_tokens": 74595,
+          "min_content_tokens": 25099
+        },
+        "GT": {
+          "doc_count": 41,
+          "avg_content_tokens": 23419.1,
+          "median_content_tokens": 20083.0,
+          "max_content_tokens": 50407,
+          "min_content_tokens": 6378
+        },
+        "ID": {
+          "doc_count": 41,
+          "avg_content_tokens": 42429.2,
+          "median_content_tokens": 43016.0,
+          "max_content_tokens": 49413,
+          "min_content_tokens": 34136
+        },
+        "Naive": {
+          "doc_count": 41,
+          "avg_content_tokens": 2156.0,
+          "median_content_tokens": 1862.0,
+          "max_content_tokens": 7060,
+          "min_content_tokens": 1456
+        }
+      }
+    },
+    "wp_bench": {
+      "data_file": "data_standardized/wp_bench.jsonl",
+      "gt_file": "ground_truth/wp_bench_gt.jsonl",
+      "task_type": "pairwise",
+      "language": "multilingual",
+      "description": "Writing Preference Benchmark — pairwise preference (filtered: top22 per domain×lang)",
+      "statistics": {
+        "doc_count": 526,
+        "pair_count": 263,
+        "avg_instruction_tokens": 196.3,
+        "avg_content_tokens": 3508.9,
+        "median_content_tokens": 2178.5,
+        "max_content_tokens": 32583,
+        "min_content_tokens": 806,
+        "pct_above_1000": 96.2,
+        "pct_above_800": 100.0
+      },
+      "per_language": {
+        "en": {
+          "pair_count": 142,
+          "avg_content_tokens": 3036.0,
+          "median_content_tokens": 1967.0
+        },
+        "zh": {
+          "pair_count": 121,
+          "avg_content_tokens": 4063.9,
+          "median_content_tokens": 2710.0
+        }
+      },
+      "domains": {
+        "剧本-脚本": 33, "提案策划": 17, "产品说明书": 15,
+        "演讲稿": 14, "人物传记": 13, "仙侠小说": 11,
+        "教程指南": 11, "采访问题": 11, "实验报告": 10,
+        "科普文章": 10, "玄幻小说": 9, "社交媒体创作": 9,
+        "角色扮演": 9, "辩论稿": 8, "跨国-跨语言抽象文学": 8,
+        "古装小说": 7, "二次元抽象文学-同人创作": 7, "互联网黑话体系": 7,
+        "饭圈抽象文学": 6, "电竞-游戏抽象文学": 5, "反主流消费文化抽象": 5,
+        "游戏小说": 4, "体育小说": 4, "博客文章": 3,
+        "产品评测": 3, "抽象文学-亚文化": 3, "武侠小说": 3,
+        "奇幻-魔幻故事": 2, "学术论文摘要": 2, "旅行游记": 2,
+        "公开信": 2, "嘻哈-说唱文化抽象文学": 2, "军事小说": 1,
+        "历史故事": 1, "悬疑-推理故事": 1, "小说-故事": 1,
+        "书评-影评-乐评": 1, "简历-求职信": 1, "亚文化身份认同表达": 1,
+        "诗歌": 1
+      }
+    },
+    "ma": {
+      "data_file": "data_standardized/ma.jsonl",
+      "gt_file": "ground_truth/ma_gt.jsonl",
+      "task_type": "pairwise",
+      "language": "en",
+      "description": "Meta Analysis — pairwise comparison on insights & structure dimensions",
+      "statistics": {
+        "doc_count": 120,
+        "avg_instruction_tokens": 414.7,
+        "avg_content_tokens": 4764.1,
+        "median_content_tokens": 4515.5,
+        "max_content_tokens": 10234,
+        "min_content_tokens": 1867,
+        "pct_above_1000": 100.0
+      }
+    },
+    "verify_bench_hard": {
+      "data_file": "data_standardized/verify_bench_hard.jsonl",
+      "gt_file": "ground_truth/verify_bench_hard_gt.jsonl",
+      "task_type": "pointwise",
+      "language": "en",
+      "description": "Hard verification benchmark — pointwise binary verification accuracy",
+      "statistics": {
+        "doc_count": 316,
+        "avg_instruction_tokens": 322.4,
+        "avg_content_tokens": 3052.6,
+        "median_content_tokens": 1692.5,
+        "max_content_tokens": 15867,
+        "min_content_tokens": 803,
+        "pct_above_1000": 81.6
+      }
+    }
+  }
+}

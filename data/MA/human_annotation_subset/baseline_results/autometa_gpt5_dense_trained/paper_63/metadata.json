@@ -1,0 +1,416 @@
+{
+  "paper_id": 63,
+  "model": "gpt-5",
+  "retrieval_mode": "dense_trained",
+  "success": true,
+  "error": null,
+  "timing": {
+    "total_seconds": 368.083331,
+    "start_time": "2026-04-14T07:08:49.044733",
+    "end_time": "2026-04-14T07:15:33.121145"
+  },
+  "retrieval": {
+    "queries_generated": 5,
+    "queries": [
+      "((\"Obesity, Morbid\"[Mesh] OR \"Obesity, Morbid/surgery\"[Mesh] OR \"morbid obes*\"[tiab] OR \"severe obes*\"[tiab] OR \"class III obes*\"[tiab]) AND (\"Gastrectomy, Sleeve\"[Mesh] OR \"sleeve gastrectom*\"[tiab] OR \"vertical sleeve gastrectom*\"[tiab] OR \"gastric sleeve\"[tiab] OR \"sleeve resection\"[tiab] OR LSG[tiab] OR LVSG[tiab]) AND (\"Laparoscopy\"[Mesh] OR laparoscop*[tiab]))",
+      "((\"Gastrectomy, Sleeve\"[Mesh] OR \"sleeve gastrectom*\"[tiab] OR \"vertical sleeve gastrectom*\"[tiab] OR \"gastric sleeve\"[tiab] OR LSG[tiab] OR LVSG[tiab]) AND (\"Lower Esophageal Sphincter\"[Mesh] OR \"Esophageal Sphincter\"[Mesh] OR \"lower esophag* sphincter\"[tiab] OR \"lower oesophag* sphincter\"[tiab] OR LES[tiab]) AND (\"Manometry\"[Mesh] OR manometr*[tiab] OR \"high-resolution manometr*\"[tiab] OR HRM[tiab] OR \"Esophageal pH Monitoring\"[Mesh] OR \"pH monitor*\"[tiab] OR \"impedance-pH\"[tiab] OR DeMeester[tiab] OR \"DeMeester score\"[tiab]) AND (pressure[tiab] OR length[tiab] OR function*[tiab]))",
+      "((\"Gastrectomy, Sleeve\"[Mesh] OR \"sleeve gastrectom*\"[tiab] OR \"vertical sleeve gastrectom*\"[tiab] OR LSG[tiab] OR LVSG[tiab]) AND (laparoscop*[tiab] OR \"Laparoscopy\"[Mesh]) AND (preoperativ*[tiab] OR \"Preoperative Period\"[Mesh] OR baseline[tiab] OR presurg*[tiab] OR \"before surgery\"[tiab] OR \"pre-post\"[tiab] OR \"before and after\"[tiab] OR paired[tiab] OR \"within-subject*\"[tiab]) AND (\"Lower Esophageal Sphincter\"[Mesh] OR \"lower esophag* sphincter\"[tiab] OR \"lower oesophag* sphincter\"[tiab] OR manometr*[tiab] OR HRM[tiab] OR \"Esophageal pH Monitoring\"[Mesh] OR \"pH monitor*\"[tiab] OR DeMeester[tiab]))",
+      "((\"Gastrectomy, Sleeve\"[Mesh] OR \"sleeve gastrectom*\"[tiab] OR \"vertical sleeve gastrectom*\"[tiab] OR \"gastric sleeve\"[tiab] OR LSG[tiab] OR LVSG[tiab]) AND (\"Body Mass Index\"[Mesh] OR BMI[tiab] OR \"body mass index\"[tiab] OR \"Weight Loss\"[Mesh] OR \"Body Weight\"[Mesh] OR \"weight loss\"[tiab] OR \"excess weight loss\"[tiab] OR EWL[tiab] OR \"%TWL\"[tiab] OR TWL[tiab] OR \"total weight loss\"[tiab]) AND (preoperativ*[tiab] OR baseline[tiab] OR \"pre-post\"[tiab] OR \"before and after\"[tiab]))",
+      "((\"Gastrectomy, Sleeve\"[Mesh] OR \"sleeve gastrectom*\"[tiab] OR \"vertical sleeve gastrectom*\"[tiab] OR LSG[tiab] OR LVSG[tiab]) AND (\"Gastroesophageal Reflux\"[Mesh] OR GERD[tiab] OR GORD[tiab] OR \"gastroesophageal reflux\"[tiab] OR \"gastro-oesophageal reflux\"[tiab] OR DeMeester[tiab] OR \"pH monitor*\"[tiab] OR \"Esophageal pH Monitoring\"[Mesh] OR manometr*[tiab] OR \"lower esophag* sphincter\"[tiab] OR \"lower oesophag* sphincter\"[tiab]) AND (random*[tiab] OR trial[tiab] OR randomized[tiab] OR randomised[tiab] OR controlled[tiab] OR cohort*[tiab] OR prospective[tiab] OR retrospective[tiab] OR longitudinal[tiab] OR \"Follow-Up Studies\"[Mesh] OR \"Case-Control Studies\"[Mesh] OR \"Cohort Studies\"[Mesh]))"
+    ],
+    "retrieved_local": 120,
+    "retrieved_pubmed": 0,
+    "after_dedup": 120,
+    "retrieved_corpus_ids": [
+      4541,
+      4544,
+      69501,
+      69510,
+      69498,
+      8363,
+      69468,
+      108086,
+      69508,
+      4543,
+      69482,
+      4540,
+      107753,
+      69469,
+      4545,
+      69555,
+      69533,
+      69512,
+      69506,
+      69531,
+      108082,
+      69950,
+      69545,
+      69466,
+      137957,
+      108087,
+      108070,
+      69515,
+      69472,
+      69549,
+      108104,
+      69511,
+      108090,
+      108072,
+      69551,
+      108089,
+      69532,
+      65258,
+      69534,
+      17998,
+      69495,
+      108091,
+      69496,
+      69462,
+      69484,
+      69528,
+      69500,
+      108083,
+      69504,
+      44141,
+      18834,
+      70302,
+      18828,
+      69494,
+      112212,
+      90564,
+      107590,
+      63704,
+      69529,
+      108173,
+      69485,
+      112244,
+      18886,
+      108174,
+      8365,
+      108071,
+      69474,
+      18883,
+      108509,
+      108088,
+      8442,
+      69548,
+      7049,
+      18806,
+      8400,
+      70396,
+      18830,
+      16451,
+      18832,
+      69536,
+      108144,
+      17908,
+      109026,
+      69473,
+      9308,
+      70336,
+      70171,
+      69505,
+      108515,
+      69491,
+      69535,
+      69497,
+      69486,
+      4542,
+      70132,
+      69471,
+      108505,
+      70615,
+      18781,
+      69547,
+      8366,
+      69481,
+      107534,
+      69550,
+      8364,
+      4539,
+      70243,
+      69489,
+      21433,
+      4538,
+      21793,
+      70644,
+      69514,
+      69483,
+      108084,
+      65362,
+      108138,
+      69461,
+      33693,
+      69467
+    ]
+  },
+  "screening": {
+    "screened_count": 120,
+    "excluded_count": 101,
+    "full_text_assessed": 19,
+    "included_count": 19,
+    "screening_criteria": [
+      {
+        "layer_name": "Layer 1",
+        "layer_order": 1,
+        "inclusion_criteria": [
+          "Study design: randomized controlled trials, nonrandomized comparative studies, or prospective/retrospective cohort pre–post studies in humans published in peer‑reviewed journals",
+          "Population: adults (≥18 years) with morbid obesity (BMI ≥40 or ≥35 with obesity‑related comorbidities) undergoing primary laparoscopic vertical sleeve gastrectomy (LVSG)",
+          "Comparator: preoperative status (baseline before LVSG), either within-subject pre–post or an explicit preoperative control group",
+          "Outcomes: reports at least one of LESP, LESL (via conventional or high‑resolution manometry), DeMeester Score (via ambulatory pH monitoring), or BMI change"
+        ],
+        "exclusion_criteria": [
+          "Non-LVSG bariatric procedures, revisional or mixed procedures, or studies where LVSG-specific data cannot be isolated",
+          "No preoperative comparator or none of the specified outcomes (LESP, LESL, DMS, BMI) reported",
+          "Non-original publications (reviews, meta-analyses, editorials/letters), conference abstracts only, or case reports/series",
+          "Non-human studies or pediatric populations (<18 years)"
+        ],
+        "description": "Screen studies enrolling morbidly obese adults undergoing primary LVSG that compare postoperative with preoperative measures and report esophageal physiology (LESP/LESL/DMS) and/or BMI change using accepted testing methods."
+      }
+    ]
+  },
+  "inclusion": {
+    "included_count": 19,
+    "included_corpus_ids": [
+      4541,
+      4544,
+      8363,
+      69468,
+      4543,
+      4540,
+      69950,
+      108072,
+      18886,
+      8365,
+      69548,
+      8400,
+      69497,
+      4542,
+      8366,
+      8364,
+      4539,
+      4538,
+      69514
+    ],
+    "included_articles": [
+      {
+        "corpus_id": 4541,
+        "title": "PREOPERATIVE MANOMETRY FOR THE SELECTION OF OBESE PEOPLE CANDIDATE TO SLEEVE GASTRECTOMY.",
+        "authors": [
+          "Antonio Carlos Valezi",
+          "Fernando Augusto Herbella",
+          "Jorge Mali-Junior",
+          "Mariano de Almeida Menezes",
+          "Mário Liberatti",
+          "Rafael Onuki Sato"
+        ],
+        "year": "2017"
+      },
+      {
+        "corpus_id": 4544,
+        "title": "Hypotonic Low Esophageal Sphincter Is Not Predictive of Gastroesophageal Reflux Disease After Sleeve Gastrectomy.",
+        "authors": [
+          "T Greilsamer",
+          "M de Montrichard",
+          "S Bruley des Varannes",
+          "D Jacobi",
+          "M Guillouche",
+          "N Regenet",
+          "E Mirallié",
+          "C Blanchard"
+        ],
+        "year": "2020"
+      },
+      {
+        "corpus_id": 8363,
+        "title": "Evolution of gastroesophageal reflux after laparoscopic vertical gastrectomy. A radiographic, manometric and pH-metric study.",
+        "authors": [
+          "David Ruiz de Angulo",
+          "Pilar Jimeno Griño",
+          "María Ángeles Ortiz Escandell",
+          "Vicente Munitiz Ruiz",
+          "Pedro José Gil Vázquez",
+          "Domingo Pérez Flores",
+          "Luisa Fernanda Martínez de Haro",
+          "Antonio Miguel Hernández",
+          "Pascual Parrilla Paricio"
+        ],
+        "year": "2019"
+      },
+      {
+        "corpus_id": 69468,
+        "title": "Impact of laparoscopic sleeve gastrectomy on esophageal physiology.",
+        "authors": [],
+        "year": "2021"
+      },
+      {
+        "corpus_id": 4543,
+        "title": "Sleeve gastrectomy and gastroesophageal reflux: a comprehensive endoscopic and pH-manometric prospective study.",
+        "authors": [
+          "Lidia Castagneto-Gissey",
+          "Alfredo Genco",
+          "Giulia Del Corpo",
+          "Danilo Badiali",
+          "Anna Maria Pronio",
+          "Giovanni Casella"
+        ],
+        "year": "2020"
+      },
+      {
+        "corpus_id": 4540,
+        "title": "Esophageal motility after laparoscopic sleeve gastrectomy.",
+        "authors": [
+          "Eleni Sioka",
+          "George Tzovaras",
+          "Fotios Tsiopoulos",
+          "Dimitris Papamargaritis",
+          "Spyros Potamianos",
+          "Constantine Chatzitheofilou",
+          "Dimitris Zacharoulis"
+        ],
+        "year": "2017"
+      },
+      {
+        "corpus_id": 69950,
+        "title": "Prospective Longitudinal Trends in Body Composition and Clinical Outcomes 3 Years Following Sleeve Gastrectomy.",
+        "authors": [],
+        "year": "2019"
+      },
+      {
+        "corpus_id": 108072,
+        "title": "Functional importance of laparoscopic sleeve gastrectomy for the lower esophageal sphincter in patients with morbid obesity.",
+        "authors": [],
+        "year": "2012"
+      },
+      {
+        "corpus_id": 18886,
+        "title": "Sleeve gastrectomy for morbid obesity: weight loss trajectory and failure predictors over a decade.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 8365,
+        "title": "Predictive Factors of Gastroesophageal Reflux Disease in Bariatric Surgery: a Controlled Trial Comparing Sleeve Gastrectomy with Gastric Bypass.",
+        "authors": [
+          "Daniel Navarini",
+          "Carlos Augusto S Madalosso",
+          "Alexandre P Tognon",
+          "Fernando Fornari",
+          "Fábio R Barão",
+          "Richard R Gurski"
+        ],
+        "year": "2020"
+      },
+      {
+        "corpus_id": 69548,
+        "title": "Long-Term Outcomes of Sleeve Gastrectomy at a Veterans Affairs Medical Center.",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 8400,
+        "title": "Effect of Bacillius Coagulans and Galactomannans on Obese Patients Undergoing Sleeve Gastrectomy, A Randomized-Controlled Clinical Trial.",
+        "authors": [
+          "Fay Kazzi",
+          "Noha Daher",
+          "Grenith Zimmerman",
+          "Manuel Garcia",
+          "Nicholas Schmidt",
+          "Keith Scharf"
+        ],
+        "year": "2021"
+      },
+      {
+        "corpus_id": 69497,
+        "title": "Long Term Outcomes of Laparoscopic Sleeve Gastrectomy in an Academic Center in Belgium (9 Years Follow-Up).",
+        "authors": [],
+        "year": "2025"
+      },
+      {
+        "corpus_id": 4542,
+        "title": "Gastroesophageal reflux-related physiologic changes after sleeve gastrectomy and Roux-en-Y gastric bypass: a prospective comparative study.",
+        "authors": [
+          "P Praveen Raj",
+          "Siddhartha Bhattacharya",
+          "Shivanshu Misra",
+          "S Saravana Kumar",
+          "Mohd Juned Khan",
+          "Sridhar Chinnaswami Gunasekaran",
+          "C Palanivelu"
+        ],
+        "year": "2019"
+      },
+      {
+        "corpus_id": 8366,
+        "title": "Persistent and De Novo GERD After Sleeve Gastrectomy: Manometric and pH-Impedance Study Findings.",
+        "authors": [
+          "Luciano Poggi",
+          "Grazia M Bernui",
+          "Diego A Romani",
+          "Agustin F Gavidia",
+          "Luis A Poggi"
+        ],
+        "year": "2023"
+      },
+      {
+        "corpus_id": 8364,
+        "title": "Outcomes of laparoscopic sleeve gastrectomy by means of esophageal manometry and pH-metry, before and after surgery.",
+        "authors": [
+          "Eyup Gemici",
+          "Osman Kones",
+          "Hakan Seyit",
+          "Ahmet Surek",
+          "Murat Cikot",
+          "Mehmet Abdussamet Bozkurt",
+          "Halil Alis"
+        ],
+        "year": "2020"
+      },
+      {
+        "corpus_id": 4539,
+        "title": "The effect of laparoscopic sleeve gastrectomy on the antireflux mechanism: can it be minimized?",
+        "authors": [
+          "Eleftheria Kleidi",
+          "Dimitrios Theodorou",
+          "Konstantinos Albanopoulos",
+          "Evangelos Menenakos",
+          "Michail A Karvelis",
+          "Joanna Papailiou",
+          "Konstantinos Stamou",
+          "Georgios Zografos",
+          "Stylianos Katsaragakis",
+          "Emmanuel Leandros"
+        ],
+        "year": "2013"
+      },
+      {
+        "corpus_id": 4538,
+        "title": "Manometric changes of the lower esophageal sphincter after sleeve gastrectomy in obese patients.",
+        "authors": [
+          "Italo Braghetto",
+          "Enrique Lanzarini",
+          "Owen Korn",
+          "Héctor Valladares",
+          "Juan Carlos Molina",
+          "Ana Henriquez"
+        ],
+        "year": "2010"
+      },
+      {
+        "corpus_id": 69514,
+        "title": "The Impact of Sleeve Gastrectomy on Gastroesophageal Reflux Disease in Patients with Morbid Obesity.",
+        "authors": [],
+        "year": "2022"
+      }
+    ],
+    "gt_matched_count": 8,
+    "gt_study_count": 19,
+    "matched_with_gt": 7,
+    "retrieval_recall": 0.875,
+    "inclusion_recall": 0.3684210526315789
+  },
+  "files": {
+    "excel": "autometa_batch_results/gpt-5/dense_trained/paper_63/data_extraction.xlsx",
+    "markdown": "autometa_batch_results/gpt-5/dense_trained/paper_63/report.md"
+  }
+}

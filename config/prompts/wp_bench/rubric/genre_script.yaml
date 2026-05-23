@@ -1,0 +1,8 @@
+# config/prompts/wp_bench/rubric/genre_script.yaml
+# Scriptwriting genre criteria
+
+genre_criteria: |
+  Scriptwriting (Play/Script):
+  - Dialogue: Is the dialogue believable for the characters, reflecting personality, background, and emotional state?
+  - Action & Staging: Does the script include stage directions (tone, emotion, action) for dialogue? Does it incorporate set design, sound effects, props?
+  - Motivation: Do main characters have clear, understandable motivations that drive the plot forward?

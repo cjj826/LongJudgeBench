@@ -1,0 +1,310 @@
+{
+  "paper_id": 347,
+  "model": "gpt-5",
+  "retrieval_mode": "bm25",
+  "success": true,
+  "error": null,
+  "timing": {
+    "total_seconds": 332.70559,
+    "start_time": "2026-04-14T12:27:07.626198",
+    "end_time": "2026-04-14T12:33:23.486177"
+  },
+  "retrieval": {
+    "queries_generated": 5,
+    "queries": [
+      "(\"Bipolar Disorder\"[Mesh] OR \"bipolar disorder\"[tiab] OR bipolar[tiab] OR \"bipolar affective\"[tiab] OR \"manic-depressive\"[tiab] OR mania[tiab] OR hypomania[tiab]) AND ((\"Calcium, Intracellular\"[Mesh] OR \"Calcium Signaling\"[Mesh] OR \"Calcium/metabolism\"[Mesh] OR \"intracellular calcium\"[tiab] OR \"cytosolic calcium\"[tiab] OR \"cytoplasmic calcium\"[tiab] OR \"[Ca2+]i\"[tiab] OR \"calcium homeostasis\"[tiab] OR \"calcium mobilization\"[tiab] OR \"calcium mobilisation\"[tiab] OR \"calcium flux\"[tiab])) AND ((\"Blood Platelets\"[Mesh] OR platelet[tiab] OR platelets[tiab]) OR (\"Lymphocytes\"[Mesh] OR \"Leukocytes, Mononuclear\"[Mesh] OR lymphocyte[tiab] OR lymphocytes[tiab] OR PBMC[tiab] OR \"peripheral blood mononuclear\"[tiab] OR \"peripheral blood lymphocyte\"[tiab] OR \"peripheral blood lymphocytes\"[tiab]))",
+      "(\"Bipolar Disorder\"[Mesh] OR \"bipolar disorder\"[tiab] OR bipolar[tiab] OR \"manic-depressive\"[tiab]) AND ((\"Blood Platelets\"[Mesh] OR platelet[tiab] OR platelets[tiab] OR \"Lymphocytes\"[Mesh] OR lymphocyte[tiab] OR lymphocytes[tiab] OR \"Leukocytes, Mononuclear\"[Mesh] OR PBMC[tiab] OR \"peripheral blood mononuclear\"[tiab])) AND ((\"Serotonin\"[Mesh] OR serotonin[tiab] OR \"5-HT\"[tiab] OR \"5 hydroxytryptamine\"[tiab] OR \"Thrombin\"[Mesh] OR thrombin[tiab])) AND ((\"Calcium, Intracellular\"[Mesh] OR \"[Ca2+]i\"[tiab] OR \"intracellular calcium\"[tiab] OR \"cytosolic calcium\"[tiab] OR \"calcium response\"[tiab] OR \"calcium mobilization\"[tiab] OR \"calcium mobilisation\"[tiab] OR stimulated[tiab] OR stimulation[tiab] OR agonist[tiab]))",
+      "((\"Bipolar Disorder\"[Mesh] OR \"bipolar disorder\"[tiab] OR bipolar[tiab] OR \"manic-depressive\"[tiab]) AND (\"healthy control\"[tiab] OR \"healthy controls\"[tiab] OR \"control subjects\"[tiab] OR control[tiab] OR controls[tiab] OR healthy[tiab] OR normal[tiab] OR \"healthy volunteers\"[tiab] OR \"Depressive Disorder, Major\"[Mesh] OR \"major depressive disorder\"[tiab] OR \"unipolar depression\"[tiab] OR unipolar[tiab] OR MDD[tiab] OR \"Schizophrenia\"[Mesh] OR schizophrenia[tiab] OR schizoaffective[tiab])) AND ((\"Blood Platelets\"[Mesh] OR platelet[tiab] OR platelets[tiab] OR \"Lymphocytes\"[Mesh] OR lymphocyte[tiab] OR lymphocytes[tiab])) AND ((\"Calcium, Intracellular\"[Mesh] OR \"[Ca2+]i\"[tiab] OR \"intracellular calcium\"[tiab] OR \"cytosolic calcium\"[tiab] OR \"resting calcium\"[tiab] OR \"basal calcium\"[tiab] OR \"baseline calcium\"[tiab])) AND ((\"Case-Control Studies\"[Mesh] OR \"Cross-Sectional Studies\"[Mesh] OR \"Cohort Studies\"[Mesh] OR \"Comparative Study\"[pt] OR \"Observational Study\"[pt] OR case-control[tiab] OR cross-sectional[tiab] OR cohort[tiab] OR comparative[tiab]))",
+      "(\"Bipolar Disorder\"[Mesh]) AND (\"Blood Platelets\"[Mesh] OR \"Lymphocytes\"[Mesh] OR \"Leukocytes, Mononuclear\"[Mesh]) AND (\"Calcium, Intracellular\"[Mesh] OR \"Calcium Signaling\"[Mesh]) AND (\"Serotonin\"[Mesh] OR \"Thrombin\"[Mesh])",
+      "(bipolar[tiab] OR \"bipolar disorder\"[tiab] OR \"bipolar affective\"[tiab] OR \"manic-depressive\"[tiab] OR mania[tiab] OR hypomania[tiab]) AND (platelet[tiab] OR platelets[tiab] OR lymphocyte[tiab] OR lymphocytes[tiab] OR \"peripheral blood lymphocyte\"[tiab] OR \"peripheral blood lymphocytes\"[tiab] OR PBMC[tiab] OR \"peripheral blood mononuclear\"[tiab]) AND (\"[Ca2+]i\"[tiab] OR \"intracellular calcium\"[tiab] OR \"cytosolic calcium\"[tiab] OR \"cytoplasmic calcium\"[tiab] OR \"resting calcium\"[tiab] OR \"basal calcium\"[tiab] OR \"baseline calcium\"[tiab] OR \"calcium homeostasis\"[tiab] OR \"calcium mobilization\"[tiab] OR \"calcium mobilisation\"[tiab] OR \"calcium flux\"[tiab] OR Fura-2[tiab] OR indo-1[tiab]) AND (serotonin[tiab] OR \"5-HT\"[tiab] OR \"5 hydroxytryptamine\"[tiab] OR thrombin[tiab] OR agonist[tiab] OR stimulation[tiab] OR stimulated[tiab])"
+    ],
+    "retrieved_local": 124,
+    "retrieved_pubmed": 0,
+    "after_dedup": 124,
+    "retrieved_corpus_ids": [
+      24289,
+      1432,
+      1424,
+      1442,
+      24291,
+      24292,
+      1434,
+      1431,
+      24347,
+      24349,
+      1423,
+      24325,
+      1422,
+      1426,
+      1427,
+      24280,
+      27289,
+      1429,
+      27288,
+      1428,
+      1430,
+      24348,
+      1441,
+      1436,
+      27219,
+      24394,
+      1433,
+      24351,
+      1506,
+      27234,
+      24337,
+      1435,
+      1425,
+      27281,
+      24300,
+      1533,
+      24831,
+      102467,
+      24301,
+      1749,
+      1694,
+      85076,
+      6064,
+      98267,
+      102530,
+      42395,
+      24286,
+      24346,
+      25621,
+      83498,
+      75462,
+      1438,
+      120020,
+      1503,
+      68778,
+      27258,
+      1741,
+      71443,
+      24353,
+      46357,
+      6268,
+      27212,
+      27290,
+      24344,
+      75123,
+      24317,
+      1509,
+      101965,
+      69633,
+      24327,
+      24287,
+      24339,
+      24350,
+      24298,
+      24333,
+      24306,
+      24330,
+      107289,
+      45788,
+      24309,
+      64277,
+      24336,
+      127531,
+      111394,
+      1437,
+      136345,
+      24307,
+      72362,
+      24335,
+      111400,
+      133739,
+      56965,
+      138572,
+      111065,
+      130054,
+      79369,
+      56587,
+      81352,
+      125762,
+      99333,
+      112114,
+      124126,
+      126467,
+      34596,
+      98165,
+      101013,
+      69546,
+      65551,
+      81481,
+      135603,
+      134109,
+      66860,
+      73285,
+      134406,
+      133525,
+      80280,
+      53370,
+      114310,
+      138228,
+      48105,
+      37219,
+      123174,
+      140557,
+      62807
+    ]
+  },
+  "screening": {
+    "screened_count": 124,
+    "excluded_count": 113,
+    "full_text_assessed": 11,
+    "included_count": 11,
+    "screening_criteria": [
+      {
+        "layer_name": "Layer 1",
+        "layer_order": 1,
+        "inclusion_criteria": [
+          "Human observational studies (cross-sectional, case–control, or cohort) that include individuals with bipolar disorder diagnosed via DSM/ICD criteria or documented clinical records",
+          "Include at least one comparator group: healthy controls and/or individuals with unipolar depression or schizophrenia",
+          "Report outcomes on basal free intracellular calcium concentration ([Ca2+]i) in platelets or lymphocytes and/or [Ca2+]i responses to stimulation with serotonin (5-HT) or thrombin",
+          "Measurements performed ex vivo in peripheral blood cells with extractable group-level data (e.g., means/SD, medians/IQR, or data enabling extraction)"
+        ],
+        "exclusion_criteria": [
+          "Non-human studies, cell lines, or post-mortem/brain tissue studies; studies measuring calcium only in non-platelet/lymphocyte cells (e.g., neurons, fibroblasts)",
+          "Studies without a bipolar disorder group or where BD data cannot be separated; or without an appropriate comparator (no healthy control or psychiatric comparator)",
+          "Studies that do not measure intracellular [Ca2+]i in platelets/lymphocytes or do not assess 5-HT- or thrombin-stimulated [Ca2+]i responses",
+          "Interventional drug trials reporting only acute pharmacologic effects without baseline/comparator data, and non-primary research (reviews, editorials, conference abstracts without extractable data)"
+        ],
+        "description": "Select human observational studies comparing individuals with bipolar disorder to healthy controls and/or unipolar depression or schizophrenia on basal and stimulated intracellular calcium in platelets or lymphocytes; exclude non-relevant tissues, non-human work, absent comparators, irrelevant outcomes, and non-primary reports."
+      }
+    ]
+  },
+  "inclusion": {
+    "included_count": 11,
+    "included_corpus_ids": [
+      24289,
+      1432,
+      1424,
+      1431,
+      24349,
+      1423,
+      1429,
+      1428,
+      1441,
+      1433,
+      24351
+    ],
+    "included_articles": [
+      {
+        "corpus_id": 24289,
+        "title": "Intracellular calcium signalling in peripheral cells of patients with bipolar affective disorder.",
+        "authors": [],
+        "year": "1994"
+      },
+      {
+        "corpus_id": 1432,
+        "title": "Elevated basal and thapsigargin-stimulated intracellular calcium of platelets and lymphocytes from bipolar affective disorder patients measured by a fluorometric microassay.",
+        "authors": [
+          "C Hough",
+          "S J Lu",
+          "C L Davis",
+          "D M Chuang",
+          "R M Post"
+        ],
+        "year": "1999"
+      },
+      {
+        "corpus_id": 1424,
+        "title": "Abnormal intracellular calcium ion concentration in platelets and lymphocytes of bipolar patients.",
+        "authors": [
+          "S L Dubovsky",
+          "J Murphy",
+          "M Thomas",
+          "J Rademacher"
+        ],
+        "year": "1992"
+      },
+      {
+        "corpus_id": 1431,
+        "title": "Enhanced calcium response to serotonin in platelets from patients with affective disorders.",
+        "authors": [
+          "S Yamawaki",
+          "A Kagaya",
+          "Y Okamoto",
+          "M Shimizu",
+          "A Nishida",
+          "Y Uchitomi"
+        ],
+        "year": "1996"
+      },
+      {
+        "corpus_id": 24349,
+        "title": "Altered 5-HT-induced calcium response in the presence of staurosporine in blood platelets from bipolar disorder patients.",
+        "authors": [],
+        "year": "2003"
+      },
+      {
+        "corpus_id": 1423,
+        "title": "Elevated platelet intracellular calcium concentration in bipolar depression.",
+        "authors": [
+          "S L Dubovsky",
+          "C Lee",
+          "J Christiano",
+          "J Murphy"
+        ],
+        "year": "1991"
+      },
+      {
+        "corpus_id": 1429,
+        "title": "Resting and thrombin-stimulated cytosolic calcium in platelets of patients with alcoholic withdrawal, bipolar manic disorder and chronic schizophrenia.",
+        "authors": [
+          "C H Tan",
+          "H S Lee",
+          "E H Kua",
+          "L H Peh"
+        ],
+        "year": "1995"
+      },
+      {
+        "corpus_id": 1428,
+        "title": "Serotonin-induced platelet intracellular calcium mobilization in depressed patients.",
+        "authors": [
+          "I Kusumi",
+          "T Koyama",
+          "I Yamashita"
+        ],
+        "year": "1994"
+      },
+      {
+        "corpus_id": 1441,
+        "title": "Increased platelet intracellular calcium ion concentration is specific to bipolar disorder.",
+        "authors": [
+          "Steven L Dubovsky",
+          "Elsa Daurignac",
+          "Kenneth E Leonard"
+        ],
+        "year": "2014"
+      },
+      {
+        "corpus_id": 1433,
+        "title": "Serotonin-induced platelet intracellular calcium mobilization in various psychiatric disorders: is it specific to bipolar disorder?",
+        "authors": [
+          "K Suzuki",
+          "I Kusumi",
+          "Y Sasaki",
+          "T Koyama"
+        ],
+        "year": "2001"
+      },
+      {
+        "corpus_id": 24351,
+        "title": "[The mechanism of enhanced platelet intracellular calcium mobilization stimulated by serotonin--in the pathophysiology of mood disorders].",
+        "authors": [],
+        "year": "2001"
+      }
+    ],
+    "gt_matched_count": 24,
+    "gt_study_count": 8.0,
+    "matched_with_gt": 8,
+    "retrieval_recall": 0.3333333333333333,
+    "inclusion_recall": 1.0
+  },
+  "files": {
+    "excel": "autometa_batch_results/gpt-5/bm25/paper_347/data_extraction.xlsx",
+    "markdown": "autometa_batch_results/gpt-5/bm25/paper_347/report.md"
+  }
+}

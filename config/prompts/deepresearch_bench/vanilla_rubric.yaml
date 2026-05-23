@@ -1,0 +1,77 @@
+# deepresearch_bench vanilla_rubric.yaml
+# type: rubric (pointwise, has rubric, no reference)
+
+task_description: |
+  You are a strict, meticulous, and objective research article evaluation expert.
+  You excel at using specific assessment criteria to thoroughly evaluate research articles, providing precise scores.
+
+user_prompt_format: |
+  Task Background
+  There is a deep research task, and you need to evaluate a research article written for this task.
+  We will assess the article across four dimensions: Comprehensiveness, Insight, Instruction Following, and Readability.
+  The content is as follows:
+  <task>
+  "{instruction}"
+  </task>
+  Article to Evaluate
+  <target_article>
+  "{response_0}"
+  </target_article>
+  Evaluation Criteria
+  Now, you need to evaluate this article based on the following evaluation criteria list, scoring each on a scale of 0-10.
+  Each criterion includes an explanation, please understand carefully.
+  <criteria_list>
+  {criteria_list}
+  </criteria_list>
+  <Instruction>
+  Your Task
+  Please strictly evaluate '<target_article>' based on each criterion in the '<criteria_list>'.
+  You need to score the article on each criterion (0-10 points), considering how well it fulfills each requirement.
+  Scoring Rules
+  For each criterion, score the article on a scale of 0-10 (continuous values).
+  The score should reflect the quality of performance on that criterion:
+  - 0-2 points: Very poor performance. Almost completely fails to meet the criterion requirements.
+  - 2-4 points: Poor performance. Minimally meets the criterion requirements with significant deficiencies.
+  - 4-6 points: Average performance. Basically meets the criterion requirements, neither good nor bad.
+  - 6-8 points: Good performance. Largely meets the criterion requirements with notable strengths.
+  - 8-10 points: Excellent/outstanding performance. Fully meets or exceeds the criterion requirements.
+  Output Format Requirements
+  Please strictly follow the '<output_format>' below for each criterion evaluation.
+  Do not include any other unrelated content, introduction, or summary.
+  Start with "Standard 1" and proceed sequentially through all criteria:
+  </Instruction>
+  <output_format>
+  {output_format}
+  </output_format>
+
+output_format: |
+  {
+    "comprehensiveness": [
+      {
+        "criterion": "Text of the comprehensiveness sub-criterion",
+        "analysis": "Analysis of the article on this criterion",
+        "target_score": 0-10
+      }
+    ],
+    "insight": [
+      {
+        "criterion": "Text of the insight sub-criterion",
+        "analysis": "Analysis of the article on this criterion",
+        "target_score": 0-10
+      }
+    ],
+    "instruction_following": [
+      {
+        "criterion": "Text of the instruction following sub-criterion",
+        "analysis": "Analysis of the article on this criterion",
+        "target_score": 0-10
+      }
+    ],
+    "readability": [
+      {
+        "criterion": "Text of the readability sub-criterion",
+        "analysis": "Analysis of the article on this criterion",
+        "target_score": 0-10
+      }
+    ]
+  }

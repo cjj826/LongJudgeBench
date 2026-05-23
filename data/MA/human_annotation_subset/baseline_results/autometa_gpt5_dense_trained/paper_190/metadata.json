@@ -1,0 +1,221 @@
+{
+  "paper_id": 190,
+  "model": "gpt-5",
+  "retrieval_mode": "dense_trained",
+  "success": true,
+  "error": null,
+  "timing": {
+    "total_seconds": 226.043182,
+    "start_time": "2026-04-14T08:52:22.483275",
+    "end_time": "2026-04-14T08:56:33.932635"
+  },
+  "retrieval": {
+    "queries_generated": 5,
+    "queries": [
+      "((\"Dentists\"[Mesh] OR \"Dental Staff\"[Mesh] OR \"Dental Hygienists\"[Mesh] OR \"Dental Assistants\"[Mesh] OR \"Dental Auxiliaries\"[Mesh] OR \"Dental Technicians\"[Mesh] OR \"Students, Dental\"[Mesh] OR \"Faculty, Dental\"[Mesh] OR \"Patients\"[Mesh] OR \"Dental Clinics\"[Mesh] OR \"Schools, Dental\"[Mesh] OR dentist*[tiab] OR \"dental professional*\"[tiab] OR \"oral health professional*\"[tiab] OR \"dental staff\"[tiab] OR \"dental hygienist*\"[tiab] OR \"dental assistant*\"[tiab] OR \"dental technician*\"[tiab] OR \"dental student*\"[tiab] OR \"dental educator*\"[tiab] OR \"dental faculty\"[tiab] OR \"dental patient*\"[tiab] OR \"dental clinic*\"[tiab] OR \"dental office*\"[tiab] OR \"dental practice*\"[tiab]) AND (\"Sexual Harassment\"[Mesh] OR \"Sex Offenses\"[Mesh] OR \"Professional Misconduct\"[Mesh] OR \"Workplace Violence\"[Mesh] OR \"sexual harassment\"[tiab] OR \"sexual misconduct\"[tiab] OR \"professional sexual misconduct\"[tiab] OR \"sexual assault\"[tiab] OR \"sexual abuse\"[tiab] OR \"sexual exploitation\"[tiab] OR \"sexual boundary violation*\"[tiab] OR \"inappropriate sexual behavio*r\"[tiab] OR \"sex-based harassment\"[tiab] OR \"gender-based harassment\"[tiab] OR \"unwanted sexual\"[tiab] OR \"quid pro quo\"[tiab] OR \"hostile work environment\"[tiab]))",
+      "((\"Dental Staff\"[Mesh] OR \"Dentists\"[Mesh] OR \"Students, Dental\"[Mesh] OR \"Faculty, Dental\"[Mesh] OR \"Patients\"[Mesh] OR \"Dental Clinics\"[Mesh] OR dentist*[tiab] OR \"dental staff\"[tiab] OR \"dental student*\"[tiab] OR \"dental educator*\"[tiab] OR \"dental patient*\"[tiab] OR \"dental clinic*\"[tiab] OR \"dental office*\"[tiab]) AND (\"Sexual Harassment\"[Mesh] OR \"Sex Offenses\"[Mesh] OR \"Professional Misconduct\"[Mesh] OR \"sexual harassment\"[tiab] OR \"sexual misconduct\"[tiab] OR \"sexual assault\"[tiab] OR \"sexual abuse\"[tiab] OR \"unwanted sexual\"[tiab] OR \"sex-based harassment\"[tiab]) AND (\"Prevalence\"[Mesh] OR \"Incidence\"[Mesh] OR \"Epidemiology\"[Subheading] OR prevalence[tiab] OR incidence[tiab] OR epidemiolog*[tiab] OR underreport*[tiab] OR under-report*[tiab] OR nonreport*[tiab] OR non-report*[tiab] OR \"Mandatory Reporting\"[Mesh] OR \"Reporting\"[Mesh] OR disclosure[tiab] OR disclosures[tiab] OR complaint*[tiab] OR whistleblow*[tiab]))",
+      "((\"Dentists\"[Mesh] OR \"Dental Staff\"[Mesh] OR \"Students, Dental\"[Mesh] OR \"Faculty, Dental\"[Mesh] OR \"Patients\"[Mesh] OR dentist*[tiab] OR \"dental hygienist*\"[tiab] OR \"dental assistant*\"[tiab] OR \"dental student*\"[tiab] OR \"dental educator*\"[tiab] OR \"dental patient*\"[tiab] OR \"dental clinic*\"[tiab]) AND (\"Sexual Harassment\"[Mesh] OR \"Sex Offenses\"[Mesh] OR \"sexual harassment\"[tiab] OR \"sexual misconduct\"[tiab] OR \"sexual assault\"[tiab] OR \"sexual abuse\"[tiab] OR \"sexual boundary violation*\"[tiab]) AND (\"Psychological Trauma\"[Mesh] OR \"Stress, Psychological\"[Mesh] OR \"Depression\"[Mesh] OR \"Anxiety\"[Mesh] OR \"Post-Traumatic Stress Disorders\"[Mesh] OR \"Burnout, Professional\"[Mesh] OR \"Occupational Stress\"[Mesh] OR \"Absenteeism\"[Mesh] OR \"Personnel Turnover\"[Mesh] OR \"Job Satisfaction\"[Mesh] OR \"emotional trauma\"[tiab] OR \"emotional distress\"[tiab] OR PTSD[tiab] OR depression[tiab] OR anxiety[tiab] OR burnout[tiab] OR \"psychological harm\"[tiab] OR \"mental health\"[tiab] OR disengagement[tiab] OR \"intention to leave\"[tiab] OR turnover[tiab] OR absentee*[tiab] OR presenteeism[tiab]))",
+      "((\"Dental Staff\"[Mesh] OR \"Dentists\"[Mesh] OR \"Students, Dental\"[Mesh] OR \"Faculty, Dental\"[Mesh] OR \"Dental Clinics\"[Mesh] OR dentist*[tiab] OR \"dental staff\"[tiab] OR \"dental student*\"[tiab] OR \"dental educator*\"[tiab] OR \"dental clinic*\"[tiab] OR \"dental school*\"[tiab]) AND (\"Sexual Harassment/prevention & control\"[Mesh] OR \"Sex Offenses/prevention & control\"[Mesh] OR ((\"sexual harassment\"[tiab] OR \"sexual misconduct\"[tiab] OR \"sexual assault\"[tiab] OR \"sex-based harassment\"[tiab]) AND (prevention[tiab] OR prevent*[tiab] OR intervention*[tiab] OR training[tiab] OR bystander[tiab] OR program*[tiab] OR policy[tiab] OR policies[tiab] OR \"code of conduct\"[tiab] OR \"zero tolerance\"[tiab] OR education[tiab] OR curriculum[tiab] OR workshop*[tiab] OR \"reporting system*\"[tiab] OR \"complaint procedure*\"[tiab]))) AND (\"Program Evaluation\"[Mesh] OR \"Evaluation Studies as Topic\"[Mesh] OR effectiveness[tiab] OR evaluation[tiab] OR outcome*[tiab] OR implementation[tiab] OR \"Randomized Controlled Trial\"[Publication Type] OR \"Controlled Clinical Trial\"[Publication Type] OR randomized[tiab] OR randomised[tiab]))",
+      "((\"Dentists\"[Mesh] OR \"Dental Staff\"[Mesh] OR \"Dental Hygienists\"[Mesh] OR \"Dental Assistants\"[Mesh] OR \"Students, Dental\"[Mesh] OR \"Patients\"[Mesh] OR dentist*[tiab] OR \"dental staff\"[tiab] OR \"dental hygienist*\"[tiab] OR \"dental assistant*\"[tiab] OR \"dental student*\"[tiab] OR \"dental patient*\"[tiab]) AND (\"Sexual Harassment\"[Mesh] OR \"Sex Offenses\"[Mesh] OR \"Professional Misconduct\"[Mesh] OR \"sexual harassment\"[tiab] OR \"sexual misconduct\"[tiab] OR \"sexual assault\"[tiab] OR \"sexual abuse\"[tiab]) AND (\"Cross-Sectional Studies\"[Mesh] OR \"Cohort Studies\"[Mesh] OR \"Case-Control Studies\"[Mesh] OR \"Surveys and Questionnaires\"[Mesh] OR survey*[tiab] OR questionnaire*[tiab] OR \"cross-sectional\"[tiab] OR cohort[tiab] OR \"case-control\"[tiab] OR prevalence[tiab] OR incidence[tiab]))"
+    ],
+    "retrieved_local": 96,
+    "retrieved_pubmed": 0,
+    "after_dedup": 96,
+    "retrieved_corpus_ids": [
+      6434,
+      104464,
+      6431,
+      6438,
+      104407,
+      6428,
+      104436,
+      6424,
+      6422,
+      6429,
+      6425,
+      6432,
+      6436,
+      103336,
+      6430,
+      103179,
+      104484,
+      6435,
+      103359,
+      103206,
+      104421,
+      104437,
+      104417,
+      6423,
+      103207,
+      103446,
+      11516,
+      104435,
+      104409,
+      103362,
+      105188,
+      103223,
+      103360,
+      103940,
+      6427,
+      13536,
+      6426,
+      6437,
+      12661,
+      103178,
+      140441,
+      103365,
+      103962,
+      103997,
+      103675,
+      111331,
+      35665,
+      6323,
+      104463,
+      35838,
+      130825,
+      10574,
+      11160,
+      45058,
+      104434,
+      35823,
+      104460,
+      104439,
+      104294,
+      104425,
+      6419,
+      74,
+      103965,
+      103927,
+      104415,
+      103928,
+      110734,
+      8607,
+      104523,
+      103673,
+      47626,
+      104413,
+      6416,
+      104422,
+      104424,
+      104433,
+      104375,
+      104177,
+      111877,
+      10544,
+      45083,
+      104382,
+      56257,
+      103283,
+      104164,
+      104526,
+      56955,
+      104167,
+      136982,
+      33263,
+      6433,
+      104470,
+      105291,
+      104465,
+      56959,
+      17211
+    ]
+  },
+  "screening": {
+    "screened_count": 96,
+    "excluded_count": 91,
+    "full_text_assessed": 5,
+    "included_count": 5,
+    "screening_criteria": [
+      {
+        "layer_name": "Layer 1",
+        "layer_order": 1,
+        "inclusion_criteria": [
+          "Population/setting: Participants are dental practitioners, dental office staff, dental patients, dental students, or dental educators in dental care settings (e.g., dental clinics, private practices, community dental services, dental schools).",
+          "Exposure/intervention: Examines sexual misconduct (e.g., harassment, assault, boundary violations) occurring in dental settings or evaluates an intervention/policy aimed at preventing, reducing, or responding to sexual misconduct; effectiveness studies include a comparator (e.g., control group or pre–post).",
+          "Outcomes: Reports at least one relevant outcome—prevalence/incidence of sexual misconduct, underreporting rates, emotional/psychological harm, professional disengagement (e.g., burnout, turnover, absenteeism), or intervention effectiveness.",
+          "Study design: Empirical primary research (quantitative, qualitative, or mixed methods), including observational studies, surveys, audits, trials, or pre–post evaluations."
+        ],
+        "exclusion_criteria": [
+          "Wrong population/setting: Not conducted in dental care settings or does not involve dental professionals/staff/patients/students/educators.",
+          "Wrong focus: Does not assess sexual misconduct (e.g., focuses solely on non-sexual bullying/violence) and does not evaluate an intervention specifically targeting sexual misconduct.",
+          "Wrong outcomes or data: Does not report any specified outcomes or provides commentary/policy/legal discussion without empirical primary data.",
+          "Study type limitations: Secondary research (systematic/narrative reviews), editorials/opinions, single-case legal reports, or conference abstracts without sufficient extractable data."
+        ],
+        "description": "Screening to identify primary empirical studies in dental settings that assess sexual misconduct exposure or interventions and report prevalence, underreporting, emotional harm, professional disengagement, or intervention effectiveness, with appropriate comparators for effectiveness analyses."
+      }
+    ]
+  },
+  "inclusion": {
+    "included_count": 5,
+    "included_corpus_ids": [
+      6434,
+      6431,
+      6428,
+      6432,
+      104437
+    ],
+    "included_articles": [
+      {
+        "corpus_id": 6434,
+        "title": "Inappropriate Patient Sexual Behavior in the Dental Practice Setting: Experiences of dental hygienists.",
+        "authors": [
+          "Priya Patel",
+          "Dianne L Smallidge",
+          "Linda D Boyd",
+          "Jared Vineyard"
+        ],
+        "year": "2021"
+      },
+      {
+        "corpus_id": 6431,
+        "title": "Sexual Harassment Issues Among Virginia Dental Hygienists.",
+        "authors": [
+          "Amber W Hunt",
+          "Brenda T Bradshaw",
+          "Susan Lynn Tolle"
+        ],
+        "year": "2020"
+      },
+      {
+        "corpus_id": 6428,
+        "title": "Sexual harassment in dentistry: prevalence in dental school.",
+        "authors": [
+          "Cléa Adas Saliba Garbin",
+          "Lívia Guimarães Zina",
+          "Artênio José Insper Garbin",
+          "Suzely Adas Saliba Moimaz"
+        ],
+        "year": "2010"
+      },
+      {
+        "corpus_id": 6432,
+        "title": "An International Survey of Female Dental Students' Perceptions About Gender Bias and Sexual Misconduct at Four Dental Schools.",
+        "authors": [
+          "Chris S Ivanoff",
+          "Diana M Luan",
+          "Timothy L Hottel",
+          "Bogomil Andonov",
+          "Luiz Evaristo Ricci Volpato",
+          "Reena R Kumar",
+          "Mark Scarbecz"
+        ],
+        "year": "2018"
+      },
+      {
+        "corpus_id": 104437,
+        "title": "Perceptions of Sexual Harassment in Oral and Maxillofacial Surgery Training and Practice.",
+        "authors": [],
+        "year": "2019"
+      }
+    ],
+    "gt_matched_count": 17,
+    "gt_study_count": 18,
+    "matched_with_gt": 4,
+    "retrieval_recall": 0.23529411764705882,
+    "inclusion_recall": 0.2222222222222222
+  },
+  "files": {
+    "excel": "autometa_batch_results/gpt-5/dense_trained/paper_190/data_extraction.xlsx",
+    "markdown": "autometa_batch_results/gpt-5/dense_trained/paper_190/report.md"
+  }
+}

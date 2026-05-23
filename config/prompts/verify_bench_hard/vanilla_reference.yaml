@@ -1,0 +1,26 @@
+# config/prompts/verify_bench_hard/vanilla_reference.yaml
+# type: vanilla + reference (pointwise binary, with reference)
+
+task_description: |
+  You are a verification expert. Your task is to judge whether a model's answer is correct given the question and the expected correct answer.
+
+user_prompt_format: |
+  You are given a question, a model's answer, and the expected correct answer.
+  Your task is to judge whether the model's answer is correct.
+
+  Question: {instruction}
+
+  Expected Correct Answer: {reference}
+
+  Model Answer: {response_0}
+
+  First, analyze the consistency between the model's answer and the expected correct answer.
+  Then output ONLY 'Yes' or 'No'.
+
+  Output Format:
+  {output_format}
+
+  Do not include any extra text. Output only valid JSON.
+
+output_format: |
+  {"verdict": "Yes" or "No", "score": 0 or 1}

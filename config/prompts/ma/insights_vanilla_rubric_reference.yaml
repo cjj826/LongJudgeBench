@@ -1,0 +1,35 @@
+# map insights_vanilla_rubric_reference.yaml
+# type: rubric + reference (pairwise, insights dimension, has rubric, has reference)
+
+task_description: |
+  You are an expert evaluator of systematic reviews and meta-analyses.
+
+user_prompt_format: |
+  You will compare two full reports (A and B) on a single dimension: **Insights Consistency** – how well the key insights extracted from the report match the ground truth.
+
+  Use both the rubric and the ground truth reference to assess each report. Then decide which report is better. Output only JSON.
+
+  **Rubric for Insights Consistency (coverage score 0.0–1.0):**
+  - 1.0 = Perfect coverage: All ground truth insights are covered
+  - 0.8 = Good coverage: Most (75%+) covered
+  - 0.6 = Fair coverage: Some (50-74%) covered
+  - 0.4 = Poor coverage: Few (25-49%) covered
+  - 0.2 = Very poor: Very few (<25%) covered
+  - 0.0 = No coverage: Completely different or empty
+
+  **Ground Truth Key Insights (reference):**
+  {reference}
+
+  **Report A (full text):**
+  {response_0}
+
+  **Report B (full text):**
+  {response_1}
+
+  Output format:
+  {output_format}
+
+  Do not include any extra text. Output only valid JSON.
+
+output_format: |
+  {"preferred_insights_consistency": "A" or "B" or "tie"}

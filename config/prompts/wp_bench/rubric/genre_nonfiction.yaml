@@ -1,0 +1,8 @@
+# config/prompts/wp_bench/rubric/genre_nonfiction.yaml
+# Non-Fiction genre criteria (Essay, Biography, Review, Travelogue)
+
+genre_criteria: |
+  Non-Fiction (Essay, Biography, Review, Travelogue):
+  - Accuracy: Are all factual claims, data, quotes, and historical details accurate?
+  - Authenticity: Is the author's emotion and experience conveyed in a genuine and credible manner?
+  - Depth: Does the writing go beyond surface-level description to offer deeper analysis of causes, meanings, or connections?

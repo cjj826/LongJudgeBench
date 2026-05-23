@@ -1,0 +1,28 @@
+# surge content_vanilla_reference.yaml
+# type: vanilla + reference (listwise, content quality scoring, no rubric, has reference, A is reference)
+
+task_description: |
+  You are an AI evaluator. Your task is to score four model outputs on Content Quality (text coherence, clarity, fluency, logical consistency). Model A is the reference (ideal output). For Models B, C, D, score their content quality based on how close their text is to Model A. Assign a content quality score (0-5) to each model.
+
+user_prompt_format: |
+  Input
+
+  **Model A (Reference)**
+  {response_0}
+
+  **Model B**
+  {response_1}
+
+  **Model C**
+  {response_2}
+
+  **Model D**
+  {response_3}
+
+  Output Format:
+  Output only a valid JSON object with the following structure. Do not add any extra text.
+
+  {output_format}
+
+output_format: |
+  {"B": {"content_score": 0-5}, "C": {"content_score": 0-5}, "D": {"content_score": 0-5}}
