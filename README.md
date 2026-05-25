@@ -53,14 +53,14 @@
 
 ## Benchmark Statistics
 
-| Dataset            | Paradigm  | Language | Records                   | Avg Tokens | Task                                                  |
-| ------------------ | --------- | -------- | ------------------------- | ---------- | ----------------------------------------------------- |
-| deepresearch_bench | pointwise | zh       | 200 (50 × 4 models)      | 18,013     | Deep research report scoring (4 weighted dimensions)  |
-| realdr             | pointwise | en/zh    | 640 (40 × 16 models)     | 10,131     | Document quality scoring (3 weighted dimensions)      |
-| verify_bench_hard  | pointwise | en       | 316                       | 3,053      | Binary verification (Yes/No)                          |
-| wp_bench           | pairwise  | en/zh    | 263 pairs (526 responses) | 3,509      | Writing preference comparison                         |
-| ma                 | pairwise  | en       | 120 pairs                 | 4,764      | Medical meta-analysis comparison (insights dimension) |
-| surge              | listwise  | en       | 41 topics × 4 models     | 28,758     | CS survey generation ranking                          |
+| Dataset            | Paradigm  | Language | Documents               | Avg Tokens | Task                                                  |
+| ------------------ | --------- | -------- | ----------------------- | ---------- | ----------------------------------------------------- |
+| deepresearch_bench | pointwise | zh       | 200                     | 18,013     | Deep research report scoring (4 weighted dimensions)  |
+| realdr             | pointwise | en/zh    | 640                     | 10,131     | Document quality scoring (3 weighted dimensions)      |
+| verify_bench_hard  | pointwise | en       | 316                     | 3,053      | Binary verification (Yes/No)                          |
+| wp_bench           | pairwise  | en/zh    | 526 (263 pairs × 2)    | 3,509      | Writing preference comparison                         |
+| ma                 | pairwise  | en       | 120                     | 4,764      | Medical meta-analysis comparison (insights dimension) |
+| surge              | listwise  | en       | 164 (41 topics × 4)    | 28,758     | CS survey generation ranking                          |
 
 ### Length Sensitivity Analysis
 

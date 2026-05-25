@@ -53,14 +53,14 @@ LongJudgeBench 是一个面向长文本生成的 LLM-as-Judge 评测框架，支
 
 ## 数据集统计
 
-| 数据集             | 范式      | 语言  | 记录数              | 平均 Token | 任务                           |
-| ------------------ | --------- | ----- | ------------------- | ---------- | ------------------------------ |
-| deepresearch_bench | pointwise | zh    | 200 (50 × 4 模型)  | 18,013     | 深度研究报告评分（4 维度加权） |
-| realdr             | pointwise | en/zh | 640 (40 × 16 模型) | 10,131     | 文档质量评分（3 维度加权）     |
-| verify_bench_hard  | pointwise | en    | 316                 | 3,053      | 二分类验证（Yes/No）           |
-| wp_bench           | pairwise  | en/zh | 263 对 (526 回复)   | 3,509      | 写作偏好比较                   |
-| ma                 | pairwise  | en    | 120 对              | 4,764      | 医学元分析（insights 维度）    |
-| surge              | listwise  | en    | 41 主题 × 4 模型   | 28,758     | 计算机科学综述生成排序         |
+| 数据集             | 范式      | 语言  | 文档数        | 平均 Token | 任务                           |
+| ------------------ | --------- | ----- | ------------- | ---------- | ------------------------------ |
+| deepresearch_bench | pointwise | zh    | 200           | 18,013     | 深度研究报告评分（4 维度加权） |
+| realdr             | pointwise | en/zh | 640           | 10,131     | 文档质量评分（3 维度加权）     |
+| verify_bench_hard  | pointwise | en    | 316           | 3,053      | 二分类验证（Yes/No）           |
+| wp_bench           | pairwise  | en/zh | 526(263对×2) | 3,509      | 写作偏好比较                   |
+| ma                 | pairwise  | en    | 120           | 4,764      | 医学元分析（insights 维度）    |
+| surge              | listwise  | en    | 164(41×4)    | 28,758     | 计算机科学综述生成排序         |
 
 ### 长度敏感性分析
 

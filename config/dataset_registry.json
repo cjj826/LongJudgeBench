@@ -24,7 +24,7 @@
       "description": "RealDR document evaluation — pointwise multi-dim weighted scoring",
       "statistics": {
         "doc_count": 640,
-        "avg_instruction_tokens": 0.0,
+        "avg_instruction_tokens": 589.5,
         "avg_content_tokens": 10131.4,
         "median_content_tokens": 9610.0,
         "max_content_tokens": 35891,

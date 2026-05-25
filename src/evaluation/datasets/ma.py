@@ -10,10 +10,9 @@ from collections import defaultdict
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 from src.utils.io_utils import load_jsonl
 
-DIMS = ["insights"]  # structure dimension temporarily excluded
+DIMS = ["insights"]
 DIM_KEY_MAP = {
     "insights": "preferred_insights_consistency",
-    "structure": "preferred_structure_quality",
 }
 
 
@@ -30,7 +29,7 @@ def load_data(data_dir: str = None) -> list[dict]:
 def extract_metrics(judge_results: list, gt_data: list) -> dict:
     """
     Judge: {data_id, response_a, response_b,
-            judge_result: {preferred_insights_consistency / preferred_structure_quality,
+            judge_result: {preferred_insights_consistency,
                            swap_position (optional, debiased)}}
            LLM may output "A" / "B" / "tie"
 

@@ -2,7 +2,7 @@
 Standardize MA (Meta-Analysis Paper Generation Benchmark)
 Paradigm: Pairwise (LLM compares two system outputs → preference)
 GT: Human pairwise preference (A2/A1/tie/B1/B2), 8 annotators aggregated
-Dimensions: insights (3 comparisons × 30 papers) + structure (1 comparison × 30 papers)
+Dimensions: insights only (3 comparisons × 30 papers)
 Input:
   - data/MA/metasyn_evaluation_complete.json
   - data/MA/human_annotation_subset/baseline_results/*/paper_{id}/report.md
@@ -28,8 +28,8 @@ OUT_REF = BASE_DIR / "data_standardized" / "ma_reference.jsonl"
 
 GT_PAPERS_FILE = MAP_DIR / "human_annotation_subset" / "gt" / "papers_annotated_30.json"
 
-# Keep only LLM-as-Judge dimensions
-DIMENSIONS = ["insights", "structure"]
+# LLM-as-Judge dimensions (structure removed — not used in evaluation)
+DIMENSIONS = ["insights"]
 
 # System name → directory mapping
 SYSTEM_DIR_MAP = {
@@ -91,7 +91,7 @@ def aggregate_pairwise_annotations(tasks: list) -> dict:
     """
     Aggregate 8 annotators' ratings per pair×dim.
     Returns: {(pair_id, dim): {"mean_rating": float, "preferred": "A/B/tie", ...}}
-    Only processes insights and structure dimensions.
+    Only processes insights dimension.
     """
     results = {}
     for task in tasks:
@@ -130,73 +130,6 @@ def aggregate_pairwise_annotations(tasks: list) -> dict:
     return results
 
 
-def construct_structure_outline(paper: dict) -> str:
-    """Build per-paper structure outline from metadata for Structure Reference."""
-    lines = []
-    lines.append("## Expected Structure Outline")
-    lines.append("")
-
-    rq = paper.get("Research_Question", "")
-    if rq:
-        lines.append(f"**Research Question**: {rq}")
-        lines.append("")
-
-    topic = paper.get("Topic", "")
-    abstract = paper.get("Abstract", "")
-    lines.append("**Background/Introduction**:")
-    if topic:
-        lines.append(f"This report should introduce the clinical context of {topic}.")
-    if abstract:
-        lines.append(f"Context: {abstract[:300]}...")
-    lines.append("")
-
-    lines.append("**Methods — The report should specify:**")
-    for field, label in [("Population", "Population"), ("Intervention", "Intervention"),
-                          ("Comparison", "Comparison"), ("Outcome", "Outcome")]:
-        val = paper.get(field, "")
-        if val:
-            lines.append(f"- {label}: {val}")
-
-    strategies = paper.get("search_strategies", [])
-    if strategies:
-        db_names = [s.get("db", "") for s in strategies if isinstance(s, dict) and s.get("db")]
-        if db_names:
-            lines.append(f"- Search databases: {', '.join(db_names)}")
-
-    inc = paper.get("inclusion_criteria", "")
-    if inc:
-        lines.append(f"- Inclusion criteria: {inc[:200]}")
-    exc = paper.get("exclusion_criteria", "")
-    if exc:
-        lines.append(f"- Exclusion criteria: {exc[:200]}")
-    lines.append("")
-
-    lines.append("**Results**:")
-    ed = paper.get("Effect_Direction", "")
-    est = paper.get("Effect_Size_Type", "")
-    esv = paper.get("Effect_Size_Value", "")
-    if ed or est:
-        parts = []
-        if ed:
-            parts.append(f"direction: {ed}")
-        if est:
-            parts.append(f"effect size ({est} = {esv})" if esv else f"effect size: {est}")
-        lines.append(f"Report the {'; '.join(parts)}.")
-    het = paper.get("Heterogeneity_Level", "")
-    if het:
-        lines.append(f"Heterogeneity: {het}.")
-    lines.append("")
-
-    lines.append("**Discussion**: Interpret the evidence, discuss limitations, heterogeneity, and clinical implications.")
-    lines.append("")
-
-    cs = paper.get("Conclusion_Summary", "")
-    if cs:
-        lines.append(f"**Conclusion**: {cs}")
-
-    return "\n".join(lines)
-
-
 def main():
     ensure_output_dirs()
     clear_jsonl(OUT_DATA)
@@ -204,7 +137,7 @@ def main():
     clear_jsonl(OUT_REF)
 
     print("=" * 60)
-    print("MA Standardization (Pairwise, insights + structure only)")
+    print("MA Standardization (Pairwise, insights only)")
     print("=" * 60)
 
     # Load data
@@ -229,7 +162,7 @@ def main():
         paper_tasks[pid].append(task)
 
     paper_ids = sorted(paper_tasks.keys())
-    print(f"  Papers with insights/structure annotations: {len(paper_ids)}")
+    print(f"  Papers with insights annotations: {len(paper_ids)}")
     print(f"  Paper IDs: {paper_ids}")
 
     # Build reference map
@@ -285,7 +218,6 @@ def main():
             if not content_a or not content_b:
                 continue
 
-            pair_label = dim_id  # insights / structure
             record_id = f"paper_{pid}_{pair_id}_{dim_id}"
 
             record = {
@@ -347,14 +279,7 @@ def main():
             save_jsonl(ref_record, OUT_REF)
             ref_count += 1
 
-        # Structure: per-paper structural outline
-        structure_outline = construct_structure_outline(paper)
-        ref_struct = {
-            "id": f"paper_{pid}_structure",
-            "reference": structure_outline,
-        }
-        save_jsonl(ref_struct, OUT_REF)
-        ref_count += 1
+        # (structure dimension reference removed — dimension not used)
 
     print(f"\n  Standardized data: {data_count} records (pair)")
     print(f"  Ground truth:      {gt_count} records")

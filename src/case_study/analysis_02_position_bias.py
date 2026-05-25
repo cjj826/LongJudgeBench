@@ -38,18 +38,24 @@ def analyze_pairwise_position_bias(judge_path: str, gt_path: str, dataset: str, 
         preferred = g.get("preferred", g.get("preference", {}).get("chosen_model", None))
         gt_map[gid] = {"preferred": preferred}
 
-    # Group by data_id, collecting original and swapped
+    # Group by (data_id, model_pair) to handle datasets where same data_id
+    # may have multiple model pairs (e.g., wp_bench: 263 pairs, 158 unique ids).
+    # Use frozenset([response_a, response_b]) as the model pair signature.
     pairs = defaultdict(lambda: {"original": None, "swapped": None})
     pref_key = dim_key if dim_key else "preferred_response"
 
     for r in judge_data:
         did = str(r.get("data_id", ""))
+        resp_a = str(r.get("response_a", ""))
+        resp_b = str(r.get("response_b", ""))
         jr = r.get("judge_result", {})
         if not isinstance(jr, dict):
             continue
         swap_pos = jr.get("swap_position", "original")
         preference = jr.get(pref_key)
-        pairs[did][swap_pos] = preference
+        # Unique pair identity: (data_id, unordered model names)
+        model_pair = frozenset([resp_a, resp_b])
+        pairs[(did, model_pair)][swap_pos] = preference
 
     # Analyze consistency
     consistent = 0
@@ -64,8 +70,8 @@ def analyze_pairwise_position_bias(judge_path: str, gt_path: str, dataset: str, 
             continue
         total += 1
         # In debiased mode: original and swapped should agree after inverting swapped
-        # If orig == "A" and swap == "B", after inverting swap → "A", they agree
-        # If orig == "A" and swap == "A", after inverting swap → "B", they disagree
+        # If orig == "A" and swap == "B", after inverting swap -> "A", they agree
+        # If orig == "A" and swap == "A", after inverting swap -> "B", they disagree
         def invert(p):
             if p == "A":
                 return "B"
@@ -117,8 +123,16 @@ def analyze_pairwise_position_bias(judge_path: str, gt_path: str, dataset: str, 
         print(f"    Always picks 'B' (strong second-position bias): {second_pos_bias}")
         other = inconsistent - first_pos_bias - second_pos_bias
         print(f"    Other inconsistency pattern: {other}")
+        always_first_ratio = first_pos_bias / inconsistent * 100 if inconsistent else 0
+        print(f"    Always-first ratio among inconsistent: {first_pos_bias}/{inconsistent} ({always_first_ratio:.0f}%)")
 
-    return {"consistent": consistent, "inconsistent": inconsistent, "total": total}
+    return {
+        "consistent": consistent,
+        "inconsistent": inconsistent,
+        "total": total,
+        "first_pos_bias": first_pos_bias,
+        "second_pos_bias": second_pos_bias,
+    }
 
 
 def main():
@@ -155,18 +169,30 @@ def main():
 
     # Summary table
     print(f"\n{'='*70}")
-    print(f"SUMMARY: Position Bias Across Models")
+    print(f"SUMMARY: Position Bias Across Models (Inconsistency = preference flips when positions swapped)")
     print(f"{'='*70}")
-    print(f"{'Model':<25} {'WP-Bench':>15} {'MA-Insights':>15}")
-    print(f"{'─'*55}")
+    print(f"{'Model':<25} {'WP-Bench Incon':>18} {'MA Incon':>12} {'WP Pattern':>14} {'MA Pattern':>14}")
+    print(f"{'─'*85}")
     for model in models:
         wp = wp_results.get(model, {})
         ma = ma_results.get(model, {})
-        wp_str = f"{wp.get('consistent', 0)}/{wp.get('total', 0)}" if wp else "N/A"
-        ma_str = f"{ma.get('consistent', 0)}/{ma.get('total', 0)}" if ma else "N/A"
-        wp_rate = f"({wp['consistent']/wp['total']*100:.0f}%)" if wp and wp['total'] > 0 else ""
-        ma_rate = f"({ma['consistent']/ma['total']*100:.0f}%)" if ma and ma['total'] > 0 else ""
-        print(f"{model:<25} {wp_str+wp_rate:>15} {ma_str+ma_rate:>15}")
+        def pattern_str(res):
+            inc = res.get("inconsistent", 0)
+            fb = res.get("first_pos_bias", 0)
+            sb = res.get("second_pos_bias", 0)
+            if inc == 0:
+                return "None"
+            fb_ratio = fb / inc
+            if fb_ratio >= 0.8:
+                return f"First-pos bias ({fb}/{inc})"
+            elif sb / inc >= 0.8:
+                return f"Second-pos bias"
+            return "Mixed"
+        wp_str = f"{wp.get('inconsistent', 0)}/{wp.get('total', 0)} ({wp.get('inconsistent', 0)/wp.get('total', 0)*100:.1f}%)" if wp else "N/A"
+        ma_str = f"{ma.get('inconsistent', 0)}/{ma.get('total', 0)} ({ma.get('inconsistent', 0)/ma.get('total', 0)*100:.1f}%)" if ma else "N/A"
+        wp_pat = pattern_str(wp) if wp else "N/A"
+        ma_pat = pattern_str(ma) if ma else "N/A"
+        print(f"{model:<25} {wp_str:>18} {ma_str:>12} {wp_pat:>14} {ma_pat:>14}")
 
 
 if __name__ == "__main__":

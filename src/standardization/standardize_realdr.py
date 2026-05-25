@@ -5,7 +5,7 @@ Input:
   - data/our_data/GT/Human_result1.xlsx  (annotator 1)
   - data/our_data/GT/Human_result2.xlsx  (annotator 2)
   - data/our_data/GT/checklist_mapping_key_T1_T40_1771971296.xlsx  (mapping + weights)
-  - task_prompt/task{id}.jsonl  (Instruction)
+  - data/our_data/task_prompt/task{id}.jsonl  (Instruction)
 Output:
   - data_standardized/realdr.jsonl
   - ground_truth/realdr_gt.jsonl
@@ -26,7 +26,7 @@ GT_DIR = OUR_DATA_DIR / "GT"
 MAPPING_XLSX = GT_DIR / "checklist_mapping_key_T1_T40_1771971296.xlsx"
 HUMAN1_XLSX = GT_DIR / "Human_result1.xlsx"
 HUMAN2_XLSX = GT_DIR / "Human_result2.xlsx"
-TASK_PROMPT_DIR = BASE_DIR / "task_prompt"
+TASK_PROMPT_DIR = BASE_DIR / "data" / "our_data" / "task_prompt"
 BLIND_DOCS_DIR = OUR_DATA_DIR  # task1 ~ task40 all under our_data
 
 OUT_DATA = BASE_DIR / "data_standardized" / "realdr.jsonl"
