@@ -18,7 +18,7 @@ class PointwiseJudge(BaseJudge):
         """
         system_prompt = prompt_template.get("task_description", "")
         user_prompt_format = prompt_template.get("user_prompt_format",
-            "## 指令\n{instruction}\n\n## 回复\n{response_0}\n\n")
+            "## Instruction\n{instruction}\n\n## Response\n{response_0}\n\n")
         output_format = prompt_template.get("output_format", "")
         format_kwargs = format_kwargs or {}
 

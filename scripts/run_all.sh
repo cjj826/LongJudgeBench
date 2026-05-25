@@ -35,7 +35,7 @@ DATASETS=(
     "realdr pointwise vanilla,vanilla_reference,vanilla_rubric,vanilla_rubric_reference"
     "verify_bench_hard pointwise vanilla,vanilla_reference,vanilla_rubric,vanilla_rubric_reference"
     "wp_bench pairwise vanilla,vanilla_rubric"
-    "ma pairwise insights_vanilla,insights_vanilla_rubric,insights_vanilla_reference,insights_vanilla_rubric_reference,structure_vanilla,structure_vanilla_rubric,structure_vanilla_reference,structure_vanilla_rubric_reference"
+    "ma pairwise insights_vanilla,insights_vanilla_rubric,insights_vanilla_reference,insights_vanilla_rubric_reference"
     "surge listwise structure_vanilla,structure_vanilla_rubric,structure_vanilla_reference,structure_vanilla_rubric_reference,content_vanilla,content_vanilla_rubric,content_vanilla_reference,content_vanilla_rubric_reference"
 )
 

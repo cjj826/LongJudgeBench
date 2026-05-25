@@ -1,6 +1,6 @@
 """WP-Bench dataset module."""
 from pathlib import Path
-from collections import defaultdict
+from collections import defaultdict, OrderedDict
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 from src.utils.io_utils import load_jsonl
@@ -37,7 +37,6 @@ def extract_metrics(judge_results: list, gt_data: list) -> dict:
         })
 
     # Group by data_id
-    from collections import OrderedDict
     by_id = OrderedDict()
     for r in judge_results:
         did = str(r.get("data_id", ""))

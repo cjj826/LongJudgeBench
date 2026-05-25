@@ -5,7 +5,7 @@ task_description: |
   You are an expert evaluator of systematic reviews and meta-analyses.
 
 user_prompt_format: |
-  You will compare two full reports (A and B) on a single dimension: **Insights Consistency** – how well the key insights extracted from the report match the ground truth.
+  You will compare two full reports (A and B) on a single dimension: **Insights Consistency** – how accurately and completely the report presents its key findings.
 
   Use the provided ground truth insights as the reference. For each report, judge how well its insights align with the reference. Then decide which report has better consistency. Output only JSON.
 

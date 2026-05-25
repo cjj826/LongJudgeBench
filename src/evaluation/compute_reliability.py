@@ -17,7 +17,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(BASE_DIR))
 
 from src.reliability.agreement_metrics import (
-    #compute_all_metrics,
     average_per_query_metrics,  # per-query
     average_per_query_accuracy,  # per-query
     pairwise_accuracy,
@@ -122,7 +121,7 @@ def compute(dataset: str, prompt_mode: str, model_name: str):
 
     result_path = BASE_DIR / "outputs" / "judge_results" / model_name / dataset / f"{prompt_mode}.jsonl"
     if not result_path.exists():
-        print(f"[跳过] 文件不存在: {result_path}")
+        print(f"[Skip] File not found: {result_path}")
         return
 
     paradigm = paradigm_map.get(dataset, "pointwise")
@@ -130,17 +129,17 @@ def compute(dataset: str, prompt_mode: str, model_name: str):
     # Dedup before loading to avoid duplicate records skewing metrics
     removed = dedup_file(result_path, paradigm, dataset=dataset)
     if removed:
-        print(f"  去重: 清理了 {removed} 条重复记录")
+        print(f"  Deduplication: removed {removed} records")
 
     judge_results = load_jsonl(result_path)
     if not judge_results:
-        print(f"[跳过] 无有效结果: {result_path}")
+        print(f"[Skip] No valid results: {result_path}")
         return
 
     gt_path = BASE_DIR / "ground_truth" / f"{dataset}_gt.jsonl"
     gt_data = load_jsonl(gt_path)
     if not gt_data:
-        print(f"[跳过] 真值文件为空: {gt_path}")
+        print(f"[Skip] Ground truth file is empty: {gt_path}")
         return
 
     # ── Token exceed & content filter statistics ──
@@ -161,12 +160,12 @@ def compute(dataset: str, prompt_mode: str, model_name: str):
     cf_error_rate = round(cf_count / total_with_errors, 4) if total_with_errors > 0 else 0.0
 
     print(f"\n=== {dataset} ({paradigm}, {prompt_mode}, {model_name}) ===")
-    print(f"  Judge 结果: {len(judge_results)} 条")
+    print(f"  Judge results: {len(judge_results)}")
     if te_count > 0:
-        print(f"  token超限:  {te_count} 条 (error_rate={te_error_rate})")
+        print(f"  Token exceed: {te_count} (error_rate={te_error_rate})")
     if cf_count > 0:
-        print(f"  内容限制:  {cf_count} 条 (error_rate={cf_error_rate})")
-    print(f"  真值:       {len(gt_data)} 条")
+        print(f"  Content filter: {cf_count} (error_rate={cf_error_rate})")
+    print(f"  Ground truth: {len(gt_data)}")
 
     # Extract metrics via dataset module
     mod = get_dataset_module(dataset)
@@ -257,7 +256,7 @@ def compute(dataset: str, prompt_mode: str, model_name: str):
             if metrics.get("spearman") is not None:
                 status += f", Sp={metrics['spearman']:.4f}, τ={metrics['kendall']:.4f}"
         else:
-            status = "样本不足"
+            status = "Insufficient samples"
 
         # Per-query Spearman/Kendall
         pq = per_query_raw.get(group_name)

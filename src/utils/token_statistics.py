@@ -15,20 +15,8 @@ sys.path.insert(0, str(BASE_DIR))
 
 DATA_DIR = BASE_DIR / "data_standardized"
 
-# ── Reuse count_tokens from src/utils/token_counter.py ─────────
-
+from src.utils.io_utils import load_jsonl
 from src.utils.token_counter import count_tokens
-
-
-
-def load_jsonl(filepath):
-    data = []
-    with open(filepath, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if line:
-                data.append(json.loads(line))
-    return data
 
 
 # Per-dataset analysis functions
@@ -182,111 +170,6 @@ def analyze_realdr(records):
     }
 
 
-# Additional features: Token filter & ratio statistics
-
-def compute_sample_tokens(record: dict) -> int:
-    """Total tokens for one sample (instruction + all response content)."""
-    total = count_tokens(record.get("instruction", ""))
-    for resp in record.get("responses", []):
-        total += count_tokens(resp.get("content", ""))
-    return total
-
-
-def filter_short_samples_and_report(records, threshold=800):
-    """
-    Filter samples with token count < threshold.
-    For paired data (wp_bench), if one side < threshold, both (entire record) are removed.
-    Returns: (filtered_records, removed_count)
-    """
-    kept = []
-    removed = 0
-    for r in records:
-        tokens = compute_sample_tokens(r)
-        if tokens < threshold:
-            removed += 1
-        else:
-            kept.append(r)
-
-    # For paired datasets, if one response in a record is below threshold but another is >= threshold,
-    # we keep it as-is (the entire record is removed).
-    # For wp_bench (one record = two responses), the above logic already removes the entire record.
-    return kept, removed
-
-
-def report_token_ratio(records, threshold=1000):
-    """
-    Compute ratio of samples with token count >= threshold.
-    """
-    total = len(records)
-    if total == 0:
-        return 0.0, 0
-    above = sum(1 for r in records if compute_sample_tokens(r) >= threshold)
-    return round(above / total * 100, 1), above
-
-
-def run_token_filter_analysis(datasets_data):
-    """Run token filter & ratio statistics."""
-    print("\n" + "=" * 65)
-    print("[Token Filter & Ratio Stats]")
-    print("=" * 65)
-
-    for name, records in datasets_data.items():
-        if not records:
-            continue
-
-        if name in ("ma",):
-            # MA: same paper appears in multiple pairs, deduplicate by (paper_id, model)
-            seen = {}
-            for r in records:
-                pid = r.get("meta", {}).get("paper_id", "")
-                for resp in r["responses"]:
-                    key = (pid, resp["model"])
-                    if key not in seen:
-                        t = count_tokens(r.get("instruction", "")) + count_tokens(resp["content"])
-                        seen[key] = t
-            all_tokens = list(seen.values())
-            below_800 = sum(1 for t in all_tokens if t < 800)
-            above_1000 = sum(1 for t in all_tokens if t >= 1000)
-            ratio_above = round(above_1000 / len(all_tokens) * 100, 1) if all_tokens else 0
-            print(f"\n  [{name}] (deduplicated)")
-            print(f"    Total samples:     {len(all_tokens)}")
-            print(f"    Token < 800:        {below_800} ({round(below_800/len(all_tokens)*100,1)}%)")
-            print(f"    Token >= 1000:      {above_1000} ({ratio_above}%)")
-        else:
-            if name == "surge":
-                # SurGE: each record has 4 responses, count separately
-                below_800_total = 0
-                above_1000_total = 0
-                grand_total = 0
-                for r in records:
-                    for resp in r["responses"]:
-                        t = count_tokens(r["instruction"]) + count_tokens(resp["content"])
-                        grand_total += 1
-                        if t < 800:
-                            below_800_total += 1
-                        if t >= 1000:
-                            above_1000_total += 1
-                ratio_above = round(above_1000_total / grand_total * 100, 1) if grand_total else 0
-                print(f"\n  [{name}] (per-sample granularity)")
-                print(f"    Total samples:     {grand_total}")
-                print(f"    Token < 800:        {below_800_total} ({round(below_800_total/grand_total*100,1)}%)")
-                print(f"    Token >= 1000:      {above_1000_total} ({ratio_above}%)")
-            else:
-                # deepresearch_bench / realdr: each response is an independent sample
-                all_cont = []
-                for r in records:
-                    inst = count_tokens(r["instruction"])
-                    for resp in r["responses"]:
-                        all_cont.append(inst + count_tokens(resp["content"]))
-                below_800 = sum(1 for t in all_cont if t < 800)
-                above_1000 = sum(1 for t in all_cont if t >= 1000)
-                ratio_above = round(above_1000 / len(all_cont) * 100, 1) if all_cont else 0
-                print(f"\n  [{name}] (per-sample granularity)")
-                print(f"    Total samples:     {len(all_cont)}")
-                print(f"    Token < 800:        {below_800} ({round(below_800/len(all_cont)*100,1)}%)")
-                print(f"    Token >= 1000:      {above_1000} ({ratio_above}%)")
-
-
 # Main
 
 def print_stats(name, stats):
@@ -341,8 +224,6 @@ def main():
     print_stats("RealDR (total)", bd_stats)
     print_stats("MA (total)", ma_stats)
     print_stats("Verify-Bench-Hard (total)", vbh_stats)
-    # ── Token filter & ratio stats ──
-    run_token_filter_analysis(all_data)
 
     print()
     print("Done!")

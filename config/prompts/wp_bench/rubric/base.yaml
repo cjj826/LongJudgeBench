@@ -1,7 +1,7 @@
 # config/prompts/wp_bench/rubric/base.yaml
 # type: rubric (pairwise with genre-specific criteria)
-# matching 提示词合集md WP-Bench Rubric Prompt
-# task: 根据题材动态适配评分标准，两两比较选择更好回复
+# WP-Bench Rubric Prompt — matches the prompt collection document
+# Task: Dynamically adapt scoring criteria by genre for pairwise comparison
 
 task_description: |
   You are a strict, meticulous, and objective creative writing evaluation expert.

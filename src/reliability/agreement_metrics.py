@@ -3,27 +3,7 @@ Reliability metrics — human-judge agreement.
 """
 import itertools
 import numpy as np
-from scipy.stats import pearsonr, spearmanr, kendalltau
-from sklearn.metrics import cohen_kappa_score
-
-
-def icc(data: np.ndarray) -> float:
-    """
-    Intraclass correlation ICC(2,1) for pointwise multi-annotator continuous scores.
-    data: (n_samples, n_annotators) matrix
-    """
-    n, k = data.shape
-    msr = np.var(data.mean(axis=1), ddof=1) * k
-    msw = np.sum((data - data.mean(axis=1, keepdims=True)) ** 2) / (n * (k - 1))
-    mse = np.sum((data.mean(axis=1, keepdims=True) - data.mean()) ** 2) * k / (n - 1) - msw / k
-    if msr + (k - 1) * mse == 0:
-        return 0.0
-    return (msr - mse) / (msr + (k - 1) * mse + k * (msw - mse) / n)
-
-
-def cohen_kappa(y1: list, y2: list, weights: str = "quadratic") -> float:
-    """Cohen's Kappa for pairwise classification agreement."""
-    return cohen_kappa_score(y1, y2, weights=weights)
+from scipy.stats import spearmanr, kendalltau
 
 
 def kendalls_tau(rank1: list, rank2: list) -> float:
@@ -35,12 +15,6 @@ def kendalls_tau(rank1: list, rank2: list) -> float:
 def spearman_corr(x: list, y: list) -> float:
     """Spearman rank correlation."""
     corr, _ = spearmanr(x, y)
-    return corr
-
-
-def pearson_corr(x: list, y: list) -> float:
-    """Pearson linear correlation coefficient."""
-    corr, _ = pearsonr(x, y)
     return corr
 
 
@@ -65,8 +39,12 @@ def pairwise_accuracy(gt_scores: np.ndarray, pred_scores: np.ndarray) -> tuple:
         if np.isnan(g) or np.isnan(p):
             continue
         total += 1
+        if g == 0 and p == 0:
+            correct += 1  # mutual tie: judge agrees with GT
+            total += 1
+            continue
         if g == 0 or p == 0:
-            continue  # GT tie or Judge tie → counted as 0 correct
+            continue  # one-sided tie → counted as 0 correct
         if g == p:
             correct += 1
     if total == 0:
@@ -140,38 +118,3 @@ def average_per_query_metrics(per_query_data: dict) -> dict:
     }
 
 
-def compute_all_metrics(gt_scores: list, pred_scores: list) -> dict:
-    """
-    Compute reliability metrics: ACC, Spearman, Kendall's Tau.
-    ACC works for all score types (via pairwise_accuracy).
-    Spearman/Kendall only valid for ordinal/continuous scores (not binary labels).
-
-    Args:
-        gt_scores: human ground truth scores
-        pred_scores: judge predicted scores
-
-    Returns: {"acc": ..., "spearman": ... (optional), "kendall": ... (optional)}
-    """
-    gt_arr = np.array(gt_scores)
-    pred_arr = np.array(pred_scores)
-
-    acc, correct, total = pairwise_accuracy(gt_arr, pred_arr)
-    result = {
-        "accuracy": round(acc, 4) if not np.isnan(acc) else None,
-        "accuracy_correct": correct,
-        "accuracy_total": total,
-    }
-
-    # Spearman / Kendall: requires >= 2 distinct values (tau-b handles ties; scipy returns NaN for constants)
-    unique_gt = len(set(gt_scores))
-    unique_pred = len(set(pred_scores))
-    if unique_gt >= 2 and unique_pred >= 2:
-        sp = spearman_corr(gt_scores, pred_scores)
-        kt = kendalls_tau(gt_scores, pred_scores)
-        result["spearman"] = round(sp, 4) if sp is not None and not np.isnan(sp) else None
-        result["kendall"] = round(kt, 4) if kt is not None and not np.isnan(kt) else None
-    else:
-        result["spearman"] = None
-        result["kendall"] = None
-
-    return result

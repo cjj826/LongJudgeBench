@@ -1,9 +1,7 @@
 """Base class for LLM-as-Judge evaluation."""
 from abc import ABC, abstractmethod
-from pathlib import Path
 import json
 import re
-import yaml
 
 
 class BaseJudge(ABC):
@@ -67,21 +65,3 @@ class BaseJudge(ABC):
                 except json.JSONDecodeError:
                     continue
         raise json.JSONDecodeError("No JSON found", text, 0)
-
-    def load_prompt(self, dataset: str, paradigm: str) -> dict:
-        """Load prompt YAML from config/prompts/{dataset}/{paradigm}.yaml"""
-        path = Path(__file__).resolve().parent.parent.parent / \
-            "config" / "prompts" / dataset / f"{paradigm}.yaml"
-        if not path.exists():
-            raise FileNotFoundError(f"Prompt file not found: {path}")
-        with open(path, "r", encoding="utf-8") as f:
-            return yaml.safe_load(f)
-
-    def save_result(self, result: dict, dataset: str, paradigm: str):
-        """Save judge result to outputs/judge_results/"""
-        out_dir = Path(__file__).resolve().parent.parent.parent / \
-            "outputs" / "judge_results" / dataset
-        out_dir.mkdir(parents=True, exist_ok=True)
-        fname = f"{paradigm}_{self.model_name}.jsonl"
-        with open(out_dir / fname, "a", encoding="utf-8") as f:
-            f.write(json.dumps(result, ensure_ascii=False) + "\n")

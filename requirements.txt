@@ -13,5 +13,5 @@ tiktoken>=0.5
 # xlsx export
 openpyxl>=3.0
 
-# Data preprocessing (Standardized_function)
+# Data preprocessing (docx parsing)
 python-docx>=0.8

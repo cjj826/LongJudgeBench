@@ -20,7 +20,7 @@
       "data_file": "data_standardized/realdr.jsonl",
       "gt_file": "ground_truth/realdr_gt.jsonl",
       "task_type": "pointwise",
-      "language": "zh",
+      "language": "zh,en",
       "description": "RealDR document evaluation — pointwise multi-dim weighted scoring",
       "statistics": {
         "doc_count": 640,
@@ -39,7 +39,7 @@
       "language": "en",
       "description": "Survey Generation — listwise ranking of 4 models on structure & content",
       "statistics": {
-        "doc_count": 41,
+        "doc_count": 164,
         "avg_instruction_tokens": 10.0,
         "avg_content_tokens": 28758.0,
         "median_content_tokens": 35948.5,
@@ -82,7 +82,7 @@
       "data_file": "data_standardized/wp_bench.jsonl",
       "gt_file": "ground_truth/wp_bench_gt.jsonl",
       "task_type": "pairwise",
-      "language": "multilingual",
+      "language": "en,zh",
       "description": "Writing Preference Benchmark — pairwise preference (filtered: top22 per domain×lang)",
       "statistics": {
         "doc_count": 526,
@@ -129,7 +129,7 @@
       "gt_file": "ground_truth/ma_gt.jsonl",
       "task_type": "pairwise",
       "language": "en",
-      "description": "Meta Analysis — pairwise comparison on insights & structure dimensions",
+      "description": "Meta Analysis — pairwise comparison only on insights dimensions",
       "statistics": {
         "doc_count": 120,
         "avg_instruction_tokens": 414.7,

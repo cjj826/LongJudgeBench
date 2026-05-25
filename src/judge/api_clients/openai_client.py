@@ -39,7 +39,7 @@ class OpenAIClient(BaseClient):
             response = self.client.chat.completions.create(**kwargs)
             content = ""
             for chunk in response:
-                if chunk.choices and chunk.choices[0].delta.content:
+                if chunk.choices and chunk.choices[0].delta and chunk.choices[0].delta.content:
                     content += chunk.choices[0].delta.content
             return content
         else:

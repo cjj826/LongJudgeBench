@@ -68,7 +68,9 @@ def _extract_dim_scores(jr: dict, sub_criterions: dict = None) -> dict:
             for item in val:
                 if not isinstance(item, dict):
                     continue
-                score = item.get("article_2_score") or item.get("target_score")
+                score = item.get("article_2_score")
+                if score is None:
+                    score = item.get("target_score")
                 if score is not None:
                     scores.append(float(score))
 

@@ -186,7 +186,7 @@ def load_completed_keys(output_path: Path, paradigm: str = "pointwise",
                 keys.add(key)
         missing = sum(1 for c in key_count.values() if c < 2)
         if missing:
-            print(f"  [断点续跑] {dataset} debiased: {missing} 条记录只有 1 行结果，需要补跑")
+            print(f"  [resume] {dataset} debiased: {missing} records with only 1 row, need re-run")
 
     # token_exceed records are also treated as completed (never retried)
     te_path = output_path.parent / f"{output_path.stem}_token_exceed{output_path.suffix}"
@@ -344,17 +344,9 @@ def process_one_record(
                     ref_key = paper_key
             if ref_key in reference_map:
                 format_kwargs["reference"] = reference_map[ref_key]
-                # MA structure dimension uses its own structural outline reference
                 if dataset == "ma":
                     dim = item.get("meta", {}).get("dimension", "")
-                    if dim == "structure":
-                        struct_key = ref_key + "_structure"
-                        if struct_key in reference_map:
-                            format_kwargs["reference"] = reference_map[struct_key]
-        if criteria_map and data_id in criteria_map:
-            format_kwargs["criteria_list"] = criteria_map[data_id]
-        if dataset == "ma":
-                format_kwargs["dimension"] = dim
+                    format_kwargs["dimension"] = dim
         judge_kwargs["format_kwargs"] = format_kwargs
 
         results = judge.judge(
@@ -399,7 +391,7 @@ def process_one_record(
             with _write_lock:
                 with open(te_path, "a", encoding="utf-8") as f:
                     f.write(json.dumps(error_record, ensure_ascii=False) + "\n")
-            print(f"  [token超限] data_id={data_id}: max_prompt_tokens 超出，不再重试")
+            print(f"  [token_exceed] data_id={data_id}: max_prompt_tokens exceeded, won't retry")
         elif any(kw in error_str for kw in ("inappropriate content", "data_inspection_failed")):
             cf_path = get_content_filter_path(output_path)
             # Content filter: treat as valid outcome, record and mark completed (no retry)
@@ -413,10 +405,10 @@ def process_one_record(
             with _write_lock:
                 with open(cf_path, "a", encoding="utf-8") as f:
                     f.write(json.dumps(error_record, ensure_ascii=False) + "\n")
-            print(f"  [内容限制] data_id={data_id}: 内容违反安全策略，不再重试")
+            print(f"  [content_filter] data_id={data_id}: content violates safety policy, won't retry")
         else:
             save_error(error_record, error_path)
-            print(f"  [错误] data_id={data_id}: {e}")
+            print(f"  [error] data_id={data_id}: {e}")
         return 0
 
 
@@ -429,17 +421,17 @@ def run_evaluation(
     max_records: int = None,
 ):
     """Main evaluation pipeline."""
-    print(f"数据集:     {dataset}")
-    print(f"范式:       {paradigm}")
-    print(f"Prompt:     {prompt_mode}")
-    print(f"模型:       {model_name}")
-    print(f"并发数:     {num_workers}")
-    print(f"断点续跑:   默认启用")
+    print(f"Dataset:     {dataset}")
+    print(f"Paradigm:    {paradigm}")
+    print(f"Prompt:      {prompt_mode}")
+    print(f"Model:       {model_name}")
+    print(f"Workers:     {num_workers}")
+    print(f"Resume:      enabled by default")
 
     # ── 1. Validate paradigm ──
     judge_cls = JUDGE_CLASSES.get(paradigm)
     if not judge_cls:
-        print(f"错误: 不支持的范式 '{paradigm}'，可选: {list(JUDGE_CLASSES.keys())}")
+        print(f"Error: unsupported paradigm '{paradigm}', options: {list(JUDGE_CLASSES.keys())}")
         sys.exit(1)
 
     # SurGE uses ListwiseJudge for batch scoring; supports legacy pointwise calls
@@ -451,21 +443,21 @@ def run_evaluation(
     try:
         mod = get_dataset_module(dataset)
     except KeyError as e:
-        print(f"错误: {e}")
+        print(f"Error: {e}")
         sys.exit(1)
 
     ds_paradigm = mod.get_paradigm()
     if paradigm != ds_paradigm:
-        print(f"警告: {dataset} 默认范式为 {ds_paradigm}，当前使用 {paradigm}，请确保 extract_metrics 兼容")
+        print(f"Warning: {dataset} default paradigm is {ds_paradigm}, currently using {paradigm}, ensure extract_metrics compatibility")
 
     # ── 3. Load API config ──
     api_config = load_api_config()
     interfaces = get_model_interfaces(api_config, target_models=[model_name])
     if not interfaces:
-        print(f"错误: 未找到模型 {model_name} 的 API 配置")
+        print(f"Error: no API config found for model {model_name}")
         sys.exit(1)
     model_info = interfaces[0]
-    print(f"API 接口:   {model_info['name']} @ {model_info['api_base']}")
+    print(f"API:         {model_info['name']} @ {model_info['api_base']}")
 
     # ── 4. Load evaluation config ──
     with open(BASE_DIR / "config" / "judge_config.yaml", "r", encoding="utf-8") as f:
@@ -476,11 +468,11 @@ def run_evaluation(
     model_mt = model_info.get("max_tokens")
     if model_mt:
         eval_cfg = {**eval_cfg, "max_tokens": model_mt}
-        print(f"  max_tokens: {model_mt} (模型专属)")
+        print(f"  max_tokens: {model_mt} (model-specific)")
 
     # ── 5. Load prompt template ──
     prompt = get_prompt(dataset, prompt_mode)
-    print(f"提示词:     config/prompts/{dataset}/{prompt_mode}.yaml")
+    print(f"Prompt:      config/prompts/{dataset}/{prompt_mode}.yaml")
 
     # ── 6. Initialize client and Judge ──
     model_mpt = model_info.get("max_prompt_tokens",
@@ -493,11 +485,11 @@ def run_evaluation(
 
 # ── 7. Load data (handled by dataset module) ──
     data = mod.load_data()
-    print(f"数据:       {len(data)} 条")
+    print(f"Records:     {len(data)}")
 
     if max_records and max_records < len(data):
         data = data[:max_records]
-        print(f"  限制: 取前 {max_records} 条")
+        print(f"  Limit: first {max_records} records")
 
     # Load reference and criteria data for format_kwargs injection
     reference_map = {}
@@ -517,13 +509,13 @@ def run_evaluation(
     error_path = get_error_path(output_path)
     removed = dedup_file(output_path, paradigm, dataset=dataset)
     if removed:
-        print(f"  清理了 {removed} 条重复记录")
+        print(f"  Deduplicated {removed} records")
     completed_keys = load_completed_keys(output_path, paradigm, dataset=dataset)
     if completed_keys:
-        print(f"  已有 {len(completed_keys)} 条已完成，跳过")
+        print(f"  {len(completed_keys)} items already completed, skipping")
 
     # ── 9. Concurrent execution ──
-    print(f"\n开始评测 ...")
+    print(f"\nStarting evaluation ...")
     start_time = time.time()
     total_new = 0
 
@@ -555,17 +547,17 @@ def run_evaluation(
                 n = future.result()
                 total_new += n
             except Exception as e:
-                print(f"  [线程错误] {e}")
+                print(f"  [Thread error] {e}")
             if done_count % max(1, total // 10) == 0 or done_count == total:
                 elapsed = time.time() - start_time
-                print(f"  进度: {done_count}/{total} ({elapsed:.0f}s)")
+                print(f"  Progress: {done_count}/{total} ({elapsed:.0f}s)")
 
     elapsed = time.time() - start_time
     total_count = total_new
-    print(f"\n完成！")
-    print(f"  新增结果: {total_new} 条")
-    print(f"  总耗时:   {elapsed:.1f}s")
-    print(f"  输出文件: {output_path}")
+    print(f"\nDone!")
+    print(f"  New results: {total_new}")
+    print(f"  Elapsed: {elapsed:.1f}s")
+    print(f"  Output: {output_path}")
 
     # ── 10. Auto-retry failed records ──
     max_retries = 1
@@ -586,7 +578,7 @@ def run_evaluation(
         if not retry_data:
             break
 
-        print(f"\n=== 第 {retry} 轮重试（{len(retry_data)} 条）===")
+        print(f"\n=== Retry #{retry} ({len(retry_data)} items) ===")
         retry_start = time.time()
         retry_new = 0
 
@@ -612,17 +604,17 @@ def run_evaluation(
                     retry_new += n
                     total_count += n
                 except Exception as e:
-                    print(f"  [线程错误] {e}")
+                    print(f"  [Thread error] {e}")
                 if done_count == rtotal or done_count % max(1, rtotal // 5) == 0:
                     elapsed_retry = time.time() - retry_start
-                    print(f"  进度: {done_count}/{rtotal} ({elapsed_retry:.0f}s)")
+                    print(f"  Progress: {done_count}/{rtotal} ({elapsed_retry:.0f}s)")
 
         r_elapsed = time.time() - retry_start
         remaining = load_error_ids(error_path)
         if remaining:
-            print(f"  第 {retry} 轮: 新增 {retry_new} 条, 仍有 {len(remaining)} 条失败 ({r_elapsed:.1f}s)")
+            print(f"  Retry #{retry}: +{retry_new}, {len(remaining)} still failing ({r_elapsed:.1f}s)")
         else:
-            print(f"  第 {retry} 轮: 新增 {retry_new} 条, 全部成功 ({r_elapsed:.1f}s)")
+            print(f"  Retry #{retry}: +{retry_new}, all succeeded ({r_elapsed:.1f}s)")
 
     # Token exceed & content filter summary
     te_path = get_token_exceed_path(output_path)
@@ -642,32 +634,32 @@ def run_evaluation(
                     cf_count += 1
 
     final_errors = load_error_ids(error_path)
-    summary_parts = [f"总计 {total_count} 条"]
+    summary_parts = [f"Total: {total_count}"]
     if te_count > 0:
-        summary_parts.append(f"token超限 {te_count} 条")
+        summary_parts.append(f"Token exceed: {te_count}")
     if cf_count > 0:
-        summary_parts.append(f"内容限制 {cf_count} 条")
+        summary_parts.append(f"Content filter: {cf_count}")
     if final_errors:
-        summary_parts.append(f"其他错误 {len(final_errors)} 条")
+        summary_parts.append(f"Other errors: {len(final_errors)}")
 
     print(f"\n  {' | '.join(summary_parts)}")
     if te_count > 0:
-        print(f"  → token超限明细: {te_path.name}")
+        print(f"  → Token exceed details: {te_path.name}")
     if cf_count > 0:
-        print(f"  → 内容限制明细: {cf_path.name}")
+        print(f"  → Content filter details: {cf_path.name}")
     if final_errors:
-        print(f"\n警告: 仍有 {len(final_errors)} 条记录因其他错误失败，请检查网络后重新运行")
+        print(f"\nWarning: {len(final_errors)} items failed with other errors. Check network and retry.")
 
 
 def main():
     """CLI entry point."""
-    parser = argparse.ArgumentParser(description="LLM-as-Judge 评测")
-    parser.add_argument("dataset", help="数据集名称 (deepresearch_bench / realdr / surge / wp_bench / ma / verify_bench_hard)")
-    parser.add_argument("paradigm", help="Judge 范式 (pointwise / pairwise / listwise)")
-    parser.add_argument("model", help="Judge 模型名称 (如 gpt-4o-mini)")
-    parser.add_argument("--prompt", default="vanilla", help="Prompt 模式 (默认: vanilla)")
-    parser.add_argument("--workers", type=int, default=8, help="并发线程数 (default: 8)")
-    parser.add_argument("--max-records", type=int, default=None, help="限制处理条数（测试用）")
+    parser = argparse.ArgumentParser(description="LLM-as-Judge Evaluation")
+    parser.add_argument("dataset", help="Dataset name (deepresearch_bench / realdr / surge / wp_bench / ma / verify_bench_hard)")
+    parser.add_argument("paradigm", help="Judge paradigm (pointwise / pairwise / listwise)")
+    parser.add_argument("model", help="Judge model name (e.g., gpt-4o-mini)")
+    parser.add_argument("--prompt", default="vanilla", help="Prompt mode (default: vanilla)")
+    parser.add_argument("--workers", type=int, default=8, help="Worker threads (default: 8)")
+    parser.add_argument("--max-records", type=int, default=None, help="Limit records for testing")
 
     args = parser.parse_args()
 

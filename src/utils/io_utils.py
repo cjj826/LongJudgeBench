@@ -12,7 +12,3 @@ def load_jsonl(filepath):
     return data
 
 
-def save_jsonl(records, filepath, mode="w"):
-    with open(filepath, mode, encoding="utf-8") as f:
-        for r in records:
-            f.write(json.dumps(r, ensure_ascii=False) + "\n")

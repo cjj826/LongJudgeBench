@@ -41,7 +41,7 @@ class PairwiseJudge(BaseJudge):
         format_kwargs = format_kwargs or {}
         system_prompt = prompt_template.get("task_description", "")
         user_prompt_format = prompt_template.get("user_prompt_format",
-            "## 指令\n{instruction}\n\n## 回复 A\n{response_0}\n\n## 回复 B\n{response_1}\n\n")
+            "## Instruction\n{instruction}\n\n## Response A\n{response_0}\n\n## Response B\n{response_1}\n\n")
         output_format = prompt_template.get("output_format", "")
 
         user_prompt = user_prompt_format.replace("{instruction}", instruction)

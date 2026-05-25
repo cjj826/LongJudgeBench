@@ -4,6 +4,7 @@ GT:    listwise (rank 1-4)
 extract_metrics: converts pointwise scores to rankings and compares with GT.
 """
 from pathlib import Path
+from collections import defaultdict
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 from src.utils.io_utils import load_jsonl
@@ -106,7 +107,6 @@ def extract_metrics(judge_results: list, gt_data: list, exclude_gt: bool = False
     # Convert paper scores to rankings, compare with GT
     # If GT exists in GT ranking but not in predicted scores (reference mode),
     # auto-assign highest score → rank 1, and record ref_dims for GT exclusion in ACC
-    from collections import defaultdict
     ref_dims = defaultdict(set)
     for did, dims in paper_scores.items():
         for dim in ["structure", "content"]:

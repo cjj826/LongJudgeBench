@@ -27,7 +27,9 @@ def extract_metrics(judge_results: list, gt_data: list) -> dict:
     Matches by data_id. Returns groups: all, model:{name}, task:{id}, dim:{name}.
     """
     DIM_KEYS = ("logical_structure_score", "expression_score", "bias_check_score")
-    DIM_NAMES = ("逻辑结构", "表达形式", "偏见检查")
+    # Dataset-internal dimension name keys (used in ground truth JSON):
+    DIM_NAMES = ("逻辑结构", "表达形式", "偏见检查")  # logical_structure, expression, bias_check
+    DIM_NAMES_EN = ("logical_structure", "expression", "bias_check")
 
     gt_map = {str(g["id"]): g for g in gt_data}
 
