@@ -7,7 +7,7 @@
 <div align="center">
   <h1>LongJudgeBench</h1>
   <p>
-    <b>A Benchmark for Evaluating LLM-as-a-Judge on Long-Form Outputs</b>
+    <b>Benchmarking LLM-as-a-Judge for Long-Form Output Evaluation</b>
   </p>
   <p>
     <img src="https://img.shields.io/badge/python-3.10+-blue" alt="Python 3.10+">
@@ -19,10 +19,10 @@
 
 ---
 
-**LongJudgeBench** is a comprehensive meta-evaluation benchmark for assessing LLM-as-a-Judge reliability on **long-form outputs** (1K–68K chars). Unlike existing benchmarks focused on short responses, LongJudgeBench targets real-world scenarios — deep research reports, scientific surveys, and long-chain reasoning — where judges must assess global structure, long-range coherence, and sustained readability.
+**LongJudgeBench** is the first dedicated meta-evaluation benchmark for assessing **LLM-as-a-Judge** reliability on realistic **long-form outputs**. It covers 5 practical scenarios — deep research report scoring, document quality assessment, writing preference comparison, medical meta-analysis, and survey generation — across 6 datasets with an average output length of over 9,000 tokens. All data is standardized under a unified evaluation schema with high-quality expert annotations as reference judgments. Extensive experiments on 8 mainstream LLMs across diverse judging settings (vanilla, rubric, reference, rubric+reference) reveal a severe reliability gap: current LLM judges perform moderately at best, with performance varying drastically across tasks, models, and judging protocols.
 
 <p align="center">
-  <img src="images/LongJudgeBench.png" alt="LongJudgeBench Overview" width="85%">
+  <img src="images/LongJudgeBench_page-0001.jpg" alt="LongJudgeBench Overview" width="85%">
   <br>
   <em>Figure 1: LongJudgeBench overview — task formalization, construction pipeline, and evaluation framework.</em>
 </p>
@@ -46,6 +46,7 @@
 - **Bilingual** support (Chinese and English tasks)
 - **4 prompt variants** per dataset: vanilla, rubric, reference, rubric+reference
 - **8 judge models** evaluated: GPT-5.2, GPT-4o-mini, DeepSeek-V4-Flash, Qwen3-Max, Qwen3-32B, Qwen3-32B (no-thinking), Kimi-K2.6, GLM-5.1
+- **Multi-perspective comparison**: thinking vs. no-thinking (Qwen3-32B), model scale effects (GPT-5.2 vs. GPT-4o-mini), and cross-family analysis (DeepSeek vs. Qwen vs. GLM vs. Kimi)
 - **3 agreement metrics**: pairwise ACC, Spearman, Kendall's τ
 - **Length sensitivity analysis**: bucketed accuracy by output length (fixed + adaptive quartile bins)
 - **Case study analysis**: systematic identification of judge failure patterns with root cause analysis
@@ -64,25 +65,38 @@
 
 ### Length Sensitivity Analysis
 
+We analyze how output length affects LLM judge reliability under the **Vanilla** setting (no rubrics or references) to eliminate confounding factors. Four representative models (Qwen3-Max, DeepSeek-V4-Flash, GLM-5.1, Kimi-K2.6) are evaluated by sorting instances into four equal-length quantiles (Q1–Q4) and computing accuracy per bin.
+
 <p align="center">
-  <img src="images/length_sensitivity.png" alt="Length Sensitivity Analysis" width="85%">
+  <img src="images/length_sensitivity_single_column_structure_page-0001.jpg" alt="Length Sensitivity Analysis" width="85%">
   <br>
-  <em>Figure 2: Judge accuracy across output length buckets — longer outputs are generally harder to evaluate reliably, with the longest quartile showing significantly lower agreement.</em>
+  <em>Figure 2: Judge accuracy across output length quartiles for 4 models on 6 datasets.</em>
 </p>
+
+The relationship between output length and judge accuracy is **dataset-specific** — there is no universal "longer is worse" trend:
+
+- **RealDR, SurGE (both content & structure dimensions), Verify**: Accuracy decreases monotonically with length. On RealDR, Spearman's ρ ranges from -0.80 to -1.00 across models. On Verify, all four models show ρ = -0.80 with perfect cross-model consensus (Kendall W = 1.000). The longest quartile (Q4) often falls below 60% accuracy.
+- **DR-Bench**: Exhibits an **inverted-U** pattern — medium-length outputs (Q2–Q3) achieve the highest accuracy, while both very short and very long outputs are harder to evaluate. Spearman's ρ is near 0 because the trend is non-linear.
+- **WP-Bench**: Shows a weak positive trend — longer outputs are slightly easier to judge, but the pattern is not robust across models (ρ ranges from +0.20 to +0.80).
+- **MA-Insights**: No meaningful relationship exists — accuracy hovers around 50% across all quartiles (average range < 0.10, Kendall W = 0.21), indicating the task itself is beyond current judge capabilities regardless of output length.
+
+Cross-model agreement (Kendall W > 0.8 for 5 of 7 dataset-dimension combinations) confirms that length effects are primarily determined by task characteristics rather than individual judge biases.
 
 ## Key Findings
 
 Our experiments across 8 LLM judges on 6 datasets reveal:
 
 - **Reliability varies sharply by model and dataset**: Pairwise accuracy ranges from ~55% (near random) to ~85% across models and datasets. No single judge is universally reliable.
-- **Length is a systematic difficulty factor**: Judge accuracy drops consistently in the longest output quartile across most datasets. The effect is most pronounced on realdr and verify_bench_hard, where the longest quartile accuracy falls below 60%.
+- **Length is a systematic difficulty factor**: Most datasets show declining accuracy on longer outputs. The effect is most pronounced on RealDR and verify_bench_hard, where the longest quartile accuracy falls below 60%.
 - **Rubrics and references help — but not always**: Reference mode improves accuracy on verify_bench_hard (70.9% → 82.3%) but can hurt on wp_bench (75.3% → 65.2%). The effectiveness depends on task characteristics.
-- **Three failure patterns** explain most judge-human disagreements:
-  - *(a) Coarse Semantic Granularity*: Judges match keywords rather than verify conceptual identity. In long texts, abundant peripheral content drowns out core concept mismatches (e.g., confusing "Streamable HTTP" with "Messages API streaming").
-  - *(b) Specialized Evaluation Needs Misalignment*: Judges evaluate surface-level topic coverage while humans evaluate precise task completion. Long responses can be "on topic" without being "on task."
-  - *(c–e) Additional patterns*: Rubric rigidity (checklist thinking), position bias in pairwise evaluation (up to 95% for some models), and score compression (model-specific, not universal).
-- **Score compression is model-specific**: Only GPT-4o-mini shows severe compression (σ=0.55 vs GT σ=1.22). Reference mode broadens its range to σ=1.00.
-- **Task-specific blind spots**: On verify_bench_hard, 14.9% of cases have all 8 judges disagree with ground truth. Semantic understanding tasks (D2-Semantic) show a 66.7% collective error rate.
+- **Three fundamental failure patterns** explain most judge-human disagreements:
+  - **(a) Coarse Semantic Granularity**: Judges match keywords rather than verify conceptual identity. In the Streamable HTTP case (id=20), Qwen3-Max assigns **8.85** to a response discussing Messages API SSE streaming, confusing it with the distinct "Streamable HTTP" protocol — the human score is only **5.37**. The ~14K token response provides abundant keyword overlap ("Anthropic", "streaming", "SSE", "events") that masks the concept mismatch.
+  - **(b) Evaluation Needs Misalignment**: Judges evaluate surface-level topic coverage while humans evaluate precise task completion. In the Gaussian electric fields case (id=9), a ~13K token general survey on computational electrochemistry receives **9.26** from Qwen3-Max, but only **5.87** from humans — because it devotes only a few paragraphs to the specific question about molecular orientation uncertainty.
+  - **(c–f) Additional patterns**: Rubric rigidity (deepseek-v4-flash systematically under-scores with checklist-style rubrics, e.g., assigning 3.70 vs human 7.07 on an insurance company comparison task), position bias in pairwise tasks (up to 93.3% of inconsistent pairs favor the first position for glm-5.1 on MA), score compression (model-specific, severe only for gpt-4o-mini with σ=0.55 vs GT σ=1.22), and task-specific blind spots (14.9% of verify_bench_hard cases have all 8 judges wrong).
+  
+  See [src/case_study/analysis.md](src/case_study/analysis.md) for a detailed case analysis with root cause examination.
+- **Score compression is model-specific**: Only GPT-4o-mini shows severe compression (σ=0.55 vs GT σ=1.22). Reference mode broadens its range to σ=1.00, nearly matching the human distribution.
+- **Task-specific blind spots**: On verify_bench_hard, 14.9% of cases have all 8 judges disagreeing with ground truth. Floating-point precision tasks (A3-Float) show the highest error rate at 57.5%, while semantic understanding tasks (D2-Semantic) reach 50.0%.
 
 ## Quick Start
 
@@ -150,11 +164,11 @@ Results are saved to `outputs/reliability_summary.xlsx` (or a custom path).
 
 ## Evaluation Paradigms
 
-| Paradigm            | Description                              | Metrics                              |
+| Paradigm            | Description                              | Applicable Datasets                              |
 | ------------------- | ---------------------------------------- | ------------------------------------ |
-| **pointwise** | Score each response independently        | pairwise ACC, Spearman, Kendall's τ |
-| **pairwise**  | Compare two responses, select preference | ACC (preference agreement)           |
-| **listwise**  | Rank multiple responses                  | Spearman, Kendall's τ, pairwise ACC |
+| **pointwise** | Score each response independently (0-10 or 0/1)       | deepresearch_bench, realdr, verify_bench_hard |
+| **pairwise**  | Compare two responses, select preference A/B         | wp_bench, ma                                  |
+| **listwise**  | Rank multiple responses (pointwise scoring + ranking)| surge                                         |
 
 All paradigms support per-query aggregated metrics to prevent long-tail data from dominating.
 
@@ -259,7 +273,7 @@ Error records are written to `{mode}_errors.jsonl` and `{mode}_token_exceed.json
 
 ```bibtex
 @article{longjudgebench,
-  title={LongJudgeBench: A Benchmark for Evaluating LLM-as-a-Judge on Long-Form Outputs},
+  title={LongJudgeBench: Benchmarking LLM-as-a-Judge for Long-Form Output Evaluation},
   author={},
   journal={},
   year={2026}

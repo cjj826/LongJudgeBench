@@ -4,7 +4,7 @@ Verification script for analysis.md calculation claims.
 Usage: PYTHONIOENCODING=utf-8 py -3 src/case_study/verify_calculations.py
 
 This script verifies all numerical claims in analysis.md (English) and
-analysis.zd.md (Chinese). Key findings are documented in the comments.
+case_analysis.md (Chinese). Key findings are documented in the comments.
 
 Key findings summary:
 1. MAE table: original used rubric+reference mode + simple avg (not weighted)
